@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBW Pertemuan 4</title>
+    <link rel="shortcut icon" href="assets/site-logo.png"> <!-- Mengubah logo page html -->
+</head>
+
+<body>
+    <!-- Judul -->
+    <h1 align="center">DAFTAR HADIR</h1>
+    <h4 align="center">PRAKTIKUM PEMROGRAMAN BERBASIS WEB</h4>
+    <hr>
+
+    <!-- Tabel Kehadiran -->
+    <table border="1" width="100%">
+        <!-- 100% agar tampilan tabel menyesuaikan tampilan halaman -->
+        <thead bgcolor="#2EC1AC" align="center">
+            <!-- thead mengandung unsur judul tabel -->
+            <tr>
+                <!-- tr untuk menambah baris baru -->
+                <th rowspan="2" width="10%">No</th> <!-- th untuk menambah data header, rowspan untuk menyatukan row -->
+                <th rowspan="2" width="60%">Nama</th>
+                <th colspan="5" width="30%">Pertemuan</th> <!-- colspan untuk menyatukan column -->
+
+            </tr>
+            <tr>
+                <td>1</td> <!-- td untuk menambah data -->
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+        </thead>
+        <tbody align="center">
+            <!-- tbody mengandung unsur isi tabel -->
+            <tr>
+                <td>001</td>
+                <td>I Gede Teguh Satya Dharma</td>
+                <td><img src="assets/signature/Teguh.png" alt="Teguh" height="15px"></td>
+                <!-- signature image diletakkan pada td sebagai nilai data -->
+                <td>-</td>
+                <td>-</td>
+                <td><img src="assets/signature/Teguh.png" alt="Teguh" height="15px"></td>
+                <td><img src="assets/signature/Teguh.png" alt="Teguh" height="15px"></td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>I Putu Satya Ariwinata</td>
+                <td><img src="assets/signature/Ariwinata.png" alt="Ariwinata" height="10px"></td>
+                <td><img src="assets/signature/Ariwinata.png" alt="Ariwinata" height="10px"></td>
+                <td><img src="assets/signature/Ariwinata.png" alt="Ariwinata" height="10px"></td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>I Wayan Nata Manik Kusuma</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>004</td>
+                <td>Dewa Gede Satya Ranasika Kusuma</td>
+                <td><img src="assets/signature/Ranasika.png" alt="Ranasika" height="10px"></td>
+                <td><img src="assets/signature/Ranasika.png" alt="Ranasika" height="10px"></td>
+                <td><img src="assets/signature/Ranasika.png" alt="Ranasika" height="10px"></td>
+                <td><img src="assets/signature/Ranasika.png" alt="Ranasika" height="10px"></td>
+                <td><img src="assets/signature/Ranasika.png" alt="Ranasika" height="10px"></td>
+            </tr>
+            <tr>
+                <td>005</td>
+                <td>Michael Ozora Orvin</td>
+                <td><img src="assets/signature/Michael.png" alt="Michael" height="10px"></td>
+                <td>-</td>
+                <td>-</td>
+                <td><img src="assets/signature/Michael.png" alt="Michael" height="10px"></td>
+                <td><img src="assets/signature/Michael.png" alt="Michael" height="10px"></td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+
+    <!-- Tabel Kehadiran -->
+    <table border="1" width="10%">
+        <thead bgcolor="#2EC1AC">
+            <th colspan="2">KETERANGAN</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>✅</td>
+                <td>Hadir</td>
+            </tr>
+            <tr>
+                <td>❌</td>
+                <td>Tidak Hadir</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        <b>
+            *Constraint : No CSS used! <br>
+            *Bonus Challenge : Replace the "✅" with an image of a hand's signature
+        </b>
+    </p>
+</body>
+
+</html>
