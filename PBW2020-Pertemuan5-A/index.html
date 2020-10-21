@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBW Pertemuan 5</title>
+    <link rel="shortcut icon" href="assets/favicon.png">
+    <!-- menghubungkan html dengan css -->
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <!-- membuat id khusus header, agar lebih mudah diberi style pada css  -->
+    <div id="header">
+        <h1>Halaman Pendaftaran</h1>
+        <p>Pendaftaran sebagai peserta dalam RAKERWIL (Rapat Kerja Wilayah) Bali dan Nusa Tenggara 2020</p>
+    </div>
+
+    <!-- membuat id khusus form -->
+    <div id="form">
+        <form action="">
+            <!-- menggunakan tabel agar form terlihat lebih rapi -->
+            <table border="0">
+                <!-- inisiasi ukuran masing-masing kolom -->
+                <tr>
+                    <td width=16%></td>
+                    <td width=16%></td>
+                    <td width=16%></td>
+                    <td width=16%></td>
+                    <td width=16%></td>
+                    <td width=16%></td>
+                </tr>
+
+                <!-- menggunakan colspan untuk memenuhi tabel -->
+                <tr>
+                    <!-- placeholder digunakan sebagai deskripsi dari inputan yang akan hilang setelah diinput -->
+                    <td colspan="3"><input type="text" id="namaLengkap" placeholder="Nama Lengkap"></td>
+                    <td colspan="3"><input type="text" id="namaPanggilan" placeholder="Nama Panggilan"></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="text" id="noTelp" placeholder="No. Telepon"></td>
+                    <td colspan="3"><input type="text" id="email" placeholder="Email"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="text" id="tglLahir" placeholder="Tanggal Lahir"></td>
+                    <td colspan="2"><input type="text" id="tempatLahir" placeholder="Tempat Lahir"></td>
+                    <td colspan="2">
+                        <!-- select memberikan beberapa opsi kepada user yang dapat dipilih -->
+                        <select id="agama">
+                            <!-- disabled selected agar opsi tidak dapat dipilih (hanya sebagai deskripsi form) -->
+                            <option disabled selected>Agama</option>
+                            <option value="islam">Islam</option>
+                            <option value="kristen">Kristen</option>
+                            <option value="katolik">Katolik</option>
+                            <option value="hindu">Hindu</option>
+                            <option value="buddha">Buddha</option>
+                            <option value="khonghucu">Khonghucu</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="text" id="universitas" placeholder="Universitas"></td>
+                    <td colspan="2"><input type="text" id="fakjur" placeholder="Fakultas/Jurusan"></td>
+                    <td colspan="2"><input type="text" id="jabatan" placeholder="Jabatan"></td>
+                </tr>
+                <tr>
+                    <td colspan="6"><input type="text" id="alamatAsal" placeholder="Alamat Asal"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <!-- diberi label agar memperjelas input yang diperlukan -->
+                        <label for="fotoAlmamater">Foto Almamater</label>
+                        <br>
+                        <!-- input tipe file untuk menerima file dari user -->
+                        <input type="file" id="fotoAlmamater">
+                    </td>
+                    <td colspan="2">
+                        <label for="scanKTP">Scan KTP</label>
+                        <br>
+                        <input type="file" id="scanKTP">
+                    </td>
+                </tr>
+                <tr>
+                    <td><button id="submit">Daftar</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>

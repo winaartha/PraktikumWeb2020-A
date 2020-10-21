@@ -1,0 +1,91 @@
+/* selector * menunjuk semua komponen, merubah font komponen yang ada pada html */
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* selector ke id header */
+#header{
+    /* mengubah ukuran tinggi header menjadi minimal 200px */
+    min-height: 200px;
+    /* memilih background pada folder assets */
+    background-image: url(../assets/background.jpg);
+    /* agar gambar lebih presisi dengan layout */
+    background-size: cover;
+    /* mengubah warna text pada header menjadi putih */
+    color: white;
+}
+
+/* selector komponen h1 dan p pada id header */
+#header h1,
+#header p{
+    /* agar tidak full kesamping */
+    padding: 0 15% 0 15%;
+}
+
+#header h1{
+    /* menurunkan posisi text header agar lebih menarik */
+    padding-top: 50px;
+}
+
+#form{
+    /* membuat id form berada di center */
+    margin: auto;
+    /* merubah ukuran lebar form menjadi 70% ukuran layar */
+    width: 70%;
+    /* merubah ukuran font */
+    font-size: 14px;
+}
+
+table,
+tr,
+td{
+    /* memberikan sela antara table, tr dan td */
+    padding: 5px 15px 5px 5px;
+}
+
+/* selector komponen input yang bertipe text dan komponen select */
+input[type=text],
+select{
+    width: 100%;
+    /* merubah ukuran font menjadi 14px */
+    font-size: 14px;
+    /* memberikan tebal border */
+    border-width: 1px;
+    /* memberikan warna border */
+    border-color: #ccc;
+    /* memberikan gaya border */
+    border-style: solid;
+    /* melengkungkan pinggiran border */
+    border-radius: 3px;
+    /* meberikan sela untuk text di dalamnya */
+    padding: 5px 5px 5px 10px;
+    /* memberikan bayangan border agar terlihat lebih menarik */
+    box-shadow: 0px 0px 2px 0px rgba(42, 42, 42, .35);
+}
+
+#agama{
+    /* merubah border pada kolom agama menjadi berwarna gradien */
+    background-image: linear-gradient(#eee, white);
+}
+
+/* selector id submit */
+#submit{
+    padding: 7px;
+    width: 75%;
+    /* merubah warna tombol */
+    background-color: #33FF57;
+    /* memberikan bayangan pada tombol dengan warna yang lebih gelap */
+    box-shadow: 0 2px 2px 0 #22aa33;
+    border: 1px;
+    border-radius: 5px;
+    border-style: solid;
+    color: white;
+    /* menebalkan tulisan pada tombol */
+    font-weight: bold;
+}
+
+/* hover untuk merubah tampilan ketika pointer diarahkan ke selector */
+#submit:hover{
+    /* merubah warna tombol */
+    background-color: #60FF90;
+}
