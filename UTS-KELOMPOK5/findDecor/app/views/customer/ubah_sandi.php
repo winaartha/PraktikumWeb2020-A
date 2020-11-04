@@ -33,8 +33,8 @@
                                     <input type="password" class="form-control" name="konfir_password" id="konfir_password" value="123456" autocapitalize="off">
                                 </div>
                             </div>
-                            <a href="profilcustomer.php" class="btn btn-lg tombol mb-3 mt-3">KEMBALI</a>
-                            <button type="submit" class="btn btn-lg tombol mb-3 mt-3 float-right" name="setsandi">SIMPAN</button>
+                            <a href="<?= BASE_URL ?>customer/profil" class="btn btn-md tombol mb-3 mt-3">KEMBALI</a>
+                            <button type="submit" class="btn btn-md tombol mb-3 mt-3 float-right" name="setsandi">SIMPAN</button>
                         </form>
                     </div>
                 </div>

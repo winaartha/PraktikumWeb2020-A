@@ -12,6 +12,7 @@
                         <p class="font">Daftar Barang Vendor</p>
                         <hr class="mt-n2">
                         <div class="vendor">
+                            <a href="<?= BASE_URL ?>vendor/tambah_barang" class="btn btn-sm tombol mb-3 p-2">TAMBAH BARANG</a>
                             <div class="row">
                                 <div class="col-lg-4 mb-4">
                                     <div class="card mx-auto mb-3 ">
@@ -58,7 +59,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="<?= BASE_URL ?>vendor/tambah_barang" class="btn btn-lg btn-block tombol mb-3 p-3">TAMBAH BARANG</a>
+
                             </div>
 
                         </div>

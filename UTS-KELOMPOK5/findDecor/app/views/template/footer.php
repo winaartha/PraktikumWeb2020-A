@@ -31,13 +31,11 @@
             <hr class="w-100 clearfix d-md-none">
 
             <!-- Grid column -->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <div class="col-md-3 col-lg-3 col-xl-2 mx-auto mt-3">
                 <h6 class="text-uppercase mb-4 font-weight-bold ftitle">Pembayaran</h6>
-                <div class="">
-                    <img src="<?= URL_IMG ?>footer/BCA.png" alt="" width="70">
-                    <img src="<?= URL_IMG ?>footer/BNI.png" alt="" width="130" class="bni">
-                    <img src="<?= URL_IMG ?>footer/BRI.png" alt="" width="90" class="bri">
-                </div>
+                <img src="<?= URL_IMG ?>footer/BCA.png" alt="" width="60">
+                <img src="<?= URL_IMG ?>footer/BNI.png" alt="" width="60" class="bni ml-1 mt-1">
+                <img src="<?= URL_IMG ?>footer/BRI.png" alt="" width="80" class="bri mt-1">
             </div>
             <!-- Grid column -->
 
@@ -82,22 +80,22 @@
                 <div class="text-center text-md-right">
                     <ul class="link list-unstyled list-inline">
                         <li class="list-inline-item">
-                            <a class="btn-floating btn-sm rgba-white-slight mx-1" href="#">
-                                <i class="soc-med fab fa-facebook-f"></i>
+                            <a class="btn-floating btn-sm rgba-white-slight mx-1 rounded-circle medsos" href="#">
+                                <i class="soc-med fab fa-facebook-f p-1"></i>
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="btn-floating btn-sm rgba-white-slight mx-1" href="#">
+                            <a class="btn-floating btn-sm rgba-white-slight mx-1 rounded-circle medsos" href="#">
                                 <i class="soc-med fab fa-twitter"></i>
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="btn-floating btn-sm rgba-white-slight mx-1" href="#">
+                            <a class="btn-floating btn-sm rgba-white-slight mx-1 rounded-circle medsos" href="#">
                                 <i class="soc-med fab fa-google-plus-g"></i>
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="btn-floating btn-sm rgba-white-slight mx-1" href="#">
+                            <a class="btn-floating btn-sm rgba-white-slight mx-1 rounded-circle medsos" href="#">
                                 <i class="soc-med fab fa-instagram"></i>
                             </a>
                         </li>

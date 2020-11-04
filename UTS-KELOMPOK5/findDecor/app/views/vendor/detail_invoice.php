@@ -54,7 +54,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="invoicevendor.php" class="btn btn-md tombol mb-3 p-3">KEMBALI</a>
+                                <a href="<?= BASE_URL ?>vendor/invoice" class="btn btn-md tombol">KEMBALI</a>
                             </div>
                             <div class="col-lg-5">
                                 <div class="row">

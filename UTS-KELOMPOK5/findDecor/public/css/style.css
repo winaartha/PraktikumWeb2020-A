@@ -38,12 +38,21 @@ body {
     margin-left: 10px;
 }
 
-/* Ubah Style Bootstrap */
+/* ICON NAVBAR */
+.batas {
+    visibility: hidden;
+    color: white;
+}
 
+.shop {
+    visibility: hidden;
+}
+
+/* Ubah Style Bootstrap */
 .card {
     border-style: none;
     background-color: #fefaf1;
-    
+
 }
 
 .form-control {
@@ -72,7 +81,7 @@ hr {
 
 
 /* VENDOR */
-.sub-tittle{
+.sub-tittle {
     font-family: 'Playfair Display', serif;
     font-size: 26px;
 }
@@ -102,9 +111,6 @@ hr {
 }
 
 
-
-
-
 /* Profil */
 .form-control-file {
     font-size: 13px;
@@ -119,13 +125,22 @@ hr {
     font-family: 'OpenSans';
 }
 
-/* Menu Samping Profil */
+/* Sidebar */
 .menu a {
     font-size: 20px;
 }
 
 .vendor a {
     font-size: 18px;
+}
+
+/* HALAMAN BAYAR */
+.order th {
+    font-size: 14px;
+}
+
+.order td {
+    font-size: 12px;
 }
 
 
@@ -145,25 +160,20 @@ hr {
     color: #ce8272 !important;
 }
 
-.page-footer .link{
+.page-footer .link {
     color: black;
 }
 
-.page-footer .soc-med{
+.page-footer .soc-med {
     border-radius: 3px;
     background-color: white;
     color: #ce8272;
 }
 
-
-/* Atur Margin Bank */
-.bni {
-    margin-left: -40px;
-}
-
-.bri {
-    margin-left: -35px;
-    margin-top: 20px;
+.medsos {
+    border-color: #d49a89;
+    border-style: solid;
+    border-width: 1px;
 }
 
 /* HOVER */
@@ -177,24 +187,8 @@ hr {
     color: #d49a89;
 }
 
-
-/* GAK JELAS */
-.batas {
-    visibility: hidden;
-    color: white;
-}
-
-.shop {
-    visibility: hidden;
-}
-
-/* HALAMAN BAYAR */
-.order th {
-    font-size: 14px;
-}
-
-.order td {
-    font-size: 12px;
+.link:hover {
+    color: #d49a89;
 }
 
 

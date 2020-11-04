@@ -76,7 +76,7 @@
                                         <label for="deskripsi">Deskripsi</label>
                                         <textarea class="form-control" id="deskripsi" rows="4" name="deskripsi">Menyediakan Dekorasi Pernikahan Sesuai Dengan Yang Diinginkan </textarea>
                                     </div>
-                                    <button type="submit" name="setvendor" class="btn btn-lg tombol mb-3 float-right">SIMPAN</button>
+                                    <button type="submit" name="setvendor" class="btn btn-md tombol mb-3 float-right">SIMPAN</button>
                                 </div>
                             </div>
                         </form>

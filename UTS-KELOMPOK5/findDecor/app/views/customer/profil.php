@@ -50,7 +50,7 @@
                                  <input type="file" class="form-control-file mt-3 border border-light">
                               </div>
                            </div>
-                           <button type="submit" name="setprofil" class="btn btn-lg btn-block tombol mb-3">SIMPAN</button>
+                           <button type="submit" name="setprofil" class="btn btn-md btn-block tombol mb-3 float-right">SIMPAN</button>
                         </div>
                      </div>
                   </form>

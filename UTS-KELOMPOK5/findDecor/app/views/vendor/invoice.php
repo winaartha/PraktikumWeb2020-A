@@ -36,7 +36,7 @@
                                             <td>22-10-2020</td>
                                             <td>
                                                 <!-- DETAIL INVOICE -->
-                                                <a href="<?= BASE_URL ?>customer/detail_invoice" class="btn btn-warning btn-sm">
+                                                <a href="<?= BASE_URL ?>vendor/detail_invoice" class="btn btn-warning btn-sm">
                                                     <i class="fas fa-fw fa-info-circle"></i>
                                                 </a>
                                             </td>

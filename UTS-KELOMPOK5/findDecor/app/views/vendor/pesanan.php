@@ -47,7 +47,7 @@
                                                 </td>
                                                 <td>
                                                     <!-- DETAIL PESANAN -->
-                                                    <a href="detailpesanan.php" class="btn btn-warning btn-sm">
+                                                    <a href="<?= BASE_URL ?>vendor/detail_pesanan" class="btn btn-warning btn-sm">
                                                         <i class="fas fa-fw fa-info-circle"></i>
                                                     </a>
                                                     <!-- SET STATUS -->

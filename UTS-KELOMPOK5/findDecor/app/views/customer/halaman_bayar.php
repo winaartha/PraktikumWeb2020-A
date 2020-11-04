@@ -34,8 +34,8 @@
                                         <label for="tglbayar">Tanggal Bayar</label>
                                         <input type="date" class="form-control" id="tglbayar" name="tglbayar">
                                     </div>
-                                    <a href="pembayarancustomer.php" class="btn btn-lg tombol mb-3 ">KEMBALI</a>
-                                    <button type="submit" name="bayar" class="btn btn-lg tombol mb-3 float-right">KIRIM</button>
+                                    <a href="<?= BASE_URL ?>customer/pembayaran" class="btn btn-md tombol mb-3 ">KEMBALI</a>
+                                    <button type="submit" name="bayar" class="btn btn-md tombol mb-3 float-right">KIRIM</button>
                                 </form>
                             </div>
                             <div class="col-lg-5">

@@ -31,7 +31,7 @@
                                 <p class="card-text mt-n2 mb-3">Rp. 300.000</p>
                             </div>
                             <div class="col-lg-6">
-                                <a href="detailbarang.php" class="btn btn-block tombol">DETAIL</a>
+                                <a href="#" class="btn btn-block tombol">DETAIL</a>
                             </div>
                         </div>
                     </div>
@@ -47,7 +47,7 @@
                                 <p class="card-text mt-n2 mb-3">Rp. 300.000</p>
                             </div>
                             <div class="col-lg-6">
-                                <a href="detailbarang.php" class="btn btn-block tombol">DETAIL</a>
+                                <a href="#" class="btn btn-block tombol">DETAIL</a>
                             </div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
                                 <p class="card-text mt-n2 mb-3">Rp. 300.000</p>
                             </div>
                             <div class="col-lg-6">
-                                <a href="detailbarang.php" class="btn btn-block tombol">DETAIL</a>
+                                <a href="#" class="btn btn-block tombol">DETAIL</a>
                             </div>
                         </div>
                     </div>
@@ -79,7 +79,7 @@
                                 <p class="card-text mt-n2 mb-3">Rp. 300.000</p>
                             </div>
                             <div class="col-lg-6">
-                                <a href="detailbarang.php" class="btn btn-block tombol">DETAIL</a>
+                                <a href="#" class="btn btn-block tombol">DETAIL</a>
                             </div>
                         </div>
                     </div>

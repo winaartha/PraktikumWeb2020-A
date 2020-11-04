@@ -41,8 +41,8 @@
                                 </div>
 
                             </div>
-                            <a href="daftarbarang.php" class="btn btn-lg tombol">KEMBALI</a>
-                            <button type="submit" name="setbarang" class="float-right btn btn-lg tombol mb-3 ">SIMPAN</button>
+                            <a href="<?= BASE_URL ?>vendor/daftar_barang" class="btn btn-md tombol">KEMBALI</a>
+                            <button type="submit" name="setbarang" class="float-right btn btn-md tombol mb-3 ">SIMPAN</button>
                         </form>
                     </div>
                 </div>
