@@ -1,0 +1,20 @@
+Q : Bootstrapnya kapan dipake ?
+A : CSS boleh make bootstrap tapi ngodingnya sendiri gak boleh make template
+
+Q : Pas pertama kali daftar apa harus milih role ?
+A : Ga perlu milih role, pas pertama kali daftar langsung jadi user pembeli tapi bisa mendaftarkan toko
+
+Q : Perlu berapa tabel di database untuk user nya ?
+A : Cukup 1 aja nanti diisi role nya
+
+Q : Pake metodologi pengembangan apa ?
+A : Scrum Methodology
+
+Q : Penyewaan ini udah termasuk masang ?
+A : Iya termasuk
+
+Q : Gimana proses pembayarannya ?
+A : Proses dulu untuk ngebeli, abistu bakal muncul rekening2 agennya, kirim bukti pembayaran, tunggu agen buat verifikasi pembayaran
+
+Q : Apa ada barang yang bisa dibeli (bukan disewa) ?
+A : Tidak

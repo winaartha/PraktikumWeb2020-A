@@ -1,0 +1,7 @@
+Navbar : Bagian atas kurang halaman
+Caraousel : FULL gambar
+Kategori masih bingung karena kalo di klik itu muncul halaman toko atau produk-produk
+Logo dibawah footer 
+footer sama navbar kurang menarik
+
+responsive masih bingung untuk icon
