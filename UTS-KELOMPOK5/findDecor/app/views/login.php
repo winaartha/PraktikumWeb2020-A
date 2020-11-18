@@ -19,7 +19,7 @@
 			<div class="row border-box">
 				<div class="col-md-6 p-3" align="center">
 					<br><br>
-					<img src="<?= URL_IMG ?>svg/couple.png" width="100%">
+					<img src="<?= URL_IMG ?>svg/undraw_mobile_login_ikmv.svg" width="100%">
 				</div>
 				<div class="col-md-6 p-5">
 					<div class="shadow-lg p-1 mb-0 bg-white rounded">
@@ -40,7 +40,7 @@
 										<input type="password" class="form-control form" id="input_password">
 										<br /><br />
 									</div>
-									<a type="button" class="btn btn-secondary btn-lg btn-block masuk" href="<?= BASE_URL ?>/customer">
+									<a type="button" class="btn btn-secondary btn-lg btn-block masuk" href="<?= BASE_URL ?>customer">
 										LOGIN</a>
 									<br />
 								</form>

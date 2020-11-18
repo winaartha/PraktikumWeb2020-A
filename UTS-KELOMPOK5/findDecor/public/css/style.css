@@ -125,9 +125,22 @@ hr {
     font-family: 'OpenSans';
 }
 
+.user-content {
+    min-height: 50em;
+}
+
+.tabel-content{
+    height: 40em;
+}
+
 /* Sidebar */
 .menu a {
     font-size: 20px;
+}
+
+.nav-item {
+    margin: 5px;
+    /* border-style: solid; */
 }
 
 .vendor a {
@@ -166,7 +179,6 @@ hr {
 
 .page-footer .soc-med {
     border-radius: 3px;
-    background-color: white;
     color: #ce8272;
 }
 

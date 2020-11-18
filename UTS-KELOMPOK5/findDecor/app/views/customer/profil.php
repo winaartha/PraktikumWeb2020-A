@@ -9,7 +9,7 @@
                </ul>
             </div>
          </div>
-         <div class="col-lg-10">
+         <div class="user-content col-lg-10">
             <div class="card mt-5 p-3 mb-5">
                <div class="container">
                   <p class="font">PROFIL SAYA</p>

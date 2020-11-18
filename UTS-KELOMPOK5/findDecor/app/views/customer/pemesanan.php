@@ -1,5 +1,5 @@
 <!-- CONTENT START -->
-<section class="content mb-5">
+<section class="customer-content content mb-5">
     <div class="container">
         <div class="row ">
             <div class="col-lg-2 mt-5">
@@ -9,8 +9,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-10">
-                <div class="card mt-5 p-3 mb-5">
+            <div class="user-content col-lg-10">
+                <div class="tabel-content card mt-5 p-3 mb-5">
                     <div class="container">
                         <p class="font">DAFTAR PEMESANAN SAYA</p>
                         <hr class="mt-n2">

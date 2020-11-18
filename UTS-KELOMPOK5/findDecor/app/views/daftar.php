@@ -12,13 +12,13 @@
 
 <body>
     <header>
-        <a class="logo title">findDécor</a>
+        <a href="<?= BASE_URL ?>" class="logo title" style="color: #ce8272 !important;">findDécor</a>
     </header>
     <div class="container">
         <div class="row mt-12">
             <div class="row border-box">
                 <div class="col-lg-6 p-3" align="center">
-                    <img src="assets/img/svg/undraw_Access_account_re_8spm.svg" width="80%">
+                    <img src="<?= URL_IMG ?>svg/undraw_Access_account_re_8spm.svg" width="80%">
                 </div>
                 <div class="col-lg-6 p-0">
                     <div class="shadow-lg p-2 bg-white rounded">
@@ -54,7 +54,7 @@
                                         <input type="password" class="form-control form" id="input_konfirpassword">
                                         <br />
                                     </div>
-                                    <a type="button" class="btn btn-secondary btn-lg btn-block masuk" href="#">
+                                    <a type="button" class="btn btn-secondary btn-lg btn-block masuk" href="<?= BASE_URL ?>login">
                                         DAFTAR
                                     </a>
                                 </form>
