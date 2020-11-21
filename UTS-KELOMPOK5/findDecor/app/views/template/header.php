@@ -23,6 +23,8 @@
     <!-- Font google -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+
     <title><?= $data['judul']; ?></title>
 </head>
 

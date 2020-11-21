@@ -110,6 +110,10 @@ hr {
     font-size: 12px;
 }
 
+.sewa {
+    font-family: 'Viga', sans-serif;
+}
+
 
 /* Profil */
 .form-control-file {
@@ -129,7 +133,7 @@ hr {
     min-height: 50em;
 }
 
-.tabel-content{
+.tabel-content {
     height: 40em;
 }
 

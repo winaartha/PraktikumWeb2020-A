@@ -73,4 +73,13 @@ class Customer extends Controller
         $this->view('customer/lihat_vendor');
         $this->view('template/footer');
     }
+
+    public function sewa_barang()
+    {
+        $data['judul'] = 'Customer';
+        $this->view('template/header', $data);
+        $this->view('template/navbar');
+        $this->view('customer/sewa_barang');
+        $this->view('template/footer');
+    }
 }
