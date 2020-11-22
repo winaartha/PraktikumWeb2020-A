@@ -207,6 +207,16 @@ hr {
     color: #d49a89;
 }
 
+/* TENTANG KAMI */
+.deskripsi h1 {
+    font-family: 'Berkshire_Swash';
+    color: #d49a89;
+}
+
+.deskripsi p {
+    font-family: 'OpenSans';
+}
+
 
 /* RESPONSIVE DESKTOP */
 @media (min-width: 992px) {

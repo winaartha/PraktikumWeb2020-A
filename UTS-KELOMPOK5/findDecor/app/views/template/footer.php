@@ -20,7 +20,7 @@
             <div class="col-md-2 col-lg-2 col-xl-2 mx-5 mt-3">
                 <h6 class="text-uppercase mb-4 font-weight-bold ftitle">Link</h6>
                 <p>
-                    <a href="#!" class="link">Tentang Kami</a>
+                    <a href="<?= BASE_URL ?>about" class="link">Tentang Kami</a>
                 </p>
                 <p>
                     <a href="#!" class="link">Kebijakan Privasi</a>
