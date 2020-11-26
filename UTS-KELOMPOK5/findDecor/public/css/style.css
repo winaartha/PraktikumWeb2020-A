@@ -110,6 +110,10 @@ hr {
     font-size: 12px;
 }
 
+.sewa {
+    font-family: 'Viga', sans-serif;
+}
+
 
 /* Profil */
 .form-control-file {
@@ -129,7 +133,7 @@ hr {
     min-height: 50em;
 }
 
-.tabel-content{
+.tabel-content {
     height: 40em;
 }
 
@@ -201,6 +205,16 @@ hr {
 
 .link:hover {
     color: #d49a89;
+}
+
+/* TENTANG KAMI */
+.deskripsi h1 {
+    font-family: 'Berkshire_Swash';
+    color: #d49a89;
+}
+
+.deskripsi p {
+    font-family: 'OpenSans';
 }
 
 

@@ -73,4 +73,13 @@ class Vendor extends Controller
         $this->view('vendor/tambah_barang');
         $this->view('template/footer');
     }
+
+    public function detail_barang()
+    {
+        $data['judul'] = 'Vendor';
+        $this->view('template/header', $data);
+        $this->view('template/navbar');
+        $this->view('vendor/detail_barang');
+        $this->view('template/footer');
+    }
 }
