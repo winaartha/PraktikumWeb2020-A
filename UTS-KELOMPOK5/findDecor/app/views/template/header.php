@@ -14,7 +14,6 @@
 
     <!-- My CSS -->
     <link rel="stylesheet" href="<?= BASE_URL; ?>css/style.css">
-    <link rel="stylesheet" href="<?= BASE_URL; ?>css/admin-style.css">
 
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="<?= BASE_URL; ?>assets/fontawesome-free/css/all.min.css">
