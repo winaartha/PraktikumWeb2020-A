@@ -12,16 +12,16 @@
 
 <body>
     <header>
-        <a href="<?= BASE_URL ?>" class="logo title" style="color: #ce8272 !important;">findDécor</a>
+        <a href="<?= BASE_URL ?>" class="logo title" style="color: #ce8272 !important;  text-decoration:none">findDécor</a>
     </header>
     <div class="container">
         <div class="row mt-12">
             <div class="row border-box">
-                <div class="col-lg-6 p-3" align="center">
+                <div class="col-lg-6 p-3 mt-5" align="center">
                     <img src="<?= URL_IMG ?>svg/undraw_Access_account_re_8spm.svg" width="80%">
                 </div>
                 <div class="col-lg-6 p-0">
-                    <div class="shadow-lg p-2 bg-white rounded">
+                    <div class="shadow-lg p-2 bg-white rounded ml-5">
                         <div class="card">
                             <div class="text-center">
                                 <br />

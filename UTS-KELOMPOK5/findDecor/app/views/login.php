@@ -12,7 +12,7 @@
 
 <body>
 	<header>
-		<a href="<?= BASE_URL ?>" class="logo title" style="color: #ce8272 !important;">findDécor</a>
+		<a href="<?= BASE_URL ?>" class="logo title" style="color: #ce8272 !important; text-decoration:none">findDécor</a>
 	</header>
 	<div class="container">
 		<div class="row justify-content-md-center mt-12">
