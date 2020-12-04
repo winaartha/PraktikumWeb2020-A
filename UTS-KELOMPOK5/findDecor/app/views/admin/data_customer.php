@@ -10,39 +10,39 @@
             </div>
             <ul class="nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= BASE_URL; ?>admin/admin"> 
+                    <a class="nav-link" href="<?= BASE_URL; ?>admin/admin">
                         <i aria-hidden="true" class="fa fa-fw fa-desktop"></i>
-                        Dashboard                       
+                        Dashboard
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= BASE_URL; ?>admin/profil_admin"> 
+                    <a class="nav-link" href="<?= BASE_URL; ?>admin/profil_admin">
                         <i aria-hidden="true" class="fa fa-fw fa-user"></i>
-                        User profil                       
+                        User profil
                     </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="<?= BASE_URL; ?>admin/data_customer"> 
+                    <a class="nav-link" href="<?= BASE_URL; ?>admin/data_customer">
                         <i aria-hidden="true" class="fa fa-fw fa-bars"></i>
-                        List Customer                     
+                        List Customer
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= BASE_URL; ?>admin/data_vendor"> 
+                    <a class="nav-link" href="<?= BASE_URL; ?>admin/data_vendor">
                         <i aria-hidden="true" class="fa fa-fw fa-list"></i>
-                        List Vendor                      
+                        List Vendor
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= BASE_URL; ?>admin/data_transaksi"> 
+                    <a class="nav-link" href="<?= BASE_URL; ?>admin/data_transaksi">
                         <i aria-hidden="true" class="fa fa-fw fa-shopping-basket"></i>
-                        List Transaksi                       
+                        List Transaksi
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= BASE_URL; ?>admin/daftar_barang"> 
+                    <a class="nav-link" href="<?= BASE_URL; ?>admin/daftar_barang">
                         <i aria-hidden="true" class="fa fa-fw fa-truck"></i>
-                        Daftar Barang                       
+                        Daftar Barang
                     </a>
                 </li>
             </ul>
@@ -53,7 +53,7 @@
     <!-- Start Main Content -->
     <div class="main">
         <!-- Start Navbar -->
-        <div class="navbar navbar-admin">           
+        <div class="navbar navbar-admin">
             <a href="<?= BASE_URL; ?>admin/data_customer">
                 Data Customer
             </a>
@@ -67,7 +67,7 @@
         <!-- Start Content -->
         <div class="main-content">
             <div class="container-fluid">
-            <div class="row">
+                <div class="row">
                     <div class="col-md-12 mt-4">
                         <div class="card strpied-tabled-with-hover">
                             <div class="card-header ">
@@ -76,48 +76,65 @@
                             <div class="card-body table-full-width table-responsive">
                                 <table class="table table-hover table-striped">
                                     <thead>
-                                        <th>ID</th>
+                                        <th>No</th>
                                         <th>Email</th>
                                         <th>Nomor Telepon</th>
                                         <th>Username</th>
                                         <th>Alamat</th>
+                                        <th>Action</th>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>winwin@gmail.com</td>
-                                        <td>081987654783</td>
-                                        <td>winaartha</td>
-                                        <td>Jln. Kenanga, No. 29</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>jaehyunjung@gmail.com</td>
-                                        <td>09112321432</td>
-                                        <td>jeongjae</td>
-                                        <td>Jln. Gunung Agung, No. 23</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>kwonhoshi@gmail.com</td>
-                                        <td>087654789000</td>
-                                        <td>hoshihosh</td>
-                                        <td>Jln. Jepun, No. 1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>iamjosh@gmail.com</td>
-                                        <td>081867890980</td>
-                                        <td>johsuajosh</td>
-                                        <td>Jln. Pandawa, No. 3</td>
-                                    </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>winwin@gmail.com</td>
+                                            <td>081987654783</td>
+                                            <td>winaartha</td>
+                                            <td>Jln. Kenanga, No. 29</td>
+                                            <td>
+                                                <!-- DELETE -->
+                                                <a href="#" class="btn btn-danger btn-sm"><i class="fas fa-fw fa-trash-alt"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>jaehyunjung@gmail.com</td>
+                                            <td>09112321432</td>
+                                            <td>jeongjae</td>
+                                            <td>Jln. Gunung Agung, No. 23</td>
+                                            <td>
+                                                <!-- DELETE -->
+                                                <a href="#" class="btn btn-danger btn-sm"><i class="fas fa-fw fa-trash-alt"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>kwonhoshi@gmail.com</td>
+                                            <td>087654789000</td>
+                                            <td>hoshihosh</td>
+                                            <td>Jln. Jepun, No. 1</td>
+                                            <td>
+                                                <!-- DELETE -->
+                                                <a href="#" class="btn btn-danger btn-sm"><i class="fas fa-fw fa-trash-alt"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>iamjosh@gmail.com</td>
+                                            <td>081867890980</td>
+                                            <td>johsuajosh</td>
+                                            <td>Jln. Pandawa, No. 3</td>
+                                            <td>
+                                                <!-- DELETE -->
+                                                <a href="#" class="btn btn-danger btn-sm"><i class="fas fa-fw fa-trash-alt"></i></a>
+                                            </td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>    
+            </div>
         </div>
         <!-- End Content -->
 

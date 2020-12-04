@@ -10,39 +10,39 @@
             </div>
             <ul class="nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= BASE_URL; ?>admin/admin"> 
+                    <a class="nav-link" href="<?= BASE_URL; ?>admin/admin">
                         <i aria-hidden="true" class="fa fa-fw fa-desktop"></i>
-                        Dashboard                       
+                        Dashboard
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= BASE_URL; ?>admin/profil_admin"> 
+                    <a class="nav-link" href="<?= BASE_URL; ?>admin/profil_admin">
                         <i aria-hidden="true" class="fa fa-fw fa-user"></i>
-                        User profil                       
+                        User profil
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= BASE_URL; ?>admin/data_customer"> 
+                    <a class="nav-link" href="<?= BASE_URL; ?>admin/data_customer">
                         <i aria-hidden="true" class="fa fa-fw fa-bars"></i>
-                        List Customer                     
+                        List Customer
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="<?= BASE_URL; ?>admin/data_vendor"> 
+                    <a class="nav-link" href="<?= BASE_URL; ?>admin/data_vendor">
                         <i aria-hidden="true" class="fa fa-fw fa-list"></i>
-                        List Vendor                      
+                        List Vendor
                     </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="<?= BASE_URL; ?>admin/data_transaksi"> 
+                    <a class="nav-link" href="<?= BASE_URL; ?>admin/data_transaksi">
                         <i aria-hidden="true" class="fa fa-fw fa-shopping-basket"></i>
-                        List Transaksi                       
+                        List Transaksi
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= BASE_URL; ?>admin/daftar_barang"> 
+                    <a class="nav-link" href="<?= BASE_URL; ?>admin/daftar_barang">
                         <i aria-hidden="true" class="fa fa-fw fa-truck"></i>
-                        Daftar Barang                       
+                        Daftar Barang
                     </a>
                 </li>
             </ul>
@@ -53,7 +53,7 @@
     <!-- Start Main Content -->
     <div class="main">
         <!-- Start Navbar -->
-        <div class="navbar navbar-admin">           
+        <div class="navbar navbar-admin">
             <a href="<?= BASE_URL; ?>admin/data_transaksi">
                 List Transaksi
             </a>
@@ -74,171 +74,33 @@
                                 <h4 class="card-title-sm">Data Transaksi</h4>
                             </div>
                             <div class="card-body">
-                                <table class="table table-sm table-bordered">
+                                <table class="table table-md table-bordered">
                                     <tr class="text-center">
-                                        <th>Id_Cust</th>
-                                        <th>Id_Barang</th>
-                                        <th>Id_Invoice</th>
-                                        <th>Status</th>
-                                        <th>Tanggal Pemesanan</th>
-                                        <th>Tanggal Dikirim</th>
-                                        <th>Tanggal Kembali</th>
-                                        <th>Tanggal Bayar</th>
+                                        <th>Nama Customer</th>
+                                        <th>Nama Vendor</th>
+                                        <th>Nama Barang</th>
+                                        <th>Qty</th>
                                         <th>Total Harga</th>
+                                        <th>Info Tanggal</th>
                                     </tr>
                                     <tr>
-                                        <td>1</td>
+                                        <td>Wina</td>
+                                        <td>Solusi Murah</td>
+                                        <td>Set Kursi</td>
                                         <td>2</td>
-                                        <td>4</td>
-                                        <td>
-                                            <div class="form-group">
-                                                <select class="form-control" id="status" name="status">
-                                                    <option disabled selected>Set Status</option>
-                                                    <option value="Proses">Konfirmasi</option>
-                                                    <option value="Proses">Proses</option>
-                                                    <option value="Kirim">Kirim</option>
-                                                    <option value="Selesai">Selesai</option>
-                                                </select>
-                                            </div>
-                                        </td>
-                                        <td>20-10-2020</td>
-                                        <td>20-10-2020</td>
-                                        <td>20-10-2020</td>
-                                        <td>24-10-2020</td>
                                         <td>Rp. 250.000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>2</td>
-                                        <td>4</td>
-                                        <td>
-                                            <div class="form-group">
-                                                <select class="form-control" id="status" name="status">
-                                                    <option disabled selected>Set Status</option>
-                                                    <option value="Proses">Konfirmasi</option>
-                                                    <option value="Proses">Proses</option>
-                                                    <option value="Kirim">Kirim</option>
-                                                    <option value="Selesai">Selesai</option>
-                                                </select>
-                                            </div>
+                                        <td class="text-center">
+                                            <a class="btn btn-warning btn-sm ml-1" href="<?= BASE_URL; ?>admin/detail_transaksi">
+                                                <i class="fas fa-fw fa-info-circle"></i>
+                                            </a>
                                         </td>
-                                        <td>20-10-2020</td>
-                                        <td>20-10-2020</td>
-                                        <td>20-10-2020</td>
-                                        <td>24-10-2020</td>
-                                        <td>Rp. 250.000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>2</td>
-                                        <td>4</td>
-                                        <td>
-                                            <div class="form-group">
-                                                <select class="form-control" id="status" name="status">
-                                                    <option disabled selected>Set Status</option>
-                                                    <option value="Proses">Konfirmasi</option>
-                                                    <option value="Proses">Proses</option>
-                                                    <option value="Kirim">Kirim</option>
-                                                    <option value="Selesai">Selesai</option>
-                                                </select>
-                                            </div>
-                                        </td>
-                                        <td>20-10-2020</td>
-                                        <td>20-10-2020</td>
-                                        <td>20-10-2020</td>
-                                        <td>24-10-2020</td>
-                                        <td>Rp. 250.000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>2</td>
-                                        <td>4</td>
-                                        <td>
-                                            <div class="form-group">
-                                                <select class="form-control" id="status" name="status">
-                                                    <option disabled selected>Set Status</option>
-                                                    <option value="Proses">Konfirmasi</option>
-                                                    <option value="Proses">Proses</option>
-                                                    <option value="Kirim">Kirim</option>
-                                                    <option value="Selesai">Selesai</option>
-                                                </select>
-                                            </div>
-                                        </td>
-                                        <td>20-10-2020</td>
-                                        <td>20-10-2020</td>
-                                        <td>20-10-2020</td>
-                                        <td>24-10-2020</td>
-                                        <td>Rp. 250.000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>2</td>
-                                        <td>4</td>
-                                        <td>
-                                            <div class="form-group">
-                                                <select class="form-control" id="status" name="status">
-                                                    <option disabled selected>Set Status</option>
-                                                    <option value="Proses">Konfirmasi</option>
-                                                    <option value="Proses">Proses</option>
-                                                    <option value="Kirim">Kirim</option>
-                                                    <option value="Selesai">Selesai</option>
-                                                </select>
-                                            </div>
-                                        </td>
-                                        <td>20-10-2020</td>
-                                        <td>20-10-2020</td>
-                                        <td>20-10-2020</td>
-                                        <td>24-10-2020</td>
-                                        <td>Rp. 250.000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>2</td>
-                                        <td>4</td>
-                                        <td>
-                                            <div class="form-group">
-                                                <select class="form-control" id="status" name="status">
-                                                    <option disabled selected>Set Status</option>
-                                                    <option value="Proses">Konfirmasi</option>
-                                                    <option value="Proses">Proses</option>
-                                                    <option value="Kirim">Kirim</option>
-                                                    <option value="Selesai">Selesai</option>
-                                                </select>
-                                            </div>
-                                        </td>
-                                        <td>20-10-2020</td>
-                                        <td>20-10-2020</td>
-                                        <td>20-10-2020</td>
-                                        <td>24-10-2020</td>
-                                        <td>Rp. 250.000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>2</td>
-                                        <td>4</td>
-                                        <td>
-                                            <div class="form-group">
-                                                <select class="form-control" id="status" name="status">
-                                                    <option disabled selected>Set Status</option>
-                                                    <option value="Proses">Konfirmasi</option>
-                                                    <option value="Proses">Proses</option>
-                                                    <option value="Kirim">Kirim</option>
-                                                    <option value="Selesai">Selesai</option>
-                                                </select>
-                                            </div>
-                                        </td>
-                                        <td>20-10-2020</td>
-                                        <td>20-10-2020</td>
-                                        <td>20-10-2020</td>
-                                        <td>24-10-2020</td>
-                                        <td>Rp. 250.000</td>
                                     </tr>
                                 </table>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>    
+            </div>
         </div>
         <!-- End Content -->
 

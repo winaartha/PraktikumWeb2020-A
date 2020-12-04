@@ -7,6 +7,7 @@ class Admin extends Controller
         $data['judul'] = 'Admin';
         $this->view('template/head-admin', $data);
         $this->view('admin/admin');
+        $this->view('template/footer-admin');
     }
 
     public function data_vendor()
@@ -14,6 +15,7 @@ class Admin extends Controller
         $data['judul'] = 'Data Vendor';
         $this->view('template/head-admin', $data);
         $this->view('admin/data_vendor');
+        $this->view('template/footer-admin');
     }
 
     public function data_customer()
@@ -21,6 +23,7 @@ class Admin extends Controller
         $data['judul'] = 'Data Customer';
         $this->view('template/head-admin', $data);
         $this->view('admin/data_customer');
+        $this->view('template/footer-admin');
     }
 
     public function data_transaksi()
@@ -28,6 +31,15 @@ class Admin extends Controller
         $data['judul'] = 'Data Transaksi';
         $this->view('template/head-admin', $data);
         $this->view('admin/data_transaksi');
+        $this->view('template/footer-admin');
+    }
+
+    public function detail_transaksi()
+    {
+        $data['judul'] = 'Detail Transaksi';
+        $this->view('template/head-admin', $data);
+        $this->view('admin/detail_transaksi');
+        $this->view('template/footer-admin');
     }
 
     public function profil_admin()
@@ -35,6 +47,7 @@ class Admin extends Controller
         $data['judul'] = 'Profil';
         $this->view('template/head-admin', $data);
         $this->view('admin/profil_admin');
+        $this->view('template/footer-admin');
     }
 
     public function daftar_barang()
@@ -42,5 +55,6 @@ class Admin extends Controller
         $data['judul'] = 'Daftar Barang';
         $this->view('template/head-admin', $data);
         $this->view('admin/daftar_barang');
+        $this->view('template/footer-admin');
     }
 }

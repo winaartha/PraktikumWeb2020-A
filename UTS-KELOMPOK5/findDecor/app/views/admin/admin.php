@@ -10,39 +10,39 @@
             </div>
             <ul class="nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="<?= BASE_URL; ?>admin/admin"> 
+                    <a class="nav-link" href="<?= BASE_URL; ?>admin/admin">
                         <i aria-hidden="true" class="fa fa-fw fa-desktop"></i>
-                        Dashboard                       
+                        Dashboard
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= BASE_URL; ?>admin/profil_admin"> 
+                    <a class="nav-link" href="<?= BASE_URL; ?>admin/profil_admin">
                         <i aria-hidden="true" class="fa fa-fw fa-user"></i>
-                        User profil                       
+                        User profil
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= BASE_URL; ?>admin/data_customer"> 
+                    <a class="nav-link" href="<?= BASE_URL; ?>admin/data_customer">
                         <i aria-hidden="true" class="fa fa-fw fa-bars"></i>
-                        List Customer                     
+                        List Customer
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= BASE_URL; ?>admin/data_vendor"> 
+                    <a class="nav-link" href="<?= BASE_URL; ?>admin/data_vendor">
                         <i aria-hidden="true" class="fa fa-fw fa-list"></i>
-                        List Vendor                      
+                        List Vendor
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= BASE_URL; ?>admin/data_transaksi"> 
+                    <a class="nav-link" href="<?= BASE_URL; ?>admin/data_transaksi">
                         <i aria-hidden="true" class="fa fa-fw fa-shopping-basket"></i>
-                        List Transaksi                       
+                        List Transaksi
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= BASE_URL; ?>admin/daftar_barang"> 
+                    <a class="nav-link" href="<?= BASE_URL; ?>admin/daftar_barang">
                         <i aria-hidden="true" class="fa fa-fw fa-truck"></i>
-                        Daftar Barang                       
+                        Daftar Barang
                     </a>
                 </li>
             </ul>
@@ -53,7 +53,7 @@
     <!-- Start Main Content -->
     <div class="main">
         <!-- Start Navbar -->
-        <div class="navbar navbar-admin">           
+        <div class="navbar navbar-admin">
             <a href="<?= BASE_URL; ?>admin/admin">
                 Dashboard
             </a>
@@ -72,7 +72,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <i aria-hidden="true" class="fa fa-users fa-4x"></i><br>
-                                 <!-- SQL TOTAL JUMLAH USER -->125 User
+                                <!-- SQL TOTAL JUMLAH USER -->125 User
                             </div>
                             <div class="card-footer ">
                                 <a href="<?= BASE_URL; ?>admin/data_customer">
@@ -86,7 +86,7 @@
                         <div class="card">
                             <div class="card-header text-center">
                                 <i aria-hidden="true" class="fa fa-university fa-4x"></i><br>
-                                 <!-- SQL TOTAL JUMLAH VENDOR -->10 Vendor
+                                <!-- SQL TOTAL JUMLAH VENDOR -->10 Vendor
                             </div>
                             <div class="card-footer ">
                                 <a href="<?= BASE_URL; ?>admin/data_vendor">
@@ -100,7 +100,7 @@
                         <div class="card">
                             <div class="card-header text-center">
                                 <i aria-hidden="true" class="fa fa-shopping-cart fa-4x"></i><br>
-                                 <!-- SQL TOTAL JUMLAH VENDOR -->Transaksi
+                                <!-- SQL TOTAL JUMLAH VENDOR -->Transaksi
                             </div>
                             <div class="card-footer ">
                                 <a href="<?= BASE_URL; ?>admin/data_transaksi">
@@ -111,7 +111,7 @@
                         </div>
                     </div>
                 </div>
-            </div>    
+            </div>
         </div>
         <!-- End Content -->
 
