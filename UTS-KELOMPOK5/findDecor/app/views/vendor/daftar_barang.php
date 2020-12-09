@@ -14,22 +14,24 @@
                         <div class="vendor">
                             <a href="<?= BASE_URL ?>vendor/tambah_barang" class="btn btn-sm tombol mb-3 p-2">TAMBAH BARANG</a>
                             <div class="row">
-                                <div class="col-lg-4 mb-4">
-                                    <div class="card mx-auto mb-3">
-                                        <img src="<?= URL_IMG ?>barang/barang1.jpg" class="card-img-top border-dark border-bottom" alt="...">
-                                        <div class="card-body">
-                                            <div class="row">
-                                                <div class="col-lg-6">
-                                                    <h5 class="card-title font-weight-bold mt-2">Set Kursi</h5>
-                                                    <p class="card-text">Rp.200.000</p>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <a href="<?= BASE_URL ?>vendor/detail_barang" class="btn btn-block tombol">DETAIL</a>
+                                <?php foreach ($data['barang'] as $br) : ?>
+                                    <div class="col-lg-4 mb-4">
+                                        <div class="card mx-auto mb-3">
+                                            <img src="<?= URL_IMG ?>barang/barang1.jpg" class="card-img-top border-dark border-bottom" alt="...">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <h5 class="card-title font-weight-bold mt-2"><?= $br['nama_barang']; ?></h5>
+                                                        <p class="card-text"><?= $br['harga_barang']; ?></p>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <a href="<?= BASE_URL ?>vendor/detail_barang" class="btn btn-block tombol">DETAIL</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                <?php endforeach;  ?>
                                 <div class="col-lg-4 mb-4">
                                     <div class="card mx-auto mb-3 ">
                                         <img src="<?= URL_IMG ?>barang/barang1.jpg" class="card-img-top border-dark border-bottom" alt="...">
