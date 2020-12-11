@@ -57,7 +57,7 @@
             <a href="<?= BASE_URL; ?>admin/profil_admin">
                 Profil User
             </a>
-            <a href="<?= BASE_URL; ?>home/index">
+            <a href="<?= BASE_URL; ?>auth/logout">
                 <i aria-hidden="true" class="fa fa-arrow-circle-right"></i>
                 Log out
             </a>

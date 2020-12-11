@@ -27,6 +27,14 @@ class Admin extends Controller
         $this->view('template/footer-admin');
     }
 
+    public function hapusvendor($id_user)
+    {
+        if ($this->model("Admin_model")->hapususer($id_user) > 0) {
+            header('Location: ' . BASE_URL . 'admin/data_vendor');
+            exit;
+        }
+    }
+
     public function data_customer()
     {
         $data['judul'] = 'Data Customer';
@@ -35,6 +43,15 @@ class Admin extends Controller
         $this->view('admin/data_customer', $data);
         $this->view('template/footer-admin');
     }
+
+    public function hapuscustomer($id_user)
+    {
+        if ($this->model("Admin_model")->hapususer($id_user) > 0) {
+            header('Location: ' . BASE_URL . 'admin/data_customer');
+            exit;
+        }
+    }
+
 
     public function data_transaksi()
     {

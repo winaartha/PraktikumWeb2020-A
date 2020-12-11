@@ -28,7 +28,7 @@
                                 <h2><b>DAFTAR</b></h2>
                             </div>
                             <div class="card-body p-3">
-                                <form method="post" action="<?= BASE_URL; ?>daftar/registrasi">
+                                <form method="post" action="<?= BASE_URL; ?>auth/simpanregis">
                                     <div class="form-group">
                                         <label for="input_email" class="label">Email</label>
                                         <input type="email" class="form-control form " id="email" name="email" autocomplete="off">
@@ -56,6 +56,11 @@
                                     <button type="submit" class="btn btn-secondary btn-lg btn-block masuk">
                                         DAFTAR
                                     </button>
+                                    <div class="text-center mt-3">
+                                        <a class="text-dark font-weight-bold" href="<?= BASE_URL; ?>auth">
+                                            Sudah Punya Akun? Login
+                                        </a>
+                                    </div>
                                 </form>
                             </div>
                         </div>

@@ -27,27 +27,27 @@
                                 <div class="col-lg-8 mt-3">
                                     <div class="form-group">
                                         <label for="vendor">Nama Vendor</label>
-                                        <input type="text" class="form-control" id="vendor" name="vendor" value="Solusi Murah">
+                                        <input type="text" class="form-control" id="vendor" name="vendor" value="<?= $data['user']['nama_vendor'] ?>">
                                     </div>
                                     <div class="form-group">
                                         <label for="notelp">No. Telp</label>
-                                        <input type="text" class="form-control" id="notelp" name="notelp" value="0812345678">
+                                        <input type="text" class="form-control" id="notelp" name="notelp" value="<?= $data['user']['notelp'] ?>">
                                     </div>
                                     <div class="form-group">
                                         <label for="alamat">Alamat</label>
-                                        <input type="text" class="form-control" id="alamat" name="alamat" value="Jl. Kampus Unud Bukit Jimbaran No. II">
+                                        <input type="text" class="form-control" id="alamat" name="alamat" value="<?= $data['user']['alamat'] ?>">
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-6 pr-2">
                                             <div class="form-group">
                                                 <label for="kecamatan">Kecamatan</label>
-                                                <input type="text" class="form-control" id="kecamatan" name="kecamatan" value="Kuta Selatan">
+                                                <input type="text" class="form-control" id="kecamatan" name="kecamatan" value="<?= $data['user']['kecamatan'] ?>">
                                             </div>
                                         </div>
                                         <div class="col-lg-6 pl-2">
                                             <div class="form-group">
                                                 <label for="kabupaten">Kabupaten</label>
-                                                <input type="text" class="form-control" id="kabupaten" name="kabupaten" value="Badung">
+                                                <input type="text" class="form-control" id="kabupaten" name="kabupaten" value="<?= $data['user']['kabupaten'] ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -56,19 +56,19 @@
                                         <div class="col-lg-4">
                                             <div class="form-group">
                                                 <label for="bca">BCA</label>
-                                                <input type="text" class="form-control" id="bca" name="bca" value="032 900 977 9">
+                                                <input type="text" class="form-control" id="bca" name="bca" value="<?= $data['user']['bca'] ?>">
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-group">
                                                 <label for="bni">BNI</label>
-                                                <input type="text" class="form-control" id="bni" name="bni" value="010 642 703 5">
+                                                <input type="text" class="form-control" id="bni" name="bni" value="<?= $data['user']['bni'] ?>">
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-group">
                                                 <label for="bri">BRI</label>
-                                                <input type="text" class="form-control" id="bri" name="bri" value="111-00-0459047-3">
+                                                <input type="text" class="form-control" id="bri" name="bri" value="<?= $data['user']['bri'] ?>">
                                             </div>
                                         </div>
                                     </div>

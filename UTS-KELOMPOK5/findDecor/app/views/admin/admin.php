@@ -54,10 +54,10 @@
     <div class="main">
         <!-- Start Navbar -->
         <div class="navbar navbar-admin">
-            <a href="<?= BASE_URL; ?>admin/admin">
+            <a href="<?= BASE_URL; ?>admin">
                 Dashboard
             </a>
-            <a href="<?= BASE_URL; ?>home/index">
+            <a href="<?= BASE_URL; ?>auth/logout">
                 <i aria-hidden="true" class="fa fa-arrow-circle-right"></i>
                 Log out
             </a>

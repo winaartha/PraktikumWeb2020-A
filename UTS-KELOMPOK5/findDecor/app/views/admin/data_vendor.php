@@ -57,7 +57,7 @@
             <a href="<?= BASE_URL; ?>admin/data_vendor">
                 Data Vendor
             </a>
-            <a href="<?= BASE_URL; ?>home/index">
+            <a href="<?= BASE_URL; ?>auth/logout">
                 <i aria-hidden="true" class="fa fa-arrow-circle-right"></i>
                 Log out
             </a>
@@ -102,7 +102,7 @@
                                             </td>
                                             <td>
                                                 <!-- DELETE -->
-                                                <a href="#" class="btn btn-danger btn-sm"><i class="fas fa-fw fa-trash-alt"></i></a>
+                                                <a href="<?= BASE_URL ?>admin/hapusvendor/<?= $vn['id_user'] ?>" class="btn btn-danger btn-sm"><i class="fas fa-fw fa-trash-alt"></i></a>
                                             </td>
 
                                         </tr>

@@ -57,7 +57,7 @@
             <a href="<?= BASE_URL; ?>admin/daftar_barang">
                 Daftar Barang
             </a>
-            <a href="<?= BASE_URL; ?>home/index">
+            <a href="<?= BASE_URL; ?>auth/logout">
                 <i aria-hidden="true" class="fa fa-arrow-circle-right"></i>
                 Log out
             </a>
@@ -87,12 +87,13 @@
                                     </thead>
                                     <tbody>
                                         <?php $no = 1;
-                                        foreach ($data["barang"] as $brg) : ?>
+                                        foreach ($data["barang"] as $brg) :
+                                        ?>
                                             <tr>
                                                 <td><?= $no++; ?></td>
                                                 <td><?= $brg['nama_barang']; ?></td>
                                                 <td><?= $brg['nama_vendor']; ?></td>
-                                                <td><?= $brg['harga_barang']; ?></td>
+                                                <td>Rp. <?= number_format($brg['harga_barang'], 0, ".", "."); ?></td>
                                                 <td>Ini Belum</td>
                                                 <td>Ini juga</td>
                                                 <td class="text-center">

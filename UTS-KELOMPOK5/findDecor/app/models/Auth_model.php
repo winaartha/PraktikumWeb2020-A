@@ -53,9 +53,11 @@ class Auth_model extends Controller
         if (mysqli_num_rows($result) == 1) {
             $row = mysqli_fetch_assoc($result);
             if (password_verify($password, $row['password'])) {
-                //Set Session
+
                 $_SESSION["id_user"] = $row['id_user'];
-                return 1;
+                $role_id = $row['role_id'];
+
+                return $role_id;
             }
         }
 

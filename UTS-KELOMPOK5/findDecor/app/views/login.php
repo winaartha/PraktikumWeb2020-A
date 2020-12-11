@@ -30,7 +30,7 @@
 							</div>
 							<br />
 							<div class="card-body p-3 pb-4">
-								<form action="<?= BASE_URL ?>login/ceklogin" method="post">
+								<form action="<?= BASE_URL ?>auth/ceklogin" method="post">
 									<div class="form-group">
 										<label for="input_email" class="label">Email</label>
 										<input type="email" class="form-control form " id="email" name="email" autocomplete="off">
@@ -42,9 +42,11 @@
 									<button type="submit" class="btn btn-secondary btn-lg btn-block masuk">
 										LOGIN
 									</button>
-									<a class="btn btn-secondary btn-lg btn-block masuk" href="<?= BASE_URL; ?>Daftar">
-										REGISTRASI
-									</a>
+									<div class="text-center mt-3">
+										<a class="text-dark font-weight-bold" href="<?= BASE_URL; ?>auth/registrasi">
+											REGISTRASI
+										</a>
+									</div>
 								</form>
 							</div>
 						</div>

@@ -20,25 +20,25 @@
                            <div class="form-group row">
                               <label for="text" class="col-sm-3 col-form-label ">Username</label>
                               <div class="col-sm-9">
-                                 <input type="text" class="form-control" name="username" id="username" value="firdauszulkarnain" autocapitalize="off">
+                                 <input type="text" class="form-control" name="username" id="username" value="<?= $data['user']['username']; ?>" autocapitalize="off">
                               </div>
                            </div>
                            <div class="form-group row">
                               <label for="text" class="col-sm-3 col-form-label ">Nama</label>
                               <div class="col-sm-9">
-                                 <input type="text" class="form-control " name="nama" id="nama" value="Muhammad Firdaus Zulkarnain" autocapitalize="off">
+                                 <input type="text" class="form-control " name="nama" id="nama" value="<?= $data['user']['nama']; ?>" autocapitalize="off">
                               </div>
                            </div>
                            <div class="form-group row">
                               <label for="text" class="col-sm-3 col-form-label ">E-mail</label>
                               <div class="col-sm-9">
-                                 <input type="text" class="form-control " name="email" id="email" value="firdauszulkarnain@gmail.com" autocapitalize="off">
+                                 <input type="text" class="form-control " name="email" id="email" value="<?= $data['user']['email']; ?>" autocapitalize="off">
                               </div>
                            </div>
                            <div class="form-group row">
                               <label for="text" class="col-sm-3 col-form-label ">No. Telp</label>
                               <div class="col-sm-9">
-                                 <input type="text" class="form-control " name="notelp" id="notelp" value="08133392893" autocapitalize="off">
+                                 <input type="text" class="form-control " name="notelp" id="notelp" value="<?= $data['user']['notelp']; ?>" autocapitalize="off">
                               </div>
                            </div>
                            <a href="<?= BASE_URL ?>customer/ubah_sandi" class="btn btn-sm tombol  mb-3 p-2">UBAH KATA SANDI</a>
