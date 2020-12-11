@@ -10,39 +10,39 @@
             </div>
             <ul class="nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= BASE_URL; ?>admin/admin"> 
+                    <a class="nav-link" href="<?= BASE_URL; ?>admin/admin">
                         <i aria-hidden="true" class="fa fa-fw fa-desktop"></i>
-                        Dashboard                       
+                        Dashboard
                     </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="<?= BASE_URL; ?>admin/profil_admin"> 
+                    <a class="nav-link" href="<?= BASE_URL; ?>admin/profil_admin">
                         <i aria-hidden="true" class="fa fa-fw fa-user"></i>
-                        User profil                       
+                        User profil
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= BASE_URL; ?>admin/data_customer"> 
+                    <a class="nav-link" href="<?= BASE_URL; ?>admin/data_customer">
                         <i aria-hidden="true" class="fa fa-fw fa-bars"></i>
-                        List Customer                     
+                        List Customer
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= BASE_URL; ?>admin/data_vendor"> 
+                    <a class="nav-link" href="<?= BASE_URL; ?>admin/data_vendor">
                         <i aria-hidden="true" class="fa fa-fw fa-list"></i>
-                        List Vendor                      
+                        List Vendor
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= BASE_URL; ?>admin/data_transaksi"> 
+                    <a class="nav-link" href="<?= BASE_URL; ?>admin/data_transaksi">
                         <i aria-hidden="true" class="fa fa-fw fa-shopping-basket"></i>
-                        List Transaksi                       
+                        List Transaksi
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= BASE_URL; ?>admin/daftar_barang"> 
+                    <a class="nav-link" href="<?= BASE_URL; ?>admin/daftar_barang">
                         <i aria-hidden="true" class="fa fa-fw fa-truck"></i>
-                        Daftar Barang                       
+                        Daftar Barang
                     </a>
                 </li>
             </ul>
@@ -53,7 +53,7 @@
     <!-- Start Main Content -->
     <div class="main">
         <!-- Start Navbar -->
-        <div class="navbar navbar-admin">           
+        <div class="navbar navbar-admin">
             <a href="<?= BASE_URL; ?>admin/profil_admin">
                 Profil User
             </a>
@@ -79,13 +79,13 @@
                                         <div class="col-md-6 pr-1">
                                             <div class="form-group">
                                                 <label>Username</label>
-                                                <input type="text" class="form-control" placeholder="Username" value="winaartha">
+                                                <input type="text" class="form-control" placeholder="Username" value="<?= $data['admin']['username']; ?>" autocomplete="off">
                                             </div>
                                         </div>
                                         <div class="col-md-6 pl-1">
                                             <div class="form-group">
-                                                <label>Email address (disabled)</label>
-                                                <input type="email" class="form-control" disabled="" placeholder="Email" value="winaartha@gmail.com">
+                                                <label>Email address</label>
+                                                <input type="email" class="form-control" disabled="" placeholder="Email" value="<?= $data['admin']['email']; ?>" autocomplete="off">
                                             </div>
                                         </div>
                                     </div>
@@ -93,7 +93,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Nomor Telepon</label>
-                                                <input type="text" class="form-control" placeholder="Nomor Telepon" value="08133392893">
+                                                <input type="text" class="form-control" placeholder="Nomor Telepon" value="<?= $data['admin']['notelp']; ?>" autocomplete="off">
                                             </div>
                                         </div>
                                     </div>
@@ -101,47 +101,47 @@
                                         <div class="col-md-6 pr-1">
                                             <div class="form-group">
                                                 <label for="password_lama">Password Lama</label>
-                                                <input type="password" class="form-control" name="password_lama" id="password_lama" value="123456" autocapitalize="off">
+                                                <input type="password" class="form-control" name="password_lama" id="password_lama" autocapitalize="off" autocomplete="off">
                                             </div>
                                         </div>
                                         <div class="col-md-6 pl-1">
                                             <div class="form-group">
                                                 <label for="password_baru">Password Baru</label>
-                                                    <input type="password" class="form-control" name="password_lama" id="password_baru" value="123456" autocapitalize="off">
+                                                <input type="password" class="form-control" name="password_lama" id="password_baru" autocapitalize="off" autocomplete="off">
                                             </div>
                                         </div>
-                                    </div> 
+                                    </div>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="konfir_password">Konfirmasi Password</label>
-                                                <input type="password" class="form-control" name="konfir_password" id="konfir_password" value="123456" autocapitalize="off">
+                                                <input type="password" class="form-control" name="konfir_password" id="konfir_password" autocapitalize="off" autocomplete="off">
                                             </div>
                                         </div>
-                                    </div>   
-                                        <button type="submit" class="btn btn-info btn-fill pull-right">UPDATE PROFIL</button>
-                            </form>     
+                                    </div>
+                                    <button type="submit" class="btn btn-info btn-fill pull-right">UPDATE PROFIL</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-4 mt-4">
-                    <div class="card card-user">
-                        <div class="card-body">
-                            <div class="col-13">
-                                <div class="card warna mb-3 p-2">
-                                    <img src="<?= URL_IMG ?>profile/Default.jpg" class="rounded-circle mx-auto border border-white" width="70%">
+                    <div class="col-4 mt-4">
+                        <div class="card card-user">
+                            <div class="card-body">
+                                <div class="col-13">
+                                    <div class="card warna mb-3 p-2">
+                                        <img src="<?= URL_IMG ?>profile/Default.jpg" class="rounded-circle mx-auto border border-white" width="70%">
                                         <div class="form-group">
                                             <input type="file" class="form-control-file mt-3 border border-light">
                                         </div>
+                                    </div>
+                                    <button type="submit" name="setprofil" class="btn btn-info btn-fill">SIMPAN</button>
                                 </div>
-                                        <button type="submit" name="setprofil" class="btn btn-info btn-fill">SIMPAN</button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>    
-        </div>
-        <!-- End Content -->
+            </div>
+            <!-- End Content -->
 
-    </div>
+        </div>
 </section>

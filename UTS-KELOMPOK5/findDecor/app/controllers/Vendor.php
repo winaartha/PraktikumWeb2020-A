@@ -14,7 +14,6 @@ class Vendor extends Controller
     public function daftar_barang()
     {
         $data['judul'] = 'Vendor';
-        $data['barang'] = $this->model('Vendor_model')->ambilbarang();
         $this->view('template/header', $data);
         $this->view('template/navbar');
         $this->view('vendor/daftar_barang', $data);

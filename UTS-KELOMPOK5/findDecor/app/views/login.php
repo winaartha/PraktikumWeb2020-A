@@ -30,17 +30,21 @@
 							</div>
 							<br />
 							<div class="card-body p-3 pb-4">
-								<form action="#" method="post">
+								<form action="<?= BASE_URL ?>login/ceklogin" method="post">
 									<div class="form-group">
 										<label for="input_email" class="label">Email</label>
 										<input type="email" class="form-control form " id="email" name="email" autocomplete="off">
 									</div>
 									<div class="form-group">
 										<label for="input_password" class="label">Password</label>
-										<input type="pa ssword" class="form-control form" id="password" name="password" autocomplete="off">
+										<input type="password" class="form-control form" id="password" name="password" autocomplete="off">
 									</div>
 									<button type="submit" class="btn btn-secondary btn-lg btn-block masuk">
-										LOGIN</button>
+										LOGIN
+									</button>
+									<a class="btn btn-secondary btn-lg btn-block masuk" href="<?= BASE_URL; ?>Daftar">
+										REGISTRASI
+									</a>
 								</form>
 							</div>
 						</div>

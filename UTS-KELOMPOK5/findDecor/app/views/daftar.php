@@ -28,35 +28,34 @@
                                 <h2><b>DAFTAR</b></h2>
                             </div>
                             <div class="card-body p-3">
-                                <form method="post">
+                                <form method="post" action="<?= BASE_URL; ?>daftar/registrasi">
                                     <div class="form-group">
                                         <label for="input_email" class="label">Email</label>
-                                        <input type="email" class="form-control form " id="input_email">
+                                        <input type="email" class="form-control form " id="email" name="email" autocomplete="off">
                                     </div>
 
                                     <div class="form-group">
                                         <label for="input_nomor" class="label">Nomor Telepon</label>
-                                        <input type="tel" class="form-control form " id="input_nomor">
+                                        <input type="text" class="form-control form " id="notelp" name="notelp" autocomplete="off">
                                     </div>
 
                                     <div class="form-group">
                                         <label for="input_username" class="label">Username</label>
-                                        <input type="text" class="form-control form " id="input_username">
+                                        <input type="text" class="form-control form " id="username" name="username" autocomplete="off">
                                     </div>
 
                                     <div class="form-group">
                                         <label for="input_password" class="label">Password</label>
-                                        <input type="password" class="form-control form" id="input_password">
+                                        <input type="password" class="form-control form" id="password" name="password">
                                     </div>
 
                                     <div class="form-group">
                                         <label for="input_konfirpassword" class="label">Konfirmasi Password</label>
-                                        <input type="password" class="form-control form" id="input_konfirpassword">
-                                        <br />
+                                        <input type="password" class="form-control form" id="password2" name="password2">
                                     </div>
-                                    <a type="button" class="btn btn-secondary btn-lg btn-block masuk" href="<?= BASE_URL ?>login">
+                                    <button type="submit" class="btn btn-secondary btn-lg btn-block masuk">
                                         DAFTAR
-                                    </a>
+                                    </button>
                                 </form>
                             </div>
                         </div>

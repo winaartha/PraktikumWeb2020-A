@@ -84,46 +84,29 @@
                                         <th>Rekening Bank</th>
                                         <th>Action</th>
                                     </tr>
+                                    <?php $no = 1;
+                                    foreach ($data["vendor"] as $vn) : ?>
+                                        <tr>
+                                            <td><?= $no++; ?></td>
+                                            <td><?= $vn['nama_vendor'] ?></td>
+                                            <td><?= $vn['username'] ?></td>
+                                            <td>
+                                                <?= $vn['alamat'] ?> <span class="badge badge-secondary pt-1 pb-1"><?= $vn['kecamatan'] ?></span>
+                                                <span class="badge badge-dark pt-1 pb-1"><?= $vn['kabupaten'] ?></span>
+                                            </td>
+                                            <td><?= $vn['notelp'] ?></td>
+                                            <td>
+                                                <?= $vn['bca'] ?> <span class="badge badge-primary text-dark">BCA</span><br>
+                                                <?= $vn['bni'] ?> <span class="badge badge-warning">BNI</span><br>
+                                                <?= $vn['bri'] ?> <span class="badge badge-info text-dark">BRI</span<br>
+                                            </td>
+                                            <td>
+                                                <!-- DELETE -->
+                                                <a href="#" class="btn btn-danger btn-sm"><i class="fas fa-fw fa-trash-alt"></i></a>
+                                            </td>
 
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Solusi Murah</td>
-                                        <td>shxhss</td>
-                                        <td>
-                                            Jl. Kampus Unud Bukit Jimbaran No. II <span class="badge badge-secondary pt-1 pb-1">Kuta Selatan</span>
-                                            <span class="badge badge-dark pt-1 pb-1">Badung</span>
-                                        </td>
-                                        <td>0812345678</td>
-                                        <td>
-                                            032 900 977 <span class="badge badge-primary text-dark">BCA</span><br>
-                                            010 642 703 5 <span class="badge badge-warning">BNI</span><br>
-                                            010 642 703 5 <span class="badge badge-info text-dark">BRI</span<br>
-                                        </td>
-                                        <td>
-                                            <!-- DELETE -->
-                                            <a href="#" class="btn btn-danger btn-sm"><i class="fas fa-fw fa-trash-alt"></i></a>
-                                        </td>
-
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Solusi Murah</td>
-                                        <td>shxhss</td>
-                                        <td>
-                                            Jl. Kampus Unud Bukit Jimbaran No. II <span class="badge badge-secondary pt-1 pb-1">Kuta Selatan</span>
-                                            <span class="badge badge-dark pt-1 pb-1">Badung</span>
-                                        </td>
-                                        <td>0812345678</td>
-                                        <td>
-                                            032 900 977 <span class="badge badge-primary text-dark">BCA</span><br>
-                                            010 642 703 5 <span class="badge badge-warning">BNI</span><br>
-                                            010 642 703 5 <span class="badge badge-info text-dark">BRI</span<br>
-                                        </td>
-                                        <td>
-                                            <!-- DELETE -->
-                                            <a href="#" class="btn btn-danger btn-sm"><i class="fas fa-fw fa-trash-alt"></i></a>
-                                        </td>
-                                    </tr>
+                                        </tr>
+                                    <?php endforeach; ?>
                                 </table>
                             </div>
                         </div>

@@ -84,50 +84,20 @@
                                         <th>Action</th>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>winwin@gmail.com</td>
-                                            <td>081987654783</td>
-                                            <td>winaartha</td>
-                                            <td>Jln. Kenanga, No. 29</td>
-                                            <td>
-                                                <!-- DELETE -->
-                                                <a href="#" class="btn btn-danger btn-sm"><i class="fas fa-fw fa-trash-alt"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>jaehyunjung@gmail.com</td>
-                                            <td>09112321432</td>
-                                            <td>jeongjae</td>
-                                            <td>Jln. Gunung Agung, No. 23</td>
-                                            <td>
-                                                <!-- DELETE -->
-                                                <a href="#" class="btn btn-danger btn-sm"><i class="fas fa-fw fa-trash-alt"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>kwonhoshi@gmail.com</td>
-                                            <td>087654789000</td>
-                                            <td>hoshihosh</td>
-                                            <td>Jln. Jepun, No. 1</td>
-                                            <td>
-                                                <!-- DELETE -->
-                                                <a href="#" class="btn btn-danger btn-sm"><i class="fas fa-fw fa-trash-alt"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>iamjosh@gmail.com</td>
-                                            <td>081867890980</td>
-                                            <td>johsuajosh</td>
-                                            <td>Jln. Pandawa, No. 3</td>
-                                            <td>
-                                                <!-- DELETE -->
-                                                <a href="#" class="btn btn-danger btn-sm"><i class="fas fa-fw fa-trash-alt"></i></a>
-                                            </td>
-                                        </tr>
+                                        <?php $no = 1;
+                                        foreach ($data["customer"] as $cs) : ?>
+                                            <tr>
+                                                <td><?= $no++; ?></td>
+                                                <td><?= $cs['email']; ?></td>
+                                                <td><?= $cs['notelp']; ?></td>
+                                                <td><?= $cs['username']; ?></td>
+                                                <td><?= $cs['alamat']; ?></td>
+                                                <td>
+                                                    <!-- DELETE -->
+                                                    <a href="#" class="btn btn-danger btn-sm"><i class="fas fa-fw fa-trash-alt"></i></a>
+                                                </td>
+                                            </tr>
+                                        <?php endforeach; ?>
                                     </tbody>
                                 </table>
                             </div>

@@ -84,11 +84,11 @@
                                         <th>Info Tanggal</th>
                                     </tr>
                                     <tr>
-                                        <td>Wina</td>
-                                        <td>Solusi Murah</td>
-                                        <td>Set Kursi</td>
-                                        <td>2</td>
-                                        <td>Rp. 250.000</td>
+                                        <td>yg ini belum</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
                                         <td class="text-center">
                                             <a class="btn btn-warning btn-sm ml-1" href="<?= BASE_URL; ?>admin/detail_transaksi">
                                                 <i class="fas fa-fw fa-info-circle"></i>

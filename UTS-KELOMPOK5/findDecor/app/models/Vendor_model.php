@@ -8,10 +8,4 @@ class Vendor_model extends Controller
     {
         $this->db = new Database;
     }
-
-    public function ambilbarang()
-    {
-        $this->db->query("SELECT * FROM barang");
-        return $this->db->resultAll();
-    }
 }

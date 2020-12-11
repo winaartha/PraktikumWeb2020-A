@@ -86,36 +86,24 @@
                                         <th>Action</th>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Backdrop Pernikahan</td>
-                                            <td>Solusi Murah</td>
-                                            <td>Rp. 200.000</td>
-                                            <td>Isinya apa?</td>
-                                            <td>1</td>
-                                            <td class="text-center">
-                                                <img src="<?= URL_IMG ?>barang/barang1.jpg" width="200" />
-                                            </td>
-                                            <td>
-                                                <!-- DELETE -->
-                                                <a href="#" class="btn btn-danger btn-sm"><i class="fas fa-fw fa-trash-alt"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Backdrop Pernikahan</td>
-                                            <td>Solusi Murah</td>
-                                            <td>Rp. 200.000</td>
-                                            <td>Isinya apa?</td>
-                                            <td>1</td>
-                                            <td class="text-center">
-                                                <img src="<?= URL_IMG ?>barang/barang1.jpg" width="200" />
-                                            </td>
-                                            <td>
-                                                <!-- DELETE -->
-                                                <a href="#" class="btn btn-danger btn-sm"><i class="fas fa-fw fa-trash-alt"></i></a>
-                                            </td>
-                                        </tr>
+                                        <?php $no = 1;
+                                        foreach ($data["barang"] as $brg) : ?>
+                                            <tr>
+                                                <td><?= $no++; ?></td>
+                                                <td><?= $brg['nama_barang']; ?></td>
+                                                <td><?= $brg['nama_vendor']; ?></td>
+                                                <td><?= $brg['harga_barang']; ?></td>
+                                                <td>Ini Belum</td>
+                                                <td>Ini juga</td>
+                                                <td class="text-center">
+                                                    <img src="<?= URL_IMG ?>barang/barang1.jpg" width="200" />
+                                                </td>
+                                                <td>
+                                                    <!-- DELETE -->
+                                                    <a href="#" class="btn btn-danger btn-sm"><i class="fas fa-fw fa-trash-alt"></i></a>
+                                                </td>
+                                            </tr>
+                                        <?php endforeach; ?>
                                     </tbody>
                                 </table>
 
