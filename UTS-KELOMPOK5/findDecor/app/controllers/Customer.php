@@ -19,23 +19,21 @@ class Customer extends Controller
         $this->view('template/footer');
     }
 
-    public function halaman_bayar()
+    public function update_profil()
     {
-        $data['judul'] = 'Customer';
-        $data['user'] = $this->model('Vendor_model')->getuser($this->id_user);
-        $this->view('template/header', $data);
-        $this->view('template/navbar', $data);
-        $this->view('customer/halaman_bayar');
-        $this->view('template/footer');
+        if ($this->model('Customer_model')->update_profil($_POST, $this->id_user) > 0) {
+            header('Location: ' . BASE_URL . '/customer');
+            exit;
+        }
     }
 
-    public function riwayat()
+    public function ubah_sandi()
     {
         $data['judul'] = 'Customer';
         $data['user'] = $this->model('Vendor_model')->getuser($this->id_user);
         $this->view('template/header', $data);
         $this->view('template/navbar', $data);
-        $this->view('customer/riwayat');
+        $this->view('customer/ubah_sandi');
         $this->view('template/footer');
     }
 
@@ -49,6 +47,16 @@ class Customer extends Controller
         $this->view('template/footer');
     }
 
+    public function halaman_bayar()
+    {
+        $data['judul'] = 'Customer';
+        $data['user'] = $this->model('Vendor_model')->getuser($this->id_user);
+        $this->view('template/header', $data);
+        $this->view('template/navbar', $data);
+        $this->view('customer/halaman_bayar');
+        $this->view('template/footer');
+    }
+
     public function pemesanan()
     {
         $data['judul'] = 'Customer';
@@ -59,25 +67,16 @@ class Customer extends Controller
         $this->view('template/footer');
     }
 
-    public function profil()
+    public function riwayat()
     {
         $data['judul'] = 'Customer';
         $data['user'] = $this->model('Vendor_model')->getuser($this->id_user);
         $this->view('template/header', $data);
         $this->view('template/navbar', $data);
-        $this->view('customer/profil');
+        $this->view('customer/riwayat');
         $this->view('template/footer');
     }
 
-    public function ubah_sandi()
-    {
-        $data['judul'] = 'Customer';
-        $data['user'] = $this->model('Vendor_model')->getuser($this->id_user);
-        $this->view('template/header', $data);
-        $this->view('template/navbar', $data);
-        $this->view('customer/ubah_sandi');
-        $this->view('template/footer');
-    }
 
     public function lihat_vendor()
     {

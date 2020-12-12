@@ -25,7 +25,7 @@
                                                         <p class="card-text">Rp. <?= number_format($br['harga_barang'], 0, ".", "."); ?></p>
                                                     </div>
                                                     <div class="col-lg-6">
-                                                        <a href="<?= BASE_URL ?>vendor/detail_barang" class="btn btn-block tombol">DETAIL</a>
+                                                        <a href="<?= BASE_URL ?>vendor/detail_barang/<?= $br['id_barang'] ?>" class="btn btn-block tombol">DETAIL</a>
                                                     </div>
                                                 </div>
                                             </div>

@@ -16,13 +16,13 @@ class Auth_model extends Controller
         return $row;
     }
 
-    public function registrasi()
+    public function registrasi($data)
     {
-        $email = htmlspecialchars($_POST['email']);
-        $notelp = htmlspecialchars($_POST['notelp']);
-        $username = htmlspecialchars($_POST['username']);
-        $password = htmlspecialchars($_POST['password']);
-        $password2 = htmlspecialchars($_POST['password2']);
+        $email = htmlspecialchars($data['email']);
+        $notelp = htmlspecialchars($data['notelp']);
+        $username = htmlspecialchars($data['username']);
+        $password = htmlspecialchars($data['password']);
+        $password2 = htmlspecialchars($data['password2']);
         $role_id = 3;
 
         $result = mysqli_query($this->db->koneksi,  "SELECT email FROM user WHERE email = '$email'");
@@ -43,10 +43,10 @@ class Auth_model extends Controller
         return mysqli_affected_rows($this->db->koneksi);
     }
 
-    public function ceklogin()
+    public function ceklogin($data)
     {
-        $email = htmlspecialchars($_POST['email']);
-        $password = htmlspecialchars($_POST['password']);
+        $email = htmlspecialchars($data['email']);
+        $password = htmlspecialchars($data['password']);
         $result = mysqli_query($this->db->koneksi, "SELECT * FROM user WHERE email = '$email'");
 
         var_dump($result);

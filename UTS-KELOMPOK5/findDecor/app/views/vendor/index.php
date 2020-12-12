@@ -14,7 +14,7 @@
                     <div class="container">
                         <p class="font">VENDOR SAYA</p>
                         <hr class="mt-n2">
-                        <form action="" method="POST">
+                        <form action="<?= BASE_URL; ?>vendor/update_profil" method="POST">
                             <div class="row">
                                 <div class="col-lg-4 mt-5">
                                     <div class="card warna mb-3 p-2">
@@ -27,27 +27,27 @@
                                 <div class="col-lg-8 mt-3">
                                     <div class="form-group">
                                         <label for="vendor">Nama Vendor</label>
-                                        <input type="text" class="form-control" id="vendor" name="vendor" value="<?= $data['user']['nama_vendor'] ?>">
+                                        <input type="text" class="form-control" id="vendor" name="vendor" value="<?= $data['user']['nama_vendor'] ?>" autocomplete="off">
                                     </div>
                                     <div class="form-group">
                                         <label for="notelp">No. Telp</label>
-                                        <input type="text" class="form-control" id="notelp" name="notelp" value="<?= $data['user']['notelp'] ?>">
+                                        <input type="text" class="form-control" id="notelp" name="notelp" value="<?= $data['user']['notelp'] ?>" autocomplete="off">
                                     </div>
                                     <div class="form-group">
                                         <label for="alamat">Alamat</label>
-                                        <input type="text" class="form-control" id="alamat" name="alamat" value="<?= $data['user']['alamat'] ?>">
+                                        <input type="text" class="form-control" id="alamat" name="alamat" value="<?= $data['user']['alamat'] ?>" autocomplete="off">
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-6 pr-2">
                                             <div class="form-group">
                                                 <label for="kecamatan">Kecamatan</label>
-                                                <input type="text" class="form-control" id="kecamatan" name="kecamatan" value="<?= $data['user']['kecamatan'] ?>">
+                                                <input type="text" class="form-control" id="kecamatan" name="kecamatan" value="<?= $data['user']['kecamatan'] ?>" autocomplete="off">
                                             </div>
                                         </div>
                                         <div class="col-lg-6 pl-2">
                                             <div class="form-group">
                                                 <label for="kabupaten">Kabupaten</label>
-                                                <input type="text" class="form-control" id="kabupaten" name="kabupaten" value="<?= $data['user']['kabupaten'] ?>">
+                                                <input type="text" class="form-control" id="kabupaten" name="kabupaten" value="<?= $data['user']['kabupaten'] ?>" autocomplete="off">
                                             </div>
                                         </div>
                                     </div>
@@ -56,19 +56,19 @@
                                         <div class="col-lg-4">
                                             <div class="form-group">
                                                 <label for="bca">BCA</label>
-                                                <input type="text" class="form-control" id="bca" name="bca" value="<?= $data['user']['bca'] ?>">
+                                                <input type="text" class="form-control" id="bca" name="bca" value="<?= $data['user']['bca'] ?>" autocomplete="off">
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-group">
                                                 <label for="bni">BNI</label>
-                                                <input type="text" class="form-control" id="bni" name="bni" value="<?= $data['user']['bni'] ?>">
+                                                <input type="text" class="form-control" id="bni" name="bni" value="<?= $data['user']['bni'] ?>" autocomplete="off">
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-group">
                                                 <label for="bri">BRI</label>
-                                                <input type="text" class="form-control" id="bri" name="bri" value="<?= $data['user']['bri'] ?>">
+                                                <input type="text" class="form-control" id="bri" name="bri" value="<?= $data['user']['bri'] ?>" autocomplete="off">
                                             </div>
                                         </div>
                                     </div>

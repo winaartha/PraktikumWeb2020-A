@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 11, 2020 at 07:58 AM
+-- Generation Time: Dec 12, 2020 at 03:56 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.3.16
 
@@ -41,8 +41,9 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`id_barang`, `nama_barang`, `harga_barang`, `deskripsi_barang`, `vendor_id`, `foto`) VALUES
-(1, 'Kursi', '90000', '\r\nterbaik', 7, ''),
-(2, 'meja', '50000', 'terbaik\r\n', 7, '');
+(2, 'Meja Eufloria', '50000', 'terbaik\r\n', 7, ''),
+(12, 'Set Kursi Eufloria', '90000', '', 7, ''),
+(14, 'Tenda hias Eufloria', '850000', 'Tenda dengan hiasan terbaik', 7, '');
 
 -- --------------------------------------------------------
 
@@ -79,6 +80,7 @@ CREATE TABLE `pesanan` (
 CREATE TABLE `user` (
   `id_user` int(11) NOT NULL,
   `username` varchar(100) NOT NULL,
+  `nama` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `notelp` varchar(100) NOT NULL,
   `nama_vendor` varchar(255) NOT NULL,
@@ -89,6 +91,7 @@ CREATE TABLE `user` (
   `bri` varchar(30) NOT NULL,
   `bca` varchar(30) NOT NULL,
   `role_id` int(11) NOT NULL,
+  `deskripsi_vendor` text NOT NULL,
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -96,11 +99,11 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id_user`, `username`, `email`, `notelp`, `nama_vendor`, `alamat`, `kabupaten`, `kecamatan`, `bni`, `bri`, `bca`, `role_id`, `password`) VALUES
-(4, 'firdaus', 'admin@gmail.com', '081333999839', '', '', '', '', '', '', '', 1, '$2y$10$YjleCV9y3oL5qaPdoQS5AOJeHattXmO2gSih49w53TccSbeXJs0hG'),
-(5, 'firdas', 'zulkarnain@gmail.com', '011111', '', '', '', '', '', '', '', 3, '$2y$10$y7m/xkZ2LMhLM1s1SJgmH.h6QLAE6qTICL5yZ3s8Q8buQLXBWdn8W'),
-(6, 'kut', 'zul@gmail.com', '111', '', '', '', '', '', '', '', 3, '$2y$10$5BDW1Ja70vw83.l49pvrouY8rGGXv6KPg36Tqx7sZY9ZpKawBSt6m'),
-(7, 'Firdaus', 'zulkar@gmail.com', '021987653892', 'Eufloria', 'Jl. Kampus Unud', 'Badung', 'Jimbaran', '01010111', '10101011', '010101', 2, '$2y$10$OBLI.SbYrFSFro./ic/M1epPpFzQEclNVg7ckn12jgZrHD9vTvkWq');
+INSERT INTO `user` (`id_user`, `username`, `nama`, `email`, `notelp`, `nama_vendor`, `alamat`, `kabupaten`, `kecamatan`, `bni`, `bri`, `bca`, `role_id`, `deskripsi_vendor`, `password`) VALUES
+(4, 'firdaus', '', 'admin@gmail.com', '081333999839', '', '', '', '', '', '', '', 1, '', '$2y$10$YjleCV9y3oL5qaPdoQS5AOJeHattXmO2gSih49w53TccSbeXJs0hG'),
+(5, 'firdas', '', 'zulkarnain@gmail.com', '011111', '', '', '', '', '', '', '', 3, '', '$2y$10$y7m/xkZ2LMhLM1s1SJgmH.h6QLAE6qTICL5yZ3s8Q8buQLXBWdn8W'),
+(7, 'firdaus', 'Firdaus Zulkarnain', 'firdauszul@gmail.com', '085678367', 'Eufloria Dekorasi', 'Taman Giri', 'Badung', 'Kuta Selatan', '0789836', '983730203', '03739472', 2, 'Menyediakan Dekorasi Pernikahan Sesuai Dengan Yang Diinginkan ', '$2y$10$cC8aXnRB9F1ffKHJIzYzLua1CCzNjay5D9J6015jdU5Je27j0K5mu'),
+(13, 'winaartha', '', 'wina@gmail.com', '0361873892', '', '', '', '', '', '', '', 3, '', '$2y$10$Gv6NjZeFRWDsxZrhXjmE6e5nMKbyIEIuZHNskiD9KuoOUHJM/5kRK');
 
 --
 -- Indexes for dumped tables
@@ -132,7 +135,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `pesanan`
@@ -144,7 +147,7 @@ ALTER TABLE `pesanan`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
