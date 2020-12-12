@@ -14,20 +14,20 @@
                     <div class="container">
                         <p class="font">TAMBAH BARANG VENDOR</p>
                         <hr class="mt-n2">
-                        <form action="" method="POST">
+                        <form action="<?= BASE_URL; ?>vendor/tambah_barang" method="POST">
                             <div class="row">
                                 <div class="col-lg-8 mt-3">
                                     <div class="form-group">
                                         <label for="namabrg">Nama Barang</label>
-                                        <input type="text" class="form-control" id="namabrg" name="namabrg">
+                                        <input type="text" class="form-control" id="namabrg" name="namabrg" autocomplete="off">
                                     </div>
                                     <div class="form-group">
                                         <label for="harga">Harga / Hari</label>
-                                        <input type="text" class="form-control" id="harga" name="harga">
+                                        <input type="text" class="form-control" id="harga" name="hargabrg" autocomplete="off">
                                     </div>
                                     <div class="form-group">
                                         <label for="deskripsibrg">Deskripsi</label>
-                                        <textarea class="form-control" id="deskripsibrg" rows="4" name="deskripsi"></textarea>
+                                        <textarea class="form-control" id="deskripsibrg" rows="4" name="deskripsibrg"></textarea>
                                     </div>
 
                                 </div>

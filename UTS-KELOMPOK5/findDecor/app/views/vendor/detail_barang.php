@@ -14,20 +14,21 @@
                     <div class="container">
                         <p class="font">Detail Barang</p>
                         <hr class="mt-n2">
-                        <form action="" method="POST">
+                        <form action="<?= BASE_URL; ?>vendor/update_barang/<?= $data['barang']['id_barang'] ?>" method="POST">
                             <div class="row">
                                 <div class="col-lg-8 mt-3">
+
                                     <div class="form-group">
                                         <label for="namabrg">Nama Barang</label>
-                                        <input type="text" class="form-control" id="namabrg" name="namabrg" value="Lorem" autocomplete="off">
+                                        <input type="text" class="form-control" id="namabrg" name="namabrg" value="<?= $data['barang']['nama_barang'] ?>" autocomplete="off">
                                     </div>
                                     <div class="form-group">
                                         <label for="harga">Harga / Hari</label>
-                                        <input type="text" class="form-control" id="harga" name="harga" value="Rp. 15.000" autocomplete="off">
+                                        <input type="text" class="form-control" id="harga" name="hargabrg" value="<?= $data['barang']['harga_barang'] ?>" autocomplete="off">
                                     </div>
                                     <div class="form-group">
                                         <label for="deskripsibrg">Deskripsi</label>
-                                        <textarea class="form-control" id="deskripsibrg" rows="4" name="deskripsi"></textarea>
+                                        <textarea class="form-control" id="deskripsibrg" rows="4" name="deskripsibrg"><?= $data['barang']['deskripsi_barang'] ?></textarea>
                                     </div>
 
                                 </div>
@@ -42,6 +43,7 @@
 
                             </div>
                             <a href="<?= BASE_URL ?>vendor/daftar_barang" class="btn btn-md tombol">KEMBALI</a>
+                            <a href="<?= BASE_URL ?>vendor/hapus_barang/<?= $data['barang']['id_barang'] ?>" class="btn btn-md tombol">HAPUS BARANG</a>
                             <button type="submit" name="ubahbarang" class="float-right btn btn-md tombol mb-3 ">UBAH</button>
                         </form>
                     </div>

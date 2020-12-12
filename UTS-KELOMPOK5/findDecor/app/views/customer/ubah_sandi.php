@@ -10,11 +10,11 @@
                 </div>
             </div>
             <div class="user-content col-lg-8">
-                <div class="tabel-content card mt-5 p-3 mb-5">
+                <div class="card mt-5 p-3 mb-5">
                     <div class="container">
                         <p class="font">UBAH KATA SANDI</p>
                         <hr class="mt-n2">
-                        <form action="" method="POST">
+                        <form action="<?= BASE_URL; ?>customer/update_sandi" method="POST">
                             <div class="form-group row">
                                 <label for="password_lama" class="col-sm-4 col-form-label ">Password Lama</label>
                                 <div class="col-sm-8">
