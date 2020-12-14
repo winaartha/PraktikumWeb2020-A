@@ -13,8 +13,8 @@ class Admin_model extends Controller
     {
         $query = "SELECT * FROM user WHERE id_user = '$id_user'";
         $result = mysqli_query($this->db->koneksi, $query);
-        $rows = mysqli_fetch_assoc($result);
-        return $rows;
+        $result = mysqli_fetch_assoc($result);
+        return $result;
     }
 
     // Ambil Customer
@@ -22,8 +22,8 @@ class Admin_model extends Controller
     {
         $query =  "SELECT * FROM user WHERE role_id = 3";
         $result = mysqli_query($this->db->koneksi, $query);
-        $rows = $this->db->resultAll($result);
-        return $rows;
+        $result = $this->db->resultAll($result);
+        return $result;
     }
 
     // Hapus Customer & Vandor
@@ -39,17 +39,17 @@ class Admin_model extends Controller
     {
         $query =  "SELECT * FROM user WHERE role_id = 2";
         $result = mysqli_query($this->db->koneksi, $query);
-        $rows = $this->db->resultAll($result);
-        return $rows;
+        $result = $this->db->resultAll($result);
+        return $result;
     }
 
     public function getbarang()
     {
-        $query =    "SELECT `barang`.*, `user`.`nama_vendor` as nama_vendor 
-                    FROM `barang` JOIN `user`
-                    ON `barang`.`vendor_id` = `user`.`id_user`";
+        $query =    "SELECT barang.*, user.nama_vendor as nama_vendor 
+                    FROM barang JOIN user
+                    ON barang.vendor_id = user.id_user";
         $result = mysqli_query($this->db->koneksi, $query);
-        $rows = $this->db->resultAll($result);
-        return $rows;
+        $result = $this->db->resultAll($result);
+        return $result;
     }
 }

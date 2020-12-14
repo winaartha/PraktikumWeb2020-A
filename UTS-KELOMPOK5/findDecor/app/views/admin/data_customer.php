@@ -80,7 +80,7 @@
                                         <th>Email</th>
                                         <th>Nomor Telepon</th>
                                         <th>Username</th>
-                                        <th>Alamat</th>
+                                        <th>Nama</th>
                                         <th>Action</th>
                                     </thead>
                                     <tbody>
@@ -91,7 +91,7 @@
                                                 <td><?= $cs['email']; ?></td>
                                                 <td><?= $cs['notelp']; ?></td>
                                                 <td><?= $cs['username']; ?></td>
-                                                <td><?= $cs['alamat']; ?></td>
+                                                <td><?= $cs['nama']; ?></td>
                                                 <td>
                                                     <!-- DELETE -->
                                                     <a href="<?= BASE_URL ?>admin/hapuscustomer/<?= $cs['id_user'] ?>" class="btn btn-danger btn-sm"><i class="fas fa-fw fa-trash-alt"></i></a>

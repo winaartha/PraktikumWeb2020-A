@@ -72,7 +72,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <i aria-hidden="true" class="fa fa-users fa-4x"></i><br>
-                                <!-- SQL TOTAL JUMLAH USER -->125 User
+                                <!-- SQL TOTAL JUMLAH USER -->Customer
                             </div>
                             <div class="card-footer ">
                                 <a href="<?= BASE_URL; ?>admin/data_customer">
@@ -86,7 +86,7 @@
                         <div class="card">
                             <div class="card-header text-center">
                                 <i aria-hidden="true" class="fa fa-university fa-4x"></i><br>
-                                <!-- SQL TOTAL JUMLAH VENDOR -->10 Vendor
+                                <!-- SQL TOTAL JUMLAH VENDOR -->Vendor
                             </div>
                             <div class="card-footer ">
                                 <a href="<?= BASE_URL; ?>admin/data_vendor">

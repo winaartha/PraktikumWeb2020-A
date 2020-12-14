@@ -41,9 +41,10 @@ class Customer extends Controller
     {
         $data['judul'] = 'Customer';
         $data['user'] = $this->model('Vendor_model')->getuser($this->id_user);
+        $data['bayar'] = $this->model('Customer_model')->getbayar($this->id_user);
         $this->view('template/header', $data);
         $this->view('template/navbar', $data);
-        $this->view('customer/pembayaran');
+        $this->view('customer/pembayaran', $data);
         $this->view('template/footer');
     }
 
@@ -78,23 +79,34 @@ class Customer extends Controller
     }
 
 
-    public function lihat_vendor()
+    public function lihat_vendor($vendor_id)
     {
         $data['judul'] = 'Customer';
         $data['user'] = $this->model('Vendor_model')->getuser($this->id_user);
+        $data['vendor'] = $this->model('Customer_model')->detail_vendor($vendor_id);
+        $data['barang'] = $this->model('Customer_model')->getbarang($vendor_id);
         $this->view('template/header', $data);
         $this->view('template/navbar', $data);
-        $this->view('customer/lihat_vendor');
+        $this->view('customer/lihat_vendor', $data);
         $this->view('template/footer');
     }
 
-    public function sewa_barang()
+    public function sewa_barang($id_barang)
     {
         $data['judul'] = 'Customer';
         $data['user'] = $this->model('Vendor_model')->getuser($this->id_user);
+        $data['barang'] = $this->model('Customer_model')->detail_barang($id_barang);
         $this->view('template/header', $data);
         $this->view('template/navbar', $data);
-        $this->view('customer/sewa_barang');
+        $this->view('customer/sewa_barang', $data);
         $this->view('template/footer');
+    }
+
+    public function pesan_barang($id_barang)
+    {
+        if ($this->model("Customer_model")->buatpesanan($_POST, $id_barang, $this->id_user) > 0) {
+            header('Location: ' . BASE_URL . '/customer/pembayaran');
+            exit;
+        }
     }
 }

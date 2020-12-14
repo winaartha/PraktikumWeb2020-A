@@ -29,108 +29,24 @@
 <section class="vendor mb-5 ml-2">
   <div class="container">
     <div class="row d-flex justify-content-center">
-      <div class="col-lg-4 mb-4">
-        <div class="card mx-auto mb-3 ">
-          <img src="<?= URL_IMG ?>toko/gambar1.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-lg-7">
-                <h5 class="card-title font-weight-bold">Eufloria</h5>
-                <p class="card-text mt-n2 mb-3">Dekorasi Pernikahan</p>
-              </div>
-              <div class="lihat-vendor col-lg-5">
-                <a href="<?= BASE_URL ?>customer/lihat_vendor" class="btn btn-block tombol"><i class="fa fa-search" aria-hidden="true"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 mb-4">
-        <div class="card mx-auto mb-3 ">
-          <img src="<?= URL_IMG ?>toko/gambar2.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-lg-7">
-                <h5 class="card-title font-weight-bold">Eufloria</h5>
-                <p class="card-text mt-n2 mb-3">Dekorasi Pernikahan</p>
-              </div>
-              <div class="lihat-vendor col-lg-5">
-                <a href="<?= BASE_URL ?>customer/lihat_vendor" class="btn btn-block tombol"><i class="fa fa-search" aria-hidden="true"></i></a>
+      <?php foreach ($data['vendor'] as $vn) : ?>
+        <div class="col-lg-4 mb-4">
+          <div class="card mx-auto mb-3 ">
+            <img src="<?= URL_IMG ?>toko/gambar1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-lg-7">
+                  <h5 class="card-title font-weight-bold"><?= $vn['nama_vendor'] ?></h5>
+                  <p class="card-text mt-n2 mb-3">Dekorasi Pernikahan</p>
+                </div>
+                <div class="lihat-vendor col-lg-5">
+                  <a href="<?= BASE_URL ?>customer/lihat_vendor/<?= $vn['id_user'] ?>" class="btn btn-block tombol"><i class="fa fa-search" aria-hidden="true"></i></a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="col-lg-4 mb-4">
-        <div class="card mx-auto mb-3 ">
-          <img src="<?= URL_IMG ?>toko/gambar3.jpeg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-lg-7">
-                <h5 class="card-title font-weight-bold">Eufloria</h5>
-                <p class="card-text mt-n2 mb-3">Dekorasi Pernikahan</p>
-              </div>
-              <div class="lihat-vendor col-lg-5">
-                <a href="<?= BASE_URL ?>customer/lihat_vendor" class="btn btn-block tombol"><i class="fa fa-search" aria-hidden="true"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 mb-4">
-        <div class="card mx-auto mb-3 ">
-          <img src="<?= URL_IMG ?>toko/gambar2.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-lg-7">
-                <h5 class="card-title font-weight-bold">Eufloria</h5>
-                <p class="card-text mt-n2 mb-3">Dekorasi Pernikahan</p>
-              </div>
-              <div class="lihat-vendor col-lg-5">
-                <a href="<?= BASE_URL ?>customer/lihat_vendor" class="btn btn-block tombol"><i class="fa fa-search" aria-hidden="true"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 mb-4">
-        <div class="card mx-auto mb-3 ">
-          <img src="<?= URL_IMG ?>toko/gambar3.jpeg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-lg-7">
-                <h5 class="card-title font-weight-bold">Eufloria</h5>
-                <p class="card-text mt-n2 mb-3">Dekorasi Pernikahan</p>
-              </div>
-              <div class="lihat-vendor col-lg-5">
-                <a href="<?= BASE_URL ?>customer/lihat_vendor" class="btn btn-block tombol"><i class="fa fa-search" aria-hidden="true"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 mb-4">
-        <div class="card mx-auto mb-3 ">
-          <img src="<?= URL_IMG ?>toko/gambar1.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-lg-7">
-                <h5 class="card-title font-weight-bold">Eufloria</h5>
-                <p class="card-text mt-n2 mb-3">Dekorasi Pernikahan</p>
-              </div>
-              <div class="lihat-vendor col-lg-5">
-                <a href="<?= BASE_URL ?>customer/lihat_vendor" class="btn btn-block tombol"><i class="fa fa-search" aria-hidden="true"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <?php endforeach; ?>
     </div>
   </div>
 </section>

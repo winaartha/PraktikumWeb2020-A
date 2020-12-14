@@ -22,25 +22,32 @@
                                             <th scope="col">No</th>
                                             <th scope="col">Barang</th>
                                             <td>Vendor</td>
-                                            <th>Qty</th>
                                             <th scope="col">Subtotal</th>
+                                            <th>Alamat Pengiriman</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Tenda</td>
-                                            <td>Eufloria</td>
-                                            <td>3</td>
-                                            <td>Rp. 50.000</td>
-                                            <td>
-                                                <!-- BAYAR -->
-                                                <a href="<?= BASE_URL ?>customer/halaman_bayar" class="btn btn-danger btn-sm">
-                                                    BAYAR
-                                                </a>
-                                            </td>
-                                        </tr>
+                                        <?php $no = 1;
+                                        foreach ($data['bayar'] as $byr) :
+                                        ?>
+                                            <tr>
+                                                <td><?= $no++; ?></td>
+                                                <td><?= $byr['nama_barang']; ?></td>
+                                                <td><?= $byr['nama_vendor']; ?></td>
+                                                <td>Rp. <?= number_format($byr['harga_barang'], 0, ".", "."); ?></td>
+                                                <td>
+                                                    <?= $byr['alamat_kirim'] ?> <span class="badge badge-secondary pt-1 pb-1"><?= $byr['kec_kirim'] ?></span>
+                                                    <span class="badge badge-dark pt-1 pb-1"><?= $byr['kab_kirim'] ?></span>
+                                                </td>
+                                                <td>
+                                                    <!-- BAYAR -->
+                                                    <a href="<?= BASE_URL ?>customer/halaman_bayar" class="btn btn-danger btn-sm">
+                                                        BAYAR
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        <?php endforeach; ?>
                                     </tbody>
                                 </table>
                             </div>
