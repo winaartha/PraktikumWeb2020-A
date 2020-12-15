@@ -1,0 +1,7 @@
+#Role Admin
+username : admin
+password : admin
+
+#Role Pegawai
+username : pegawai
+password : pegawai

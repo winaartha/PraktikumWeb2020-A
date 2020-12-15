@@ -1,10 +1,18 @@
 <?php
 
 session_start();
-if (!isset($_SESSION['login'])) {
+if (isset($_SESSION['login'])) {
+    //untuk login bukan admin
+    if ($_SESSION['role'] != "admin") {
+        header("Location: index.php");
+        exit;
+    }
+} else {
+    //untuk belum login
     header("Location: login.php");
     exit;
 }
+
 require "function.php";
 
 ?>
@@ -25,7 +33,9 @@ require "function.php";
     <div class="content">
         <h1 class="title">Daftar Mahasiswa</h1>
         <p>Selamat datang, <?= $_SESSION['nama'] . ' ( ' . $_SESSION['role'] . ' )' ?></p>
-        <a href="input.php" class="btn primary">Tambah Data</a>
+        <a href="input.php">
+            <div class="btn primary">Tambah Data</div>
+        </a>
 
         <table border="1" cellpadding="10" style="width: 100%; margin:10px 0px;">
             <tr>
@@ -50,13 +60,15 @@ require "function.php";
                             justify-content: center;
                         ">
                         <a href="edit.php?id=<?= $mhs['id'] ?>" class="opsi info">Edit</a>
-                        <!-- <a href="delete.php?id=<?= $mhs['id'] ?>" class="opsi danger">Delete</a> -->
+                        <a href="delete.php?id=<?= $mhs['id'] ?>" class="opsi danger">Delete</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
         </table>
 
-        <a href="logout.php" class="btn danger">Logout</a>
+        <a href="logout.php">
+            <div class="btn danger">Logout</div>
+        </a>
     </div>
 </body>
 
