@@ -5,9 +5,9 @@
         </div>
         <div class="col-sm-5">
             <div class="keterangan">
-                <h4 class="mt-5">Vendor Eufloria</h4>
-                <p>08123456789</p>
-                <p class="mt-n3">Jl. Kampus Unud Bukit Jimbaran</p>
+                <h4 class="mt-5"><?= $data['barang']['nama_vendor']; ?></h4>
+                <p><?= $data['barang']['notelp']; ?></p>
+                <p class="mt-n3"><?= $data['barang']['alamat']; ?></p>
             </div>
         </div>
     </div>
@@ -21,21 +21,21 @@
             <img src="<?= URL_IMG ?>toko/gambar1.jpg" alt="" width="90%" class="mb-4">
             <p class="text-center">DESKRIPSI PRODUK</p>
             <div style="width: 20rem;">
-                <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nihil quidem, in recusandae sunt modi voluptatum. Velit incidunt beatae explicabo.</p>
+                <p class="text-justify"><?= $data['barang']['deskripsi_barang']; ?></p>
             </div>
         </div>
         <div class="col-lg-8">
-            <h5 class="judbar">Lorem ipsum dolor sit amet.</h5>
-            <p>Rp. 300.000</p>
-            <form action="" method="">
+            <h5 class="judbar"><?= $data['barang']['nama_barang']; ?></h5>
+            <p>Rp. <?= number_format($data['barang']['harga_barang'], 0, ".", "."); ?></p>
+            <form action="<?= BASE_URL; ?>customer/pesan_barang/<?= $data['barang']['id_barang'] ?>" method="POST">
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="tglawal">Tanggal Pinjam</label>
-                        <input type="date" class="form-control" id="tglawal" name="tglawal">
+                        <input type="date" class="form-control" id="tglawal" name="tglpinjam">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="tglakhir">Tanggal Selesai</label>
-                        <input type="date" class="form-control" id="tglakhir" name="tglakhir">
+                        <input type="date" class="form-control" id="tglakhir" name="tglkembali">
                     </div>
                 </div>
                 <hr>
@@ -44,19 +44,19 @@
                     <div class="col-lg-6 pr-2">
                         <div class="form-group">
                             <label for="kecamatan">Kecamatan</label>
-                            <input type="text" class="form-control" id="kecamatan" name="kecamatan" value="Kuta Selatan">
+                            <input type="text" class="form-control" id="kecamatan" name="kecamatan">
                         </div>
                     </div>
                     <div class="col-lg-6 pl-2">
                         <div class="form-group">
                             <label for="kabupaten">Kabupaten</label>
-                            <input type="text" class="form-control" id="kabupaten" name="kabupaten" value="Badung">
+                            <input type="text" class="form-control" id="kabupaten" name="kabupaten">
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="alamat">Alamat</label>
-                    <input type="text" class="form-control" id="alamat" name="alamat" value="Jl. Kampus Unud Bukit Jimbaran No. II">
+                    <input type="text" class="form-control" id="alamat" name="alamat">
                 </div>
                 <div class="form-group">
                     <label for="catatan">Catatan</label>

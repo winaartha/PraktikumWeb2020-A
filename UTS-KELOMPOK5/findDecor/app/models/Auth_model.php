@@ -18,9 +18,10 @@ class Auth_model extends Controller
 
     public function registrasi($data)
     {
+        $username = htmlspecialchars($data['username']);
         $email = htmlspecialchars($data['email']);
         $notelp = htmlspecialchars($data['notelp']);
-        $username = htmlspecialchars($data['username']);
+        $nama = htmlspecialchars($data['nama']);
         $password = htmlspecialchars($data['password']);
         $password2 = htmlspecialchars($data['password2']);
         $role_id = 3;
@@ -37,7 +38,7 @@ class Auth_model extends Controller
         $password = password_hash($password, PASSWORD_DEFAULT);
 
 
-        $query = "INSERT INTO user (username, email, notelp, role_id, password) VALUES ('$username','$email', '$notelp', '$role_id', '$password')";
+        $query = "INSERT INTO user (username, nama, email, notelp, role_id, password) VALUES ('$username', '$nama', '$email', '$notelp', '$role_id', '$password')";
 
         mysqli_query($this->db->koneksi, $query);
         return mysqli_affected_rows($this->db->koneksi);

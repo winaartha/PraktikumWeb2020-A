@@ -13,9 +13,9 @@
             </form>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <ul class="navbar-nav ml-auto">
-                    <a class="navbar-brand" href="<?= BASE_URL ?>login"><i class="icon fas fa-shopping-cart shop ml-2 mr-2"></i></a>
-                    <p class="batas mr-4 mt-1">|</p>
                     <?php if (isset($_SESSION['id_user'])) : ?>
+                        <a class="navbar-brand" href="<?= BASE_URL ?>customer/pembayaran"><i class="icon fas fa-shopping-cart shop ml-2 mr-2"></i></a>
+                        <p class="batas mr-4 mt-1">|</p>
                         <div class="dropdown">
                             <button class="btn btn masuk mt-3 dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <?= $data['user']['username']; ?>
@@ -31,6 +31,8 @@
                         </div>
                         <a class="nav-item btn tombol mt-3 font-weight-bold border" href="<?= BASE_URL ?>auth/logout">Logout</a>
                     <?php else : ?>
+                        <a class="navbar-brand" href="<?= BASE_URL ?>auth"><i class="icon fas fa-shopping-cart shop ml-2 mr-2"></i></a>
+                        <p class="batas mr-4 mt-1">|</p>
                         <a class="nav-item btn masuk mt-3 mr-1 font-weight-bold" href="<?= BASE_URL ?>auth">Masuk</a>
                         <a class="nav-item btn tombol mt-3 font-weight-bold border" href="<?= BASE_URL ?>auth/registrasi">Daftar</a>
                     <?php endif; ?>

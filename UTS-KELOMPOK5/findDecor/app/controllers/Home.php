@@ -14,9 +14,10 @@ class Home extends Controller
 
         $data['judul'] = 'Home';
         $data['user'] = $this->model('Vendor_model')->getuser($this->id_user);
+        $data['vendor'] = $this->model('Home_model')->getvendor();
         $this->view('template/header', $data);
         $this->view('template/navbar', $data);
-        $this->view('home/index');
+        $this->view('home/index', $data);
         $this->view('template/footer');
     }
 
