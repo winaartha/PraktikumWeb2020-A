@@ -48,23 +48,34 @@ class Customer extends Controller
         $this->view('template/footer');
     }
 
-    public function halaman_bayar()
+    // 
+    public function halaman_bayar($id_bayar)
     {
         $data['judul'] = 'Customer';
         $data['user'] = $this->model('Vendor_model')->getuser($this->id_user);
+        $data['bayar'] =  $this->model('Customer_model')->detail_bayar($id_bayar);
         $this->view('template/header', $data);
         $this->view('template/navbar', $data);
-        $this->view('customer/halaman_bayar');
+        $this->view('customer/halaman_bayar', $data);
         $this->view('template/footer');
+    }
+
+    public function bayar($id_bayar)
+    {
+        if ($this->model("Customer_model")->update_pembayaran($_POST, $id_bayar, $this->id_user) > 0) {
+            header('Location: ' . BASE_URL . '/customer/pemesanan');
+            exit;
+        }
     }
 
     public function pemesanan()
     {
         $data['judul'] = 'Customer';
         $data['user'] = $this->model('Vendor_model')->getuser($this->id_user);
+        $data['pesan'] = $this->model('Customer_model')->getpesan($this->id_user);
         $this->view('template/header', $data);
         $this->view('template/navbar', $data);
-        $this->view('customer/pemesanan');
+        $this->view('customer/pemesanan', $data);
         $this->view('template/footer');
     }
 
@@ -72,9 +83,10 @@ class Customer extends Controller
     {
         $data['judul'] = 'Customer';
         $data['user'] = $this->model('Vendor_model')->getuser($this->id_user);
+        $data['riwayat'] = $this->model('Customer_model')->getinvoice($this->id_user);
         $this->view('template/header', $data);
         $this->view('template/navbar', $data);
-        $this->view('customer/riwayat');
+        $this->view('customer/riwayat', $data);
         $this->view('template/footer');
     }
 

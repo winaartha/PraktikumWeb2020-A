@@ -16,18 +16,18 @@
                         <hr class="mt-n2">
                         <div class="row">
                             <div class="col-lg-7 mt-3">
-                                <form action="" method="">
+                                <form action="<?= BASE_URL; ?>customer/bayar/<?= $data['bayar']['id_pesanan']; ?>" method="POST">
                                     <div class="form-group">
                                         <label for="atasnama">ATAS NAMA</label>
-                                        <input type="text" class="form-control" id="atasnama" name="atasnama" value="Firdaus">
+                                        <input type="text" class="form-control" id="atasnama" name="atasnama">
                                     </div>
                                     <div class="form-group">
                                         <label for="bank">BANK Pembayaran</label>
                                         <select class="form-control" id="bank" name="bank">
                                             <option disabled selected>Pilih Bank</option>
-                                            <option value="Proses">BCA</option>
-                                            <option value="Proses">BNI</option>
-                                            <option value="Kirim">BNI</option>
+                                            <option value="bca">BCA</option>
+                                            <option value="bni">BNI</option>
+                                            <option value="bri">BRI</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
@@ -53,17 +53,17 @@
                                                 <tbody class="mt-n2">
                                                     <tr>
                                                         <td>
-                                                            Set Kursi
+                                                            <?= $data['bayar']['nama_barang']; ?>
                                                         </td>
-                                                        <td>x01</td>
+                                                        <td></td>
                                                         <td>
-                                                            Rp. 300.000
+                                                            Rp. <?= number_format($data['bayar']['total_harga'], 0, ".", "."); ?>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <th>TOTAL</th>
                                                         <td></td>
-                                                        <td>Rp. 300.000</td>
+                                                        <td>Rp. <?= number_format($data['bayar']['total_harga'], 0, ".", "."); ?></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -77,21 +77,21 @@
                                 <div class="card border border-dark mb-3 p-2">
                                     <p class="text-center">BCA</p>
                                     <hr class="mt-n2">
-                                    <p class="text-center"> 032 900 977 9</p>
+                                    <p class="text-center"><?= $data['bayar']['bca']; ?></p>
                                 </div>
                             </div>
                             <div class="col-lg-4">
                                 <div class="card border border-dark mb-3 p-2">
                                     <p class="text-center">BNI</p>
                                     <hr class="mt-n2">
-                                    <p class="text-center"> 010 642 703 5</p>
+                                    <p class="text-center"><?= $data['bayar']['bni']; ?></p>
                                 </div>
                             </div>
                             <div class="col-lg-4">
                                 <div class="card border border-dark mb-3 p-2">
                                     <p class="text-center">BRI</p>
                                     <hr class="mt-n2">
-                                    <p class="text-center"> 111-00-0459047-3</p>
+                                    <p class="text-center"><?= $data['bayar']['bri']; ?></p>
                                 </div>
                             </div>
                         </div>

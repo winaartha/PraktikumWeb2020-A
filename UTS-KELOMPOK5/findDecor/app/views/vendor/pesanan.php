@@ -20,43 +20,52 @@
                                             <th scope="col">No</th>
                                             <th>Pembeli</th>
                                             <th scope="col">Barang</th>
-                                            <th>Qty</th>
                                             <th scope="col">Total</th>
                                             <th scope="col">Status</th>
                                             <td>Action</td>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <form action="" method="">
-                                                <td>1</td>
-                                                <td>Firdaus</td>
-                                                <td>Tenda</td>
-                                                <td>3</td>
-                                                <td>Rp. 150.000</td>
-                                                <td>
-                                                    <div class="form-group">
-                                                        <select class="form-control" id="status" name="status">
-                                                            <option disabled selected>Set Status</option>
-                                                            <option value="Proses">Konfirmasi</option>
-                                                            <option value="Proses">Proses</option>
-                                                            <option value="Kirim">Kirim</option>
-                                                            <option value="Selesai">Selesai</option>
-                                                        </select>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <!-- DETAIL PESANAN -->
-                                                    <a href="<?= BASE_URL ?>vendor/detail_pesanan" class="btn btn-warning btn-sm">
-                                                        <i class="fas fa-fw fa-info-circle"></i>
-                                                    </a>
-                                                    <!-- SET STATUS -->
-                                                    <button type="submit" class="btn btn-success btn-sm" name="setstatus">
-                                                        SET
-                                                    </button>
-                                                </td>
-                                            </form>
-                                        </tr>
+                                        <?php $no = 1;
+                                        foreach ($data['pesan'] as $ps) :
+                                        ?>
+                                            <tr>
+                                                <form action="<?= BASE_URL; ?>vendor/update_pesanan/<?= $ps['id_pesanan']; ?>" method="POST">
+                                                    <td><?= $no++; ?></td>
+                                                    <td><?= $ps['nama_customer']; ?></td>
+                                                    <td><?= $ps['nama_barang']; ?></td>
+                                                    <td>Rp. <?= number_format($ps['total_harga'], 0, ".", "."); ?></td>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <select class="form-control" id="status" name="status">
+                                                                <option disabled selected><?= $ps['status_pesanan']; ?></option>
+                                                                <?php if ($ps['status_pesanan'] == 'Proses') : ?>
+                                                                    <option value="Kirim">Kirim</option>
+                                                                    <option value="Selesai">Selesai</option>
+                                                                <?php elseif ($ps['status_pesanan'] == 'Kirim') : ?>
+                                                                    <option value="Selesai">Selesai</option>
+                                                                <?php else : ?>
+                                                                    <option value="Proses">Proses</option>
+                                                                    <option value="Kirim">Kirim</option>
+                                                                    <option value="Selesai">Selesai</option>
+                                                                <?php endif ?>
+                                                            </select>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <!-- DETAIL PESANAN -->
+                                                        <a href="<?= BASE_URL ?>vendor/detail_pesanan/<?= $ps['id_pesanan']; ?>" class="btn btn-warning btn-sm">
+                                                            <i class="fas fa-fw fa-info-circle"></i>
+                                                        </a>
+                                                        <!-- SET STATUS -->
+                                                        <button type="submit" class="btn btn-success btn-sm" name="setstatus">
+                                                            SET
+                                                        </button>
+                                                    </td>
+                                                </form>
+                                            <?php endforeach; ?>
+                                            </tr>
                                     </tbody>
                                 </table>
                             </div>

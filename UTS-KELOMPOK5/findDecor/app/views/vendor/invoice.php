@@ -27,20 +27,24 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Firdaus</td>
-                                            <td>Tenda</td>
-                                            <td>Rp. 150.000</td>
-                                            <td>20-10-2020</td>
-                                            <td>22-10-2020</td>
-                                            <td>
-                                                <!-- DETAIL INVOICE -->
-                                                <a href="<?= BASE_URL ?>vendor/detail_invoice" class="btn btn-warning btn-sm">
-                                                    <i class="fas fa-fw fa-info-circle"></i>
-                                                </a>
-                                            </td>
-                                        </tr>
+                                        <?php $no = 1;
+                                        foreach ($data['invoice'] as $iv) :
+                                        ?>
+                                            <tr>
+                                                <td><?= $no++; ?></td>
+                                                <td><?= $iv['nama']; ?></td>
+                                                <td><?= $iv['nama_barang']; ?></td>
+                                                <td>Rp. <?= number_format($iv['total_harga'], 0, ".", "."); ?></td>
+                                                <td><?= $iv['tgl_pesan']; ?></td>
+                                                <td><?= $iv['tgl_selesai']; ?></td>
+                                                <td>
+                                                    <!-- DETAIL INVOICE -->
+                                                    <a href="<?= BASE_URL ?>vendor/detail_invoice" class="btn btn-warning btn-sm">
+                                                        <i class="fas fa-fw fa-info-circle"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        <?php endforeach; ?>
                                     </tbody>
                                 </table>
                             </div>

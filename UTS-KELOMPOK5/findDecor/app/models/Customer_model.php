@@ -37,7 +37,7 @@ class Customer_model extends Controller
 
     public function detail_barang($id_barang)
     {
-        $query = "SELECT barang.*, user.nama_vendor as nama_vendor, user.notelp as notelp, user.alamat as alamat
+        $query = "SELECT barang.*, user.nama_vendor, user.notelp, user.alamat
                 FROM barang JOIN user 
                 ON barang.vendor_id = user.id_user
                 WHERE id_barang = $id_barang";
@@ -51,7 +51,8 @@ class Customer_model extends Controller
         $barang =  mysqli_query($this->db->koneksi, "SELECT * FROM barang where id_barang = $id_barang");
         $barang = mysqli_fetch_assoc($barang);
         $barang_id = $barang['id_barang'];
-        $hargabrg = $barang['harga_barang'];
+        $vendor_id = $barang['vendor_id'];
+        $total = $barang['harga_barang'];
 
         $tgl_pinjam = htmlspecialchars($data['tglpinjam']);
         $tgl_kembali = htmlspecialchars($data['tglkembali']);
@@ -60,9 +61,12 @@ class Customer_model extends Controller
         $kec = htmlspecialchars($data['kecamatan']);
         $catatan = htmlspecialchars($data['catatan']);
         $status = 'Belum Bayar';
+        $tgl_pesan = date('Y-m-d H:i:s');
 
-        $query = "INSERT INTO pembayaran (barang_id, harga_barang, tgl_pinjam, tgl_kembali, user_id, alamat_kirim, kab_kirim, kec_kirim, catatan, status_bayar) VALUES ('$barang_id','$hargabrg', '$tgl_pinjam', '$tgl_kembali', '$user_id', '$alamat', '$kab', '$kec', '$catatan', '$status')";
-        // var_dump($query);
+        $query = "INSERT INTO pesanan 
+        (barang_id, vendor_id, total_harga, tgl_pesan, tgl_pinjam, tgl_kembali, user_id, alamat_kirim, kab_kirim, kec_kirim, catatan, status_pesanan) 
+        VALUES ('$barang_id','$vendor_id', '$total','$tgl_pesan' , '$tgl_pinjam', '$tgl_kembali', '$user_id', '$alamat', '$kab', '$kec', '$catatan', '$status')";
+
 
         mysqli_query($this->db->koneksi, $query);
         return mysqli_affected_rows($this->db->koneksi);
@@ -70,12 +74,71 @@ class Customer_model extends Controller
 
     public function getbayar($id_user)
     {
-        $query = "SELECT pembayaran.*, user.nama_vendor as nama_vendor, barang.nama_barang as nama_barang
-        FROM pembayaran JOIN barang 
-        ON pembayaran.barang_id = barang.id_barang
+        $status = 'Belum Bayar';
+        $query = "SELECT pesanan.*, user.nama_vendor, barang.nama_barang
+        FROM pesanan JOIN barang 
+        ON pesanan.barang_id = barang.id_barang
+        JOIN user 
+        ON pesanan.vendor_id = user.id_user
+        WHERE pesanan.user_id = $id_user AND status_pesanan = '$status'";
+        $result = mysqli_query($this->db->koneksi, $query);
+        $result = $this->db->resultAll($result);
+        return $result;
+    }
+
+    public function detail_bayar($id_pesanan)
+    {
+        $query = "SELECT pesanan.*, barang.nama_barang, user.bca, user.bni, user.bri
+        FROM pesanan JOIN barang 
+        ON pesanan.barang_id = barang.id_barang
+        JOIN user 
+        ON pesanan.vendor_id = user.id_user
+        WHERE id_pesanan = $id_pesanan";
+        $result = mysqli_query($this->db->koneksi, $query);
+        $result = mysqli_fetch_assoc($result);
+        return $result;
+    }
+
+    public function update_pembayaran($data, $id_pesanan)
+    {
+        $atasnama = htmlspecialchars($data['atasnama']);
+        $bank = htmlspecialchars($data['bank']);
+        $tgl_bayar = htmlspecialchars($data['tglbayar']);
+        $status = "Menunggu Konfirmasi";
+
+        $query = "UPDATE pesanan SET status_pesanan = '$status', atas_nama = '$atasnama', bank = '$bank', tgl_bayar = '$tgl_bayar' WHERE id_pesanan = $id_pesanan";
+        mysqli_query($this->db->koneksi, $query);
+
+        return mysqli_affected_rows($this->db->koneksi);
+    }
+
+
+    public function getpesan($id_user)
+    {
+        $status = 'Selesai';
+        $query = "SELECT pesanan.*, user.nama_vendor, barang.nama_barang
+        FROM pesanan JOIN barang
+        ON pesanan.barang_id = barang.id_barang
         JOIN user 
         ON barang.vendor_id = user.id_user
-        WHERE user_id = $id_user AND status_bayar = 'Belum Bayar'";
+        WHERE pesanan.user_id = $id_user AND pesanan.status_pesanan != '$status'";
+
+        $result = mysqli_query($this->db->koneksi, $query);
+        $result = $this->db->resultAll($result);
+        return $result;
+    }
+
+    // INVOICE
+    public function getinvoice($user_id)
+    {
+        $query = "SELECT invoice.*, pesanan.total_harga, pesanan.tgl_pesan, user.nama_vendor, barang.nama_barang
+        FROM invoice JOIN pesanan 
+        ON invoice.pesanan_id = pesanan.id_pesanan
+        JOIN barang 
+        ON pesanan.barang_id = barang.id_barang
+        JOIN user 
+        ON invoice.vendor_id = user.id_user
+        WHERE invoice.user_id = $user_id";
         $result = mysqli_query($this->db->koneksi, $query);
         $result = $this->db->resultAll($result);
         return $result;

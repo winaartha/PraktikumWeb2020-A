@@ -22,31 +22,24 @@
                                             <th scope="col">No</th>
                                             <th scope="col">Barang</th>
                                             <td>Vendor</td>
-                                            <th>Qty</th>
                                             <th scope="col">Subtotal</th>
                                             <th scope="col">Status Pesanan</th>
                                             <th scope="col">Tanggal Pemesanan</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Tenda</td>
-                                            <td>Eufloria</td>
-                                            <td>3</td>
-                                            <td>Rp. 50.000</td>
-                                            <td>Menunggu Konfirmasi</td>
-                                            <td>20-10-2020</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Sofa</td>
-                                            <td>Eufloria</td>
-                                            <td>1</td>
-                                            <td>Rp. 250.000</td>
-                                            <td>Proses</td>
-                                            <td>20-10-2020</td>
-                                        </tr>
+                                        <?php $no = 1;
+                                        foreach ($data['pesan'] as $psn) :
+                                        ?>
+                                            <tr>
+                                                <td><?= $no++; ?></td>
+                                                <td><?= $psn['nama_barang']; ?></td>
+                                                <td><?= $psn['nama_vendor']; ?></td>
+                                                <td>Rp. <?= number_format($psn['total_harga'], 0, ".", "."); ?></td>
+                                                <td><?= $psn['status_pesanan']; ?></td>
+                                                <td><?= $psn['tgl_pesan']; ?></td>
+                                            </tr>
+                                        <?php endforeach; ?>
                                     </tbody>
                                 </table>
                             </div>

@@ -26,20 +26,25 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <form action="" method="">
-                                                <td>1</td>
-                                                <td>Firdaus</td>
-                                                <td>BCA</td>
-                                                <td>Rp. 150.000</td>
-                                                <td>20-10-2020 09.00</td>
-                                                <td>
-                                                    <button type="submit" class="btn btn-danger btn-sm" name="setkonfirmasi">
-                                                        Konfirmasi
-                                                    </button>
-                                                </td>
-                                            </form>
-                                        </tr>
+                                        <?php $no = 1;
+                                        foreach ($data['bayar'] as $byr) :
+                                        ?>
+                                            <tr>
+                                                <form action="<?= BASE_URL; ?>vendor/update_pembayaran/<?= $byr['id_pesanan']; ?>" method="POST">
+                                                    <input type="hidden" name="status" value="Dikonfirmasi">
+                                                    <td><?= $no++; ?></td>
+                                                    <td><?= $byr['atas_nama']; ?></td>
+                                                    <td class="text-uppercase"><?= $byr['bank']; ?></td>
+                                                    <td>Rp. <?= number_format($byr['total_harga'], 0, ".", "."); ?></td>
+                                                    <td><?= $byr['tgl_bayar']; ?></td>
+                                                    <td>
+                                                        <button type="submit" class="btn btn-danger btn-sm" name="setkonfirmasi">
+                                                            Konfirmasi
+                                                        </button>
+                                                    </td>
+                                                </form>
+                                            </tr>
+                                        <?php endforeach; ?>
                                     </tbody>
                                 </table>
                             </div>

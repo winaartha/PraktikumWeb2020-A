@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 14, 2020 at 01:38 PM
+-- Generation Time: Dec 15, 2020 at 01:28 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.3.16
 
@@ -48,32 +48,23 @@ INSERT INTO `barang` (`id_barang`, `nama_barang`, `harga_barang`, `deskripsi_bar
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pembayaran`
+-- Table structure for table `invoice`
 --
 
-CREATE TABLE `pembayaran` (
-  `id_bayar` int(11) NOT NULL,
-  `barang_id` int(11) NOT NULL,
-  `harga_barang` int(11) NOT NULL,
-  `tgl_pinjam` date NOT NULL,
-  `tgl_kembali` date NOT NULL,
+CREATE TABLE `invoice` (
+  `id_invoice` int(11) NOT NULL,
+  `pesanan_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
-  `alamat_kirim` varchar(255) NOT NULL,
-  `kab_kirim` varchar(100) NOT NULL,
-  `kec_kirim` varchar(100) NOT NULL,
-  `catatan` text NOT NULL,
-  `status_bayar` varchar(50) NOT NULL,
-  `atas_nama` varchar(255) NOT NULL,
-  `bank` varchar(50) NOT NULL,
-  `tgl_bayar` date NOT NULL
+  `vendor_id` int(11) NOT NULL,
+  `tgl_selesai` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `pembayaran`
+-- Dumping data for table `invoice`
 --
 
-INSERT INTO `pembayaran` (`id_bayar`, `barang_id`, `harga_barang`, `tgl_pinjam`, `tgl_kembali`, `user_id`, `alamat_kirim`, `kab_kirim`, `kec_kirim`, `catatan`, `status_bayar`, `atas_nama`, `bank`, `tgl_bayar`) VALUES
-(1, 2, 50000, '2020-12-17', '2020-12-18', 13, 'Jl Taman Giri', 'Badung', 'Kuta Selatan', 'cepetin', 'Belum Bayar', '', '', '0000-00-00');
+INSERT INTO `invoice` (`id_invoice`, `pesanan_id`, `user_id`, `vendor_id`, `tgl_selesai`) VALUES
+(1, 4, 13, 7, '2020-12-15');
 
 -- --------------------------------------------------------
 
@@ -83,9 +74,31 @@ INSERT INTO `pembayaran` (`id_bayar`, `barang_id`, `harga_barang`, `tgl_pinjam`,
 
 CREATE TABLE `pesanan` (
   `id_pesanan` int(11) NOT NULL,
-  `bayar_id` int(11) NOT NULL,
-  `status pesanan` varchar(50) NOT NULL
+  `barang_id` int(11) NOT NULL,
+  `vendor_id` int(11) NOT NULL,
+  `total_harga` decimal(10,0) NOT NULL,
+  `tgl_pesan` date NOT NULL,
+  `tgl_pinjam` date NOT NULL,
+  `tgl_kembali` date NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `alamat_kirim` varchar(255) NOT NULL,
+  `kab_kirim` varchar(100) NOT NULL,
+  `kec_kirim` varchar(100) NOT NULL,
+  `catatan` text NOT NULL,
+  `status_pesanan` varchar(50) NOT NULL,
+  `atas_nama` varchar(255) NOT NULL,
+  `bank` varchar(50) NOT NULL,
+  `tgl_bayar` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pesanan`
+--
+
+INSERT INTO `pesanan` (`id_pesanan`, `barang_id`, `vendor_id`, `total_harga`, `tgl_pesan`, `tgl_pinjam`, `tgl_kembali`, `user_id`, `alamat_kirim`, `kab_kirim`, `kec_kirim`, `catatan`, `status_pesanan`, `atas_nama`, `bank`, `tgl_bayar`) VALUES
+(4, 2, 7, '50000', '2020-12-15', '2020-12-16', '2020-12-18', 13, 'Taman Giri', 'Badung', 'Kuta Selatan', 'cepetin woy', 'Selesai', 'Wina Artha', 'bca', '2020-12-16'),
+(5, 14, 7, '850000', '2020-12-15', '2020-12-17', '2020-12-18', 13, 'Jl Taman Giri', 'Badung', 'Kuta Selatan', 'cepetin bang', 'Belum Bayar', 'Wina Artha', 'bca', '2020-12-16'),
+(6, 12, 7, '90000', '2020-12-15', '2020-12-18', '2020-12-18', 13, 'Jl Taman Giri', 'Badung', 'Kuta Selatan', 'bagusin barangnya bang', 'Menunggu Konfirmasi', 'Wina Artha', 'bri', '2020-12-16');
 
 -- --------------------------------------------------------
 
@@ -134,10 +147,10 @@ ALTER TABLE `barang`
   ADD PRIMARY KEY (`id_barang`);
 
 --
--- Indexes for table `pembayaran`
+-- Indexes for table `invoice`
 --
-ALTER TABLE `pembayaran`
-  ADD PRIMARY KEY (`id_bayar`);
+ALTER TABLE `invoice`
+  ADD PRIMARY KEY (`id_invoice`);
 
 --
 -- Indexes for table `pesanan`
@@ -162,16 +175,16 @@ ALTER TABLE `barang`
   MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT for table `pembayaran`
+-- AUTO_INCREMENT for table `invoice`
 --
-ALTER TABLE `pembayaran`
-  MODIFY `id_bayar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `invoice`
+  MODIFY `id_invoice` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `pesanan`
 --
 ALTER TABLE `pesanan`
-  MODIFY `id_pesanan` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `user`

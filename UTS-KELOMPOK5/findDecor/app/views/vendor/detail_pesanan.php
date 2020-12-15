@@ -23,31 +23,31 @@
                                                 <tbody class="mt-n2">
                                                     <tr>
                                                         <th>Nama</th>
-                                                        <th>Firdaus Zulkarnain</th>
+                                                        <th><?= $data['pesan']['nama_customer']; ?></th>
                                                     </tr>
                                                     <tr>
                                                         <th>No. Telepon</th>
-                                                        <th>08123456789</th>
+                                                        <th><?= $data['pesan']['notelp']; ?></th>
                                                     </tr>
                                                     <tr>
                                                         <th>Alamat</th>
-                                                        <th>Jl. Kampus Unud Bukit Jimbaran</th>
+                                                        <th><?= $data['pesan']['alamat_kirim']; ?></th>
                                                     </tr>
                                                     <tr>
                                                         <th>Kabupaten</th>
-                                                        <th>Badung</th>
+                                                        <th><?= $data['pesan']['kab_kirim']; ?></th>
                                                     </tr>
                                                     <tr>
                                                         <th>Kecamatan</th>
-                                                        <th>Kuta Selatan</th>
+                                                        <th><?= $data['pesan']['kec_kirim']; ?></th>
                                                     </tr>
                                                     <tr>
                                                         <th>Via Pembayaran</th>
-                                                        <th>BCA</th>
+                                                        <th class="text-uppercase"><?= $data['pesan']['bank']; ?></th>
                                                     </tr>
                                                     <tr>
                                                         <th>Catatan</th>
-                                                        <th>Lebih cepat dalam pengiriman</th>
+                                                        <th><?= $data['pesan']['catatan']; ?></th>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -67,11 +67,11 @@
                                                     <tbody class="mt-n2">
                                                         <tr>
                                                             <th>Tanggal Pemesanan</th>
-                                                            <th>20-10-2020</th>
+                                                            <th><?= $data['pesan']['tgl_pesan']; ?></th>
                                                         </tr>
                                                         <tr>
                                                             <th>Status</th>
-                                                            <th>Kirim</th>
+                                                            <th><?= $data['pesan']['status_pesanan']; ?></th>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -88,23 +88,20 @@
                                                 <table class="table table-hover table-borderless">
                                                     <thead>
                                                         <th>Barang</th>
-                                                        <th></th>
                                                         <th>Harga</th>
                                                     </thead>
                                                     <tbody class="mt-n2">
                                                         <tr>
                                                             <td>
-                                                                Set Kursi
+                                                                <?= $data['pesan']['nama_barang']; ?>
                                                             </td>
-                                                            <td>x01</td>
                                                             <td>
-                                                                Rp. 300.000
+                                                                Rp. <?= number_format($data['pesan']['total_harga'], 0, ".", "."); ?>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <th>TOTAL</th>
-                                                            <th></th>
-                                                            <th>Rp. 300.000</th>
+                                                            <th>Rp. <?= number_format($data['pesan']['total_harga'], 0, ".", "."); ?></th>
                                                         </tr>
                                                     </tbody>
                                                 </table>

@@ -91,10 +91,19 @@ class Vendor extends Controller
     {
         $data['judul'] = 'Vendor';
         $data['user'] = $this->model('Vendor_model')->getuser($this->id_user);
+        $data['bayar'] = $this->model('Vendor_model')->getbayar($this->id_user);
         $this->view('template/header', $data);
         $this->view('template/navbar', $data);
-        $this->view('vendor/pembayaran');
+        $this->view('vendor/pembayaran', $data);
         $this->view('template/footer');
+    }
+
+    public function update_pembayaran($id_pesanan)
+    {
+        if ($this->model('Vendor_model')->update_pembayaran($_POST, $id_pesanan) > 0) {
+            header('Location: ' . BASE_URL . '/vendor/pesanan');
+            exit;
+        }
     }
 
     // PESANAN START
@@ -102,20 +111,30 @@ class Vendor extends Controller
     {
         $data['judul'] = 'Vendor';
         $data['user'] = $this->model('Vendor_model')->getuser($this->id_user);
+        $data['pesan'] = $this->model('Vendor_model')->getpesan($this->id_user);
         $this->view('template/header', $data);
         $this->view('template/navbar', $data);
-        $this->view('vendor/pesanan');
+        $this->view('vendor/pesanan', $data);
         $this->view('template/footer');
     }
 
-    public function detail_pesanan()
+    public function detail_pesanan($id_pesanan)
     {
         $data['judul'] = 'Vendor';
         $data['user'] = $this->model('Vendor_model')->getuser($this->id_user);
+        $data['pesan'] = $this->model('Vendor_model')->detail_pesanan($id_pesanan);
         $this->view('template/header', $data);
         $this->view('template/navbar', $data);
-        $this->view('vendor/detail_pesanan');
+        $this->view('vendor/detail_pesanan', $data);
         $this->view('template/footer');
+    }
+
+    public function update_pesanan($id_pesanan)
+    {
+        if ($this->model('Vendor_model')->update_pesanan($_POST, $id_pesanan) > 0) {
+            header('Location: ' . BASE_URL . '/vendor/pesanan');
+            exit;
+        }
     }
 
     // INVOICE START
@@ -123,9 +142,10 @@ class Vendor extends Controller
     {
         $data['judul'] = 'Vendor';
         $data['user'] = $this->model('Vendor_model')->getuser($this->id_user);
+        $data['invoice'] = $this->model('Vendor_model')->getinvoice($this->id_user);
         $this->view('template/header', $data);
         $this->view('template/navbar', $data);
-        $this->view('vendor/invoice');
+        $this->view('vendor/invoice', $data);
         $this->view('template/footer');
     }
 
