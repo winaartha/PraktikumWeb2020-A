@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body, input{
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-login input{
+    width: 16rem;
+    height: 2em;
+}
+
+.form-input input, .form-edit input{
+    width: 30rem;
+}
+
+input{
+    font-size: 14px;
+    border-width: 1px;
+    border-color: #ccc;
+    border-style: solid;
+    border-radius: 3px;
+    padding: 5px 5px 5px 10px;
+    box-shadow: 0px 0px 2px 0px rgba(42, 42, 42, .35);
+}
+
+
+
+.content{   
+    width: fit-content;
+    margin: auto;
+    margin-top: 5%;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    margin: 10px 0px;
+}
+
+a{
+    text-decoration: none;
+}
+
+th{
+    background-color: #c9cbff;
+}
+
+/* button */
+.btn{
+    padding: 7px 10px;
+    margin: 15px 5px;
+    border: 1px;
+    border-radius: 5px;
+    border-style: solid;
+    width: fit-content;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+form .btn{
+    font-size: 16px;
+}
+
+.primary{
+    background-color: #1e9c2f;
+    color: white;
+}
+
+.danger{
+    background-color: #9c1e28;
+    color: white;
+}
+
+.info{
+    background-color: #215faf;
+    color: white;
+}
+
+.normal{
+    border-style: none;
+    background-color: #ccc;
+    color: #444;
+}
+/* endbutton */
+
+.right{
+    float: right;
+}
+
+.center{
+    margin: auto;
+}
+
+.title{
+    text-align: center;
+}
+
+.opsi{
+    width: fit-content;
+    font-size: 14px;
+    border-radius: 10%;
+    padding: 5px 10px;
+    margin: 0px 5px;
+}
+
+.error{
+    background-color: #ce404b;
+    font-size: 14px;
+    margin: auto;
+    color: white;
+    border-radius: 3px;
+    padding: 5px 5px 5px 10px;
+}
