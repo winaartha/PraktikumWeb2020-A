@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 15, 2020 at 01:28 PM
+-- Generation Time: Dec 16, 2020 at 05:20 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.3.16
 
@@ -136,6 +136,26 @@ INSERT INTO `user` (`id_user`, `username`, `nama`, `email`, `notelp`, `nama_vend
 (13, 'winaartha', 'Wina Artha Setiawan', 'wina@gmail.com', '0361873892', '', '', '', '', '', '', '', '', 3, '', '$2y$10$Gv6NjZeFRWDsxZrhXjmE6e5nMKbyIEIuZHNskiD9KuoOUHJM/5kRK'),
 (14, 'zul', 'zul', 'zul@gmail.com', '036278273', '', '', '', '', '', '', '', '', 3, '', '$2y$10$61q3o8d67vTsbU8E7XMZ9.IJcj/czK6oWpBSaX6yL3dNu/oqDv1hO');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_role`
+--
+
+CREATE TABLE `user_role` (
+  `id_role` int(11) NOT NULL,
+  `nama_role` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user_role`
+--
+
+INSERT INTO `user_role` (`id_role`, `nama_role`) VALUES
+(1, 'Admin'),
+(2, 'Vendor'),
+(3, 'Customer');
+
 --
 -- Indexes for dumped tables
 --
@@ -165,6 +185,12 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`id_user`);
 
 --
+-- Indexes for table `user_role`
+--
+ALTER TABLE `user_role`
+  ADD PRIMARY KEY (`id_role`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -191,6 +217,12 @@ ALTER TABLE `pesanan`
 --
 ALTER TABLE `user`
   MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT for table `user_role`
+--
+ALTER TABLE `user_role`
+  MODIFY `id_role` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

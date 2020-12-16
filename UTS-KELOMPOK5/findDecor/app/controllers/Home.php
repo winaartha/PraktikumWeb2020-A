@@ -8,12 +8,19 @@ class Home extends Controller
         if (isset($_SESSION['id_user'])) {
             $this->id_user = $_SESSION['id_user'];
         }
+
+        $data['user'] = $this->model('Auth_model')->getuser($this->id_user);
+        $role = $data['user']['nama_role'];
+        if ($role == 'Admin') {
+            header('Location: ' . BASE_URL . 'auth/blocked/' . $role);
+            exit;
+        }
     }
     public function index()
     {
 
         $data['judul'] = 'Home';
-        $data['user'] = $this->model('Vendor_model')->getuser($this->id_user);
+        $data['user'] = $this->model('Auth_model')->getuser($this->id_user);
         $data['vendor'] = $this->model('Home_model')->getvendor();
         $this->view('template/header', $data);
         $this->view('template/navbar', $data);
@@ -24,7 +31,7 @@ class Home extends Controller
     public function about()
     {
         $data['judul'] = 'Tentang Kami';
-        $data['user'] = $this->model('Vendor_model')->getuser($this->id_user);
+        $data['user'] = $this->model('Auth_model')->getuser($this->id_user);
         $this->view('template/header', $data);
         $this->view('template/navbar', $data);
         $this->view('about/index');

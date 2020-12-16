@@ -10,14 +10,6 @@ class Vendor_model extends Controller
     }
 
     // INDEX VENDOR START
-    public function getuser($id_user)
-    {
-        $query = "SELECT * FROM user WHERE id_user = '$id_user'";
-        $result = mysqli_query($this->db->koneksi, $query);
-        $result = mysqli_fetch_assoc($result);
-        return $result;
-    }
-
     public function update_profil($data, $id_user)
     {
         $nama = htmlspecialchars($data['vendor']);

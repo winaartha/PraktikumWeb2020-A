@@ -2,11 +2,20 @@
 
 class Auth extends Controller
 {
-    public function __construct()
+    private function cekuser()
     {
+        if (isset($_SESSION['id_user'])) {
+            $id_user = $_SESSION['id_user'];
+            $data['user'] = $this->model('Auth_model')->getuser($id_user);
+            $tujuan = $data['user']['nama_role'];
+            header('Location: ' . BASE_URL  . $tujuan);
+            exit;
+        }
     }
+
     public function index()
     {
+        $this->cekuser();
         $data['judul'] = 'Login';
         $this->view('template/header', $data);
         $this->view('login');
@@ -14,6 +23,7 @@ class Auth extends Controller
 
     public function ceklogin()
     {
+        $this->cekuser();
         $login = $this->model("Auth_model")->ceklogin($_POST);
         if ($login == 1) {
             header('Location: ' . BASE_URL . '/admin');
@@ -32,6 +42,7 @@ class Auth extends Controller
 
     public function registrasi()
     {
+        $this->cekuser();
         $data['judul'] = 'Daftar';
         $this->view('template/header', $data);
         $this->view('daftar');
@@ -39,6 +50,7 @@ class Auth extends Controller
 
     public function simpanregis()
     {
+        $this->cekuser();
         if ($this->model("Auth_model")->registrasi($_POST) > 0) {
             header('Location: ' . BASE_URL . '/auth');
             exit;
@@ -50,5 +62,13 @@ class Auth extends Controller
         session_destroy();
         header('Location: ' . BASE_URL . '/Home');
         exit;
+    }
+
+    public function blocked($tujuan)
+    {
+        $data['judul'] = 'Access Blocked';
+        $data['tujuan'] = $tujuan;
+        $this->view('template/header', $data);
+        $this->view('blocked', $data);
     }
 }

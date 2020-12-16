@@ -7,6 +7,16 @@ class Admin extends Controller
     {
         if (isset($_SESSION['id_user'])) {
             $this->id_user = $_SESSION['id_user'];
+        } else {
+            header('Location: ' . BASE_URL . 'auth');
+            exit;
+        }
+
+        $data['user'] = $this->model('Auth_model')->getuser($this->id_user);
+        $role = $data['user']['nama_role'];
+        if ($role != 'Admin') {
+            header('Location: ' . BASE_URL . 'auth/blocked/' . $role);
+            exit;
         }
     }
 

@@ -11,9 +11,13 @@ class Auth_model extends Controller
 
     public function getuser($id_user)
     {
-        $result = mysqli_query($this->db->koneksi, "SELECT * FROM user WHERE id_user = '$id_user'");
-        $row = mysqli_fetch_assoc($result);
-        return $row;
+        $query = "SELECT user.*, user_role.nama_role as nama_role FROM user 
+                JOIN user_role 
+                ON user.role_id = user_role.id_role 
+                WHERE user.id_user = '$id_user'";
+        $result = mysqli_query($this->db->koneksi, $query);
+        $result = mysqli_fetch_assoc($result);
+        return $result;
     }
 
     public function registrasi($data)
@@ -50,7 +54,6 @@ class Auth_model extends Controller
         $password = htmlspecialchars($data['password']);
         $result = mysqli_query($this->db->koneksi, "SELECT * FROM user WHERE email = '$email'");
 
-        var_dump($result);
         if (mysqli_num_rows($result) == 1) {
             $row = mysqli_fetch_assoc($result);
             if (password_verify($password, $row['password'])) {
