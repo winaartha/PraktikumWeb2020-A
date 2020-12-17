@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 16, 2020 at 05:20 PM
+-- Generation Time: Dec 17, 2020 at 11:50 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.3.16
 
@@ -112,6 +112,7 @@ CREATE TABLE `user` (
   `nama` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `notelp` varchar(100) NOT NULL,
+  `foto` varchar(50) NOT NULL,
   `nama_vendor` varchar(255) NOT NULL,
   `foto_vendor` varchar(50) NOT NULL,
   `alamat` varchar(255) NOT NULL,
@@ -129,12 +130,12 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id_user`, `username`, `nama`, `email`, `notelp`, `nama_vendor`, `foto_vendor`, `alamat`, `kabupaten`, `kecamatan`, `bni`, `bri`, `bca`, `role_id`, `deskripsi_vendor`, `password`) VALUES
-(4, 'admin', '', 'admin@gmail.com', '081333999839', '', '', '', '', '', '', '', '', 1, '', '$2y$10$YjleCV9y3oL5qaPdoQS5AOJeHattXmO2gSih49w53TccSbeXJs0hG'),
-(5, 'zulkarnain', 'Zulkarnain', 'zulkarnain@gmail.com', '011111', '', '', '', '', '', '', '', '', 3, '', '$2y$10$y7m/xkZ2LMhLM1s1SJgmH.h6QLAE6qTICL5yZ3s8Q8buQLXBWdn8W'),
-(7, 'firdauszul', 'Firdaus Zulkarnain', 'firdauszul@gmail.com', '085678367', 'Eufloria Dekorasi', '', 'Taman Giri', 'Badung', 'Kuta Selatan', '0789836', '983730203', '03739472', 2, 'Menyediakan Dekorasi Pernikahan Sesuai Dengan Yang Diinginkan ', '$2y$10$cC8aXnRB9F1ffKHJIzYzLua1CCzNjay5D9J6015jdU5Je27j0K5mu'),
-(13, 'winaartha', 'Wina Artha Setiawan', 'wina@gmail.com', '0361873892', '', '', '', '', '', '', '', '', 3, '', '$2y$10$Gv6NjZeFRWDsxZrhXjmE6e5nMKbyIEIuZHNskiD9KuoOUHJM/5kRK'),
-(14, 'zul', 'zul', 'zul@gmail.com', '036278273', '', '', '', '', '', '', '', '', 3, '', '$2y$10$61q3o8d67vTsbU8E7XMZ9.IJcj/czK6oWpBSaX6yL3dNu/oqDv1hO');
+INSERT INTO `user` (`id_user`, `username`, `nama`, `email`, `notelp`, `foto`, `nama_vendor`, `foto_vendor`, `alamat`, `kabupaten`, `kecamatan`, `bni`, `bri`, `bca`, `role_id`, `deskripsi_vendor`, `password`) VALUES
+(4, 'admin', '', 'admin@gmail.com', '08199928293', 'Default.jpg', '', '', '', '', '', '', '', '', 1, '', '$2y$10$YjleCV9y3oL5qaPdoQS5AOJeHattXmO2gSih49w53TccSbeXJs0hG'),
+(5, 'zulkarnain', 'Zulkarnain', 'zulkarnain@gmail.com', '011111', '', '', '', '', '', '', '', '', '', 3, '', '$2y$10$y7m/xkZ2LMhLM1s1SJgmH.h6QLAE6qTICL5yZ3s8Q8buQLXBWdn8W'),
+(7, 'firdauszul', 'Firdaus Zulkarnain', 'firdauszul@gmail.com', '085678367', 'Default.jpg', 'Eufloria Dekorasi', 'Default.jpg', 'Taman Giri', 'Badung', 'Kuta Selatan', '0789836', '983730203', '03739472', 2, 'Menyediakan Dekorasi Pernikahan Sesuai Dengan Yang Diinginkan ', '$2y$10$cC8aXnRB9F1ffKHJIzYzLua1CCzNjay5D9J6015jdU5Je27j0K5mu'),
+(13, 'winaartha', 'Wina Artha Setiawan', 'wina@gmail.com', '0361873892', 'Default.jpg', '', '', '', '', '', '', '', '', 3, '', '$2y$10$Gv6NjZeFRWDsxZrhXjmE6e5nMKbyIEIuZHNskiD9KuoOUHJM/5kRK'),
+(14, 'zul', 'zul', 'zul@gmail.com', '036278273', '', '', '', '', '', '', '', '', '', 3, '', '$2y$10$61q3o8d67vTsbU8E7XMZ9.IJcj/czK6oWpBSaX6yL3dNu/oqDv1hO');
 
 -- --------------------------------------------------------
 
@@ -216,7 +217,7 @@ ALTER TABLE `pesanan`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `user_role`
