@@ -6,7 +6,7 @@ class Auth extends Controller
     {
         if (isset($_SESSION['id_user'])) {
             $id_user = $_SESSION['id_user'];
-            $data['user'] = $this->model('Auth_model')->getuser($id_user);
+            $data['user'] = $this->model('Home_model')->getuser($id_user);
             $tujuan = $data['user']['nama_role'];
             header('Location: ' . BASE_URL  . $tujuan);
             exit;

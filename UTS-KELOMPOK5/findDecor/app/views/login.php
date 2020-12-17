@@ -43,9 +43,10 @@
 										LOGIN
 									</button>
 									<div class="text-center mt-3">
-										<a class="text-dark font-weight-bold" href="<?= BASE_URL; ?>auth/registrasi">
-											REGISTRASI
-										</a>
+										<p>Belum Punya Akun? Silahkan<a class="text-dark font-weight-bold" href="<?= BASE_URL; ?>auth/registrasi">
+												Registrasi
+											</a></p>
+
 									</div>
 								</form>
 							</div>

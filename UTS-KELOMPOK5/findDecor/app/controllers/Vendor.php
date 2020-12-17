@@ -12,21 +12,26 @@ class Vendor extends Controller
             exit;
         }
 
-        $data['user'] = $this->model('Auth_model')->getuser($this->id_user);
+        $data['user'] = $this->model('Home_model')->getuser($this->id_user);
         $role = $data['user']['nama_role'];
         if ($role == 'Admin') {
             header('Location: ' . BASE_URL . 'auth/blocked/' . $role);
             exit;
         }
-        if ($role == 'Customer') {
-            $this->daftar_vendor($this->id_user);
+    }
+    private function cekrole()
+    {
+        $data['user'] = $this->model('Home_model')->getuser($this->id_user);
+        if ($data['user']['nama_role'] == 'Customer') {
+            $this->daftar_vendor();
         }
     }
     // INDEX VENDOR START
     public function index()
     {
+        $this->cekrole();
         $data['judul'] = 'Vendor';
-        $data['user'] = $this->model('Auth_model')->getuser($this->id_user);
+        $data['user'] = $this->model('Home_model')->getuser($this->id_user);
         $this->view('template/header', $data);
         $this->view('template/navbar', $data);
         $this->view('vendor/index', $data);
@@ -35,8 +40,15 @@ class Vendor extends Controller
 
     public function update_profil()
     {
-        if ($this->model('Vendor_model')->update_profil($_POST, $this->id_user) > 0) {
-            header('Location: ' . BASE_URL . '/customer');
+        $this->cekrole();
+        $data['user'] = $this->model('Home_model')->getuser($this->id_user);
+        $role = 2;
+        $foto = $this->model('Home_model')->foto($_FILES, $role);
+        if ($foto == NULL) {
+            $foto = $data['user']['foto_vendor'];
+        }
+        if ($this->model('Vendor_model')->update_profil($_POST, $this->id_user, $foto) > 0) {
+            header('Location: ' . BASE_URL . '/vendor');
             exit;
         }
     }
@@ -45,8 +57,9 @@ class Vendor extends Controller
     // BARANG START
     public function daftar_barang()
     {
+        $this->cekrole();
         $data['judul'] = 'Vendor';
-        $data['user'] = $this->model('Auth_model')->getuser($this->id_user);
+        $data['user'] = $this->model('Home_model')->getuser($this->id_user);
         $data['barang'] = $this->model('Vendor_model')->getbarang($this->id_user);
         $this->view('template/header', $data);
         $this->view('template/navbar', $data);
@@ -56,8 +69,9 @@ class Vendor extends Controller
 
     public function tambah_barang()
     {
+        $this->cekrole();
         $data['judul'] = 'Vendor';
-        $data['user'] = $this->model('Auth_model')->getuser($this->id_user);
+        $data['user'] = $this->model('Home_model')->getuser($this->id_user);
         $this->view('template/header', $data);
         $this->view('template/navbar', $data);
         $this->view('vendor/tambah_barang');
@@ -74,8 +88,9 @@ class Vendor extends Controller
 
     public function detail_barang($id_barang)
     {
+        $this->cekrole();
         $data['judul'] = 'Vendor';
-        $data['user'] = $this->model('Auth_model')->getuser($this->id_user);
+        $data['user'] = $this->model('Home_model')->getuser($this->id_user);
         $data['barang'] = $this->model('Vendor_model')->getdetailbrg($id_barang);
         $this->view('template/header', $data);
         $this->view('template/navbar', $data);
@@ -102,8 +117,9 @@ class Vendor extends Controller
     // PEMBAYARAN START
     public function pembayaran()
     {
+        $this->cekrole();
         $data['judul'] = 'Vendor';
-        $data['user'] = $this->model('Auth_model')->getuser($this->id_user);
+        $data['user'] = $this->model('Home_model')->getuser($this->id_user);
         $data['bayar'] = $this->model('Vendor_model')->getbayar($this->id_user);
         $this->view('template/header', $data);
         $this->view('template/navbar', $data);
@@ -122,8 +138,9 @@ class Vendor extends Controller
     // PESANAN START
     public function pesanan()
     {
+        $this->cekrole();
         $data['judul'] = 'Vendor';
-        $data['user'] = $this->model('Auth_model')->getuser($this->id_user);
+        $data['user'] = $this->model('Home_model')->getuser($this->id_user);
         $data['pesan'] = $this->model('Vendor_model')->getpesan($this->id_user);
         $this->view('template/header', $data);
         $this->view('template/navbar', $data);
@@ -133,8 +150,9 @@ class Vendor extends Controller
 
     public function detail_pesanan($id_pesanan)
     {
+        $this->cekrole();
         $data['judul'] = 'Vendor';
-        $data['user'] = $this->model('Auth_model')->getuser($this->id_user);
+        $data['user'] = $this->model('Home_model')->getuser($this->id_user);
         $data['pesan'] = $this->model('Vendor_model')->detail_pesanan($id_pesanan);
         $this->view('template/header', $data);
         $this->view('template/navbar', $data);
@@ -153,8 +171,9 @@ class Vendor extends Controller
     // INVOICE START
     public function invoice()
     {
+        $this->cekrole();
         $data['judul'] = 'Vendor';
-        $data['user'] = $this->model('Auth_model')->getuser($this->id_user);
+        $data['user'] = $this->model('Home_model')->getuser($this->id_user);
         $data['invoice'] = $this->model('Vendor_model')->getinvoice($this->id_user);
         $this->view('template/header', $data);
         $this->view('template/navbar', $data);
@@ -164,8 +183,9 @@ class Vendor extends Controller
 
     public function detail_invoice()
     {
+        $this->cekrole();
         $data['judul'] = 'Vendor';
-        $data['user'] = $this->model('Auth_model')->getuser($this->id_user);
+        $data['user'] = $this->model('Home_model')->getuser($this->id_user);
         $this->view('template/header', $data);
         $this->view('template/navbar', $data);
         $this->view('vendor/detail_invoice');
@@ -173,13 +193,21 @@ class Vendor extends Controller
     }
 
     // REGIS VENDOR
-    public function daftar_vendor($id_user)
+    public function daftar_vendor()
     {
         $data['judul'] = 'Daftar Vendor';
-        $data['user'] = $this->model('Auth_model')->getuser($this->id_user);
+        $data['user'] = $this->model('Home_model')->getuser($this->id_user);
         $this->view('template/header', $data);
         $this->view('template/navbar', $data);
         $this->view('vendor/daftar_vendor');
         $this->view('template/footer');
+    }
+
+    public function simpan_vendor()
+    {
+        if ($this->model('Vendor_model')->jadi_vendor($_POST, $this->id_user) > 0) {
+            header('Location: ' . BASE_URL . 'Vendor');
+            exit;
+        }
     }
 }

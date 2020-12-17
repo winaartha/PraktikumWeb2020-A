@@ -5,8 +5,41 @@
             <div class="col-lg-8">
                 <div class="card">
                     <div class="card-body">
-                        <form action="" method="POST">
-
+                        <form action="<?= BASE_URL; ?>vendor/simpan_vendor" method="POST">
+                            <div class="form-group">
+                                <label for="nama_vendor">Nama Vendor</label>
+                                <input type="text" class="form-control" id="nama_vendor" name="nama_vendor" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <label for="alamat">Alamat Vendor</label>
+                                <input type="text" class="form-control" id="alamat" name="alamat" autocomplete="off">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="kab">Kabupaten</label>
+                                    <input type="text" class="form-control" id="kabupaten" name="kabupaten" autocomplete="off">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="kecamatan">Kecamatan</label>
+                                    <input type="kecamatan" class="form-control" id="kecamatan" name="kecamatan">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="bank">BANK</label>
+                                    <select id="bank" class="form-control" name="bank">
+                                        <option selected>Choose...</option>
+                                        <option value="bca">BCA</option>
+                                        <option value="bri">BRI</option>
+                                        <option value="bni">BNI</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-8">
+                                    <label for="rekening">Rekening</label>
+                                    <input type="text" class="form-control" id="rekening" name="rekening">
+                                </div>
+                            </div>
+                            <button type="submit" name="setvendor" class="btn btn-md tombol mb-3 float-right">SIMPAN</button>
                         </form>
                     </div>
                 </div>

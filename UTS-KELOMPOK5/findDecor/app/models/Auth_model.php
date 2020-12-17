@@ -9,16 +9,7 @@ class Auth_model extends Controller
         $this->db = new Database;
     }
 
-    public function getuser($id_user)
-    {
-        $query = "SELECT user.*, user_role.nama_role as nama_role FROM user 
-                JOIN user_role 
-                ON user.role_id = user_role.id_role 
-                WHERE user.id_user = '$id_user'";
-        $result = mysqli_query($this->db->koneksi, $query);
-        $result = mysqli_fetch_assoc($result);
-        return $result;
-    }
+
 
     public function registrasi($data)
     {

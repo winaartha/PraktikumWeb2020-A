@@ -58,9 +58,12 @@
                                         DAFTAR
                                     </button>
                                     <div class="text-center mt-3">
-                                        <a class="text-dark font-weight-bold" href="<?= BASE_URL; ?>auth">
-                                            Sudah Punya Akun? Login
-                                        </a>
+                                        <p> Sudah Punya Akun? Silahkan
+                                            <a class="text-dark font-weight-bold" href="<?= BASE_URL; ?>auth">
+                                                Login
+                                            </a>
+                                        </p>
+
                                     </div>
                                 </form>
                             </div>

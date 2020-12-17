@@ -14,13 +14,13 @@
                     <div class="container">
                         <p class="font">VENDOR SAYA</p>
                         <hr class="mt-n2">
-                        <form action="<?= BASE_URL; ?>vendor/update_profil" method="POST">
+                        <form action="<?= BASE_URL; ?>vendor/update_profil" method="POST" enctype="multipart/form-data">
                             <div class="row">
                                 <div class="col-lg-4 mt-5">
                                     <div class="card warna mb-3 p-2">
-                                        <img src="assets/img/logovendor/logo1.png" class="rounded-circle mx-auto border border-white" width="90%">
+                                        <img src="assets/img/logovendor/<?= $data['user']['foto_vendor']; ?>" class="rounded-circle mx-auto border border-white" width="90%">
                                         <div class="form-group">
-                                            <input type="file" class="form-control-file mt-3 border border-light">
+                                            <input type="file" class="form-control-file mt-3 border border-light" name="foto" value="<?= $data['user']['foto_vendor']; ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -74,7 +74,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="deskripsi">Deskripsi</label>
-                                        <textarea class="form-control" id="deskripsi" rows="4" name="deskripsi">Menyediakan Dekorasi Pernikahan Sesuai Dengan Yang Diinginkan </textarea>
+                                        <textarea class="form-control" id="deskripsi" rows="4" name="deskripsi"><?= $data['user']['deskripsi_vendor'] ?></textarea>
                                     </div>
                                     <button type="submit" name="setvendor" class="btn btn-md tombol mb-3 float-right">SIMPAN</button>
                                 </div>
@@ -87,3 +87,4 @@
     </div>
 
 </section>
+<!--  -->

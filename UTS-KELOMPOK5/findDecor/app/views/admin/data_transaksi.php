@@ -76,25 +76,26 @@
                             <div class="card-body">
                                 <table class="table table-md table-bordered">
                                     <tr class="text-center">
+                                        <th>No</th>
                                         <th>Nama Customer</th>
-                                        <th>Nama Vendor</th>
                                         <th>Nama Barang</th>
-                                        <th>Qty</th>
                                         <th>Total Harga</th>
                                         <th>Info Tanggal</th>
                                     </tr>
-                                    <tr>
-                                        <td>yg ini belum</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td class="text-center">
-                                            <a class="btn btn-warning btn-sm ml-1" href="<?= BASE_URL; ?>admin/detail_transaksi">
-                                                <i class="fas fa-fw fa-info-circle"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
+                                    <?php $no = 1;
+                                    foreach ($data["invoice"] as $iv) : ?>
+                                        <tr>
+                                            <td><?= $no++; ?></td>
+                                            <td><?= $iv['nama'] ?></td>
+                                            <td><?= $iv['nama_barang'] ?></td>
+                                            <td>Rp. <?= number_format($iv['total_harga'], 0, ".", "."); ?></td>
+                                            <td class="text-center">
+                                                <a class="btn btn-warning btn-sm ml-1" href="<?= BASE_URL; ?>admin/detail_transaksi">
+                                                    <i class="fas fa-fw fa-info-circle"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
                                 </table>
                             </div>
                         </div>

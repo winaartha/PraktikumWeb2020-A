@@ -14,7 +14,7 @@
                <div class="container">
                   <p class="font">PROFIL SAYA</p>
                   <hr class="mt-n2">
-                  <form action="<?= BASE_URL; ?>customer/update_profil" method="POST">
+                  <form action="<?= BASE_URL; ?>customer/update_profil" method="POST" enctype="multipart/form-data">
                      <div class="row">
                         <div class="col-lg-8 mt-3">
                            <div class="form-group row">
@@ -45,9 +45,9 @@
                         </div>
                         <div class="col-lg-4">
                            <div class="card warna mb-3 p-2">
-                              <img src="<?= URL_IMG ?>profile/Default.jpg" class="rounded-circle mx-auto border border-white" width="70%">
+                              <img src="<?= URL_IMG ?>profile/<?= $data['user']['foto']; ?>" class="rounded-circle mx-auto border border-white" width="70%">
                               <div class="form-group">
-                                 <input type="file" class="form-control-file mt-3 border border-light">
+                                 <input type="file" class="form-control-file mt-3 border border-light" name="foto" value="<?= $data['user']['foto']; ?>">
                               </div>
                            </div>
                            <button type="submit" name="setprofil" class="btn btn-md btn-block tombol mb-3 float-right">SIMPAN</button>
@@ -61,3 +61,4 @@
    </div>
 
 </section>
+<!--  -->

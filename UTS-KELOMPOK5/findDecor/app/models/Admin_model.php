@@ -9,12 +9,16 @@ class Admin_model extends Controller
         $this->db = new Database;
     }
 
-    public function getuser($id_user)
+
+    public function update_profil($data, $id_user, $foto)
     {
-        $query = "SELECT * FROM user WHERE id_user = '$id_user'";
-        $result = mysqli_query($this->db->koneksi, $query);
-        $result = mysqli_fetch_assoc($result);
-        return $result;
+        $username = htmlspecialchars($data['username']);
+        $nama = htmlspecialchars($data['nama']);
+        $notelp = htmlspecialchars($data['notelp']);
+
+        $query = "UPDATE user SET username = '$username', nama = '$nama', notelp = '$notelp', foto = '$foto' WHERE id_user = $id_user";
+        mysqli_query($this->db->koneksi, $query);
+        return mysqli_affected_rows($this->db->koneksi);
     }
 
     // Ambil Customer
@@ -48,6 +52,20 @@ class Admin_model extends Controller
         $query =    "SELECT barang.*, user.nama_vendor as nama_vendor 
                     FROM barang JOIN user
                     ON barang.vendor_id = user.id_user";
+        $result = mysqli_query($this->db->koneksi, $query);
+        $result = $this->db->resultAll($result);
+        return $result;
+    }
+
+    public function getinvoice()
+    {
+        $query =    "SELECT invoice.*, user.nama_vendor as nama_vendor, user.nama, barang.nama_barang, pesanan.total_harga 
+        FROM invoice JOIN pesanan
+        ON invoice.pesanan_id = pesanan.id_pesanan
+        JOIN user
+        ON invoice.user_id = user.id_user 
+        JOIN barang
+        ON pesanan.barang_id = barang.id_barang";
         $result = mysqli_query($this->db->koneksi, $query);
         $result = $this->db->resultAll($result);
         return $result;

@@ -12,7 +12,7 @@ class Admin extends Controller
             exit;
         }
 
-        $data['user'] = $this->model('Auth_model')->getuser($this->id_user);
+        $data['user'] = $this->model('Home_model')->getuser($this->id_user);
         $role = $data['user']['nama_role'];
         if ($role != 'Admin') {
             header('Location: ' . BASE_URL . 'auth/blocked/' . $role);
@@ -26,6 +26,32 @@ class Admin extends Controller
         $this->view('template/head-admin', $data);
         $this->view('admin/admin');
         $this->view('template/footer-admin');
+    }
+
+    public function profil_admin()
+    {
+        $data['judul'] = 'Profil';
+        $data['admin'] = $this->model('Home_model')->getuser($this->id_user);
+        $this->view('template/head-admin', $data);
+        $this->view('admin/profil_admin', $data);
+        $this->view('template/footer-admin');
+    }
+
+    public function update_profil()
+    {
+        $data['user'] = $this->model('Home_model')->getuser($this->id_user);
+        $role = 1;
+        $foto = $this->model('Home_model')->foto($_FILES, $role);
+        if ($foto == NULL) {
+            $foto = $data['user']['foto'];
+        }
+        if ($this->model('Admin_model')->update_profil($_POST, $this->id_user, $foto) > 0) {
+            header('Location: ' . BASE_URL . '/admin/profil_admin');
+            exit;
+        } else {
+            header('Location: ' . BASE_URL . '/admin/profil_admin');
+            exit;
+        }
     }
 
     public function data_vendor()
@@ -66,8 +92,9 @@ class Admin extends Controller
     public function data_transaksi()
     {
         $data['judul'] = 'Data Transaksi';
+        $data['invoice'] = $this->model('Admin_model')->getinvoice();
         $this->view('template/head-admin', $data);
-        $this->view('admin/data_transaksi');
+        $this->view('admin/data_transaksi', $data);
         $this->view('template/footer-admin');
     }
 
@@ -79,14 +106,7 @@ class Admin extends Controller
         $this->view('template/footer-admin');
     }
 
-    public function profil_admin()
-    {
-        $data['judul'] = 'Profil';
-        $data['admin'] = $this->model('Admin_model')->getuser($this->id_user);
-        $this->view('template/head-admin', $data);
-        $this->view('admin/profil_admin', $data);
-        $this->view('template/footer-admin');
-    }
+
 
     public function daftar_barang()
     {

@@ -10,7 +10,7 @@ class Vendor_model extends Controller
     }
 
     // INDEX VENDOR START
-    public function update_profil($data, $id_user)
+    public function update_profil($data, $id_user, $fotovendor)
     {
         $nama = htmlspecialchars($data['vendor']);
         $notelp = htmlspecialchars($data['notelp']);
@@ -22,10 +22,12 @@ class Vendor_model extends Controller
         $bri = htmlspecialchars($data['bri']);
         $deskripsi = htmlspecialchars($data['deskripsi']);
 
-        $query = "UPDATE user SET nama_vendor = '$nama', notelp = '$notelp', alamat = '$alamat', kecamatan = '$kecamatan', kabupaten = '$kabupaten', bni = '$bni', bca = '$bca', bri = '$bri', deskripsi_vendor = '$deskripsi'  WHERE id_user = $id_user";
+        $query = "UPDATE user SET nama_vendor = '$nama', foto_vendor = '$fotovendor', notelp = '$notelp', alamat = '$alamat', kecamatan = '$kecamatan', kabupaten = '$kabupaten', bni = '$bni', bca = '$bca', bri = '$bri', deskripsi_vendor = '$deskripsi'  WHERE id_user = $id_user";
         mysqli_query($this->db->koneksi, $query);
         return mysqli_affected_rows($this->db->koneksi);
     }
+
+
 
 
     // BARANG START
@@ -157,5 +159,21 @@ class Vendor_model extends Controller
         $result = mysqli_query($this->db->koneksi, $query);
         $result = $this->db->resultAll($result);
         return $result;
+    }
+
+    public function jadi_vendor($data, $id_user)
+    {
+        $nama = htmlspecialchars($data['nama_vendor']);
+        $alamat = htmlspecialchars($data['alamat']);
+        $kecamatan = htmlspecialchars($data['kecamatan']);
+        $kabupaten = htmlspecialchars($data['kabupaten']);
+        $bank = htmlspecialchars($data['bank']);
+        $rekening = htmlspecialchars($data['rekening']);
+        $role_id = 2;
+        $foto = 'Default.jpg';
+
+        $query = "UPDATE user SET nama_vendor = '$nama', alamat = '$alamat', kecamatan = '$kecamatan', kabupaten = '$kabupaten', $bank = '$rekening', foto_vendor = '$foto' , role_id = $role_id WHERE id_user = $id_user";
+        mysqli_query($this->db->koneksi, $query);
+        return mysqli_affected_rows($this->db->koneksi);
     }
 }

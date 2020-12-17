@@ -67,25 +67,26 @@
         <!-- Start Content -->
         <div class="main-content">
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-8 mt-4">
-                        <div class="card">
-                            <div class="card-header text-left" style="background:rgb(54, 54, 54)">
-                                <h4 class="card-title-sm">Edit Profil</h4>
-                            </div>
-                            <div class="card-body">
-                                <form action="" method="POST">
+                <form action="<?= BASE_URL; ?>admin/update_profil" method="POST" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-8 mt-4">
+                            <div class="card">
+                                <div class="card-header text-left" style="background:rgb(54, 54, 54)">
+                                    <h4 class="card-title-sm">Edit Profil</h4>
+                                </div>
+                                <div class="card-body">
+
                                     <div class="row">
                                         <div class="col-md-6 pr-1">
                                             <div class="form-group">
                                                 <label>Username</label>
-                                                <input type="text" class="form-control" placeholder="Username" value="<?= $data['admin']['username']; ?>" autocomplete="off">
+                                                <input type="text" class="form-control" name="username" value="<?= $data['admin']['username']; ?>" autocomplete="off">
                                             </div>
                                         </div>
                                         <div class="col-md-6 pl-1">
                                             <div class="form-group">
                                                 <label>Email address</label>
-                                                <input type="email" class="form-control" disabled="" placeholder="Email" value="<?= $data['admin']['email']; ?>" autocomplete="off">
+                                                <input type="email" class="form-control" disabled="" name="email" value="<?= $data['admin']['email']; ?>" autocomplete="off">
                                             </div>
                                         </div>
                                     </div>
@@ -93,7 +94,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Nomor Telepon</label>
-                                                <input type="text" class="form-control" placeholder="Nomor Telepon" value="<?= $data['admin']['notelp']; ?>" autocomplete="off">
+                                                <input type="text" class="form-control" name="notelp" value="<?= $data['admin']['notelp']; ?>" autocomplete="off">
                                             </div>
                                         </div>
                                     </div>
@@ -120,26 +121,27 @@
                                         </div>
                                     </div>
                                     <button type="submit" class="btn btn-info btn-fill pull-right">UPDATE PROFIL</button>
-                                </form>
+
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-4 mt-4">
-                        <div class="card card-user">
-                            <div class="card-body">
-                                <div class="col-13">
-                                    <div class="card warna mb-3 p-2">
-                                        <img src="<?= URL_IMG ?>profile/Default.jpg" class="rounded-circle mx-auto border border-white" width="70%">
-                                        <div class="form-group">
-                                            <input type="file" class="form-control-file mt-3 border border-light">
+                        <div class="col-4 mt-4">
+                            <div class="card card-user">
+                                <div class="card-body">
+                                    <div class="col-13">
+                                        <div class="card warna mb-3 p-2">
+                                            <img src="<?= URL_IMG ?>admin/<?= $data['admin']['foto']; ?>" class="rounded-circle mx-auto border border-white" width="70%">
+                                            <div class="form-group">
+                                                <input type="file" class="form-control-file mt-3 border border-light" name="foto" value="<?= $data['admin']['foto']; ?>">
+                                            </div>
                                         </div>
+                                        <button type="submit" name="setprofil" class="btn btn-info btn-fill">SIMPAN</button>
                                     </div>
-                                    <button type="submit" name="setprofil" class="btn btn-info btn-fill">SIMPAN</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
             <!-- End Content -->
 
