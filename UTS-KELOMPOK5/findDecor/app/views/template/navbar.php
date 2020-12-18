@@ -6,9 +6,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <form action="" class="mt-3 p-1">
+            <form method="POST" action="<?= BASE_URL; ?>Home/cari" class="mt-3 p-1">
                 <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Cari Dekorasi" name="cari" autocomplete="off">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Cari Dekorasi" name="keyword" autocomplete="off">
                 </form>
             </form>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">

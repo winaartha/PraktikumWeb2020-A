@@ -75,4 +75,13 @@ class Home_model extends Controller
         move_uploaded_file($temp, $dest_path);
         return $namaFileBaru;
     }
+
+    public function carivendor($data)
+    {
+        $keyword = htmlspecialchars($data['keyword']);
+        $query = "SELECT * FROM user WHERE  role_id = 2  AND nama_vendor LIKE '%$keyword%' ";
+        $query = mysqli_query($this->db->koneksi, $query);
+        $result = $this->db->resultAll($query);
+        return $result;
+    }
 }
