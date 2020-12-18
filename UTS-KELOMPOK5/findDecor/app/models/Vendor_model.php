@@ -45,7 +45,7 @@ class Vendor_model extends Controller
         $hargabrg = htmlspecialchars($data['hargabrg']);
         $deskripsibrg = htmlspecialchars($data['deskripsibrg']);
 
-        $query = "INSERT INTO barang (nama_barang, harga_barang, deskripsi_barang, vendor_id) VALUES ('$namabrg','$hargabrg', '$deskripsibrg', '$user_id')";
+        $query = "INSERT INTO barang (nama_barang, harga_barang, deskripsi_barang, vendor_id) VALUES ('$namabrg','$hargabrg', '$deskripsibrg', $user_id)";
 
         mysqli_query($this->db->koneksi, $query);
         return mysqli_affected_rows($this->db->koneksi);

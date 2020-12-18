@@ -33,7 +33,7 @@ class Auth_model extends Controller
         $password = password_hash($password, PASSWORD_DEFAULT);
 
 
-        $query = "INSERT INTO user (username, nama, email, notelp, role_id, password) VALUES ('$username', '$nama', '$email', '$notelp', '$role_id', '$password')";
+        $query = "INSERT INTO user (username, nama, email, notelp, foto, role_id, password) VALUES ('$username', '$nama', '$email', '$notelp' ,'$role_id', '$password')";
 
         mysqli_query($this->db->koneksi, $query);
         return mysqli_affected_rows($this->db->koneksi);
