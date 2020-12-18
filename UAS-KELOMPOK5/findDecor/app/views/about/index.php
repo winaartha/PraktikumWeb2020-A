@@ -29,7 +29,27 @@
         <i class="fas fa-minus"></i>
         DESKRIPSI
     </h1>
-    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, placeat cumque, tempore quia facilis ex repellat fugit ut praesentium magni sequi culpa cum asperiores earum recusandae dolor sunt laudantium voluptatem voluptatum numquam totam? Recusandae voluptate ratione quibusdam hic, neque dicta reiciendis nostrum deleniti illum ipsa praesentium error, labore perferendis suscipit consequuntur officia numquam minima ex accusantium sunt eos molestiae eveniet dolorum quod? Commodi iusto iure dolorem nesciunt perferendis ut vitae, animi nobis iste voluptate eligendi odit explicabo officiis saepe dolores possimus accusantium quidem molestias accusamus veniam fugiat recusandae. Quisquam magnam doloribus fugit ipsam ut, quod dolor suscipit eos nobis dignissimos aliquid nihil. Autem corporis veniam deserunt ea sapiente pariatur fuga blanditiis harum eaque vel dolore maiores possimus suscipit ipsum, placeat obcaecati fugit porro, accusantium, voluptatem vitae quia aut consequuntur dolorum! Velit hic officiis earum mollitia ea. Reprehenderit ex porro tempora ipsam velit autem consectetur voluptatem quisquam explicabo itaque ab maxime, id esse numquam ea amet hic voluptates consequuntur soluta possimus dolorum pariatur laborum nesciunt? Enim debitis at incidunt distinctio voluptatibus impedit quas deserunt quo officia reiciendis, earum necessitatibus recusandae beatae veritatis ut, velit odio! Ea cumque laboriosam molestias non laudantium sequi consectetur, vitae voluptates esse labore? Eligendi iure magnam aut.</p>
+    <p class="text-justify">Halo sahabat yang luar biasa, pada kesempatan kali ini izinkan kami dari findDécor untuk memperkenalkan diri. Mudah-mudahan dengan adanya perkenalan ini sahabat-sahabat sekalian akan lebih senang dengantoko online ini.
+
+        Sungguh terhormat bagi kami, jika Anda datang ke toko ini dan bisa memperoleh banyak hal yang bermanfaat.
+
+        findDécor adalah sebuah toko yang menyediakan jasa peminjaman dekorasi pernikahan. Bermula dari sebuah bangunan yang berlokasi di Kampus Ilkom, toko kami akhirnya bisa menjangkau pasar yang lebih luas lagi melalui internet.
+
+        Seiring dengan semakin berkembangnya teknologi, maka kami mencoba berinovasi dalam berbisnis. Salah satu bentuk inovasinya adalah dengan menyediakan berbagai layanan toko kami melalui media internet, dan toko online ini adalah salah satu bentuk pelayanan kami kepada Anda.
+
+        findDécor didirikan oleh Kelompok 5 pada 18 Desember 2020. Keberadaan dari toko online ini diharapkan dapat mempermudah Anda untuk mendapatkan berbagai produk berkualitas tinggi namun dengan harga yang terjangkau.
+
+        Dalam memberi layanan, kami selalu mencoba memberi persembahan terbaik kepada siapapun. Selain itu kami juga selalu menjunjung tinggi nilai-nilai etika yang baik, seperti kejujuran, ketepatan, dan profesionalitas dalam berbisnis. Mudah-mudahan dengannya toko online kami bisa memberi banyak manfaat bagi Anda.
+
+        Sekian dulu perkenalan ini. Semoga perkenalan ini bisa memberi inspirasi dan manfaat bagi Anda.
+
+        Salam super dan semoga Anda sukses selalu.
+        <br>
+        <br>
+        Kelompok 5
+        <br>
+        findDécor 💕
+    </p>
 </div>
 
 </div>
