@@ -23,7 +23,7 @@
                     <a href="<?= BASE_URL ?>home/about" class="link">Tentang Kami</a>
                 </p>
                 <p>
-                    <a href="#!" class="link">Kebijakan Privasi</a>
+                    <a href="<?= BASE_URL ?>home/privacy" class="link">Kebijakan Privasi</a>
                 </p>
             </div>
 

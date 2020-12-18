@@ -47,4 +47,14 @@ class Home extends Controller
         $this->view('about/index');
         $this->view('template/footer');
     }
+
+    public function privacy()
+    {
+        $data['judul'] = 'Privacy';
+        $data['user'] = $this->model('Home_model')->getuser($this->id_user);
+        $this->view('template/header', $data);
+        $this->view('template/navbar', $data);
+        $this->view('privacy/index');
+        $this->view('template/footer');
+    }
 }
