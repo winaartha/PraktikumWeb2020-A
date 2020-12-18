@@ -14,7 +14,7 @@
                     <div class="container">
                         <p class="font">TAMBAH BARANG VENDOR</p>
                         <hr class="mt-n2">
-                        <form action="<?= BASE_URL; ?>vendor/tambah_barang" method="POST">
+                        <form action="<?= BASE_URL; ?>vendor/simpan_barang" method="POST">
                             <div class="row">
                                 <div class="col-lg-8 mt-3">
                                     <div class="form-group">

@@ -206,7 +206,7 @@ class Vendor extends Controller
     public function simpan_vendor()
     {
         if ($this->model('Vendor_model')->jadi_vendor($_POST, $this->id_user) > 0) {
-            header('Location: ' . BASE_URL . 'Vendor');
+            header('Location: ' . BASE_URL . 'vendor');
             exit;
         }
     }

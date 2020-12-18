@@ -24,7 +24,7 @@ class Customer_model extends Controller
 
     public function detail_vendor($vendor_id)
     {
-        $query = mysqli_query($this->db->koneksi, "SELECT nama_vendor, notelp, alamat from user where id_user = $vendor_id");
+        $query = mysqli_query($this->db->koneksi, "SELECT * from user where id_user = $vendor_id");
         $result = mysqli_fetch_assoc($query);
         return $result;
     }
