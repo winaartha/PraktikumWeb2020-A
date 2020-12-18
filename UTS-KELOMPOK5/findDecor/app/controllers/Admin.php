@@ -54,6 +54,14 @@ class Admin extends Controller
         }
     }
 
+    public function update_sandi()
+    {
+        if ($this->model("Home_model")->update_sandi($_POST, $this->id_user) > 0) {
+            header('Location: ' . BASE_URL . '/admin');
+            exit;
+        }
+    }
+
     public function data_vendor()
     {
         $data['judul'] = 'Data Vendor';

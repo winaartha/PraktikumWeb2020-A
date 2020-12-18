@@ -21,6 +21,27 @@ class Customer_model extends Controller
         return mysqli_affected_rows($this->db->koneksi);
     }
 
+    public function update_sandi($data, $id_user)
+    {
+        $pass_lama = htmlspecialchars($data['password_lama']);
+        $pass = htmlspecialchars($data['password1']);
+        $pass2 = htmlspecialchars($data['password2']);
+
+        $query = mysqli_query($this->db->koneksi, "SELECT * from user where id_user = $id_user");
+        $data['user'] = mysqli_fetch_assoc($query);
+        $pass_db = $data['user']['password'];
+        if (!password_verify($pass_lama, $pass_db)) {
+            return 0;
+        } else if ($pass != $pass2) {
+            return 0;
+        } else {
+            $password = password_hash($pass, PASSWORD_DEFAULT);
+        }
+
+        $query = "UPDATE user SET password = '$password'WHERE id_user = $id_user";
+        mysqli_query($this->db->koneksi, $query);
+        return mysqli_affected_rows($this->db->koneksi);
+    }
 
     public function detail_vendor($vendor_id)
     {

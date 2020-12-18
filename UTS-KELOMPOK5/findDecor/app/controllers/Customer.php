@@ -55,6 +55,17 @@ class Customer extends Controller
         $this->view('template/footer');
     }
 
+    public function update_sandi()
+    {
+        if ($this->model("Customer_model")->update_sandi($_POST, $this->id_user) > 0) {
+            header('Location: ' . BASE_URL . '/customer');
+            exit;
+        } else {
+            header('Location: ' . BASE_URL . '/customer/ubah_sandi');
+            exit;
+        }
+    }
+
     public function pembayaran()
     {
         $data['judul'] = 'Customer';
@@ -90,6 +101,9 @@ class Customer extends Controller
     {
         if ($this->model("Customer_model")->hapus_pesanan($id_bayar) > 0) {
             header('Location: ' . BASE_URL . '/customer/pemesanan');
+            exit;
+        } else {
+            header('Location: ' . BASE_URL . '/customer/pembayaran');
             exit;
         }
     }

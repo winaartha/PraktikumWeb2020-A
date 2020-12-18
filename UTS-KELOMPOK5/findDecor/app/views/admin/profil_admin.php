@@ -98,29 +98,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-6 pr-1">
-                                            <div class="form-group">
-                                                <label for="password_lama">Password Lama</label>
-                                                <input type="password" class="form-control" name="password_lama" id="password_lama" autocapitalize="off" autocomplete="off">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 pl-1">
-                                            <div class="form-group">
-                                                <label for="password_baru">Password Baru</label>
-                                                <input type="password" class="form-control" name="password_lama" id="password_baru" autocapitalize="off" autocomplete="off">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label for="konfir_password">Konfirmasi Password</label>
-                                                <input type="password" class="form-control" name="konfir_password" id="konfir_password" autocapitalize="off" autocomplete="off">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="btn btn-info btn-fill pull-right">UPDATE PROFIL</button>
 
                                 </div>
                             </div>

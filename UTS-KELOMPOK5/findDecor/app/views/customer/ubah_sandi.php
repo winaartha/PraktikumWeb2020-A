@@ -18,19 +18,19 @@
                             <div class="form-group row">
                                 <label for="password_lama" class="col-sm-4 col-form-label ">Password Lama</label>
                                 <div class="col-sm-8">
-                                    <input type="password" class="form-control" name="password_lama" id="password_lama" value="123456" autocapitalize="off">
+                                    <input type="password" class="form-control" name="password_lama" id="password_lama" autocapitalize="off">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="password_baru" class="col-sm-4 col-form-label ">Password baru</label>
+                                <label for="password_baru" class="col-sm-4 col-form-label ">Password Baru</label>
                                 <div class="col-sm-8">
-                                    <input type="password" class="form-control" name="password_baru" id="password_baru" value="123456" autocapitalize="off">
+                                    <input type="password" class="form-control" name="password1" id="password1" autocapitalize="off">
                                 </div>
                             </div>
                             <div class="form-group row mt-5">
                                 <label for="konfir_password" class="col-sm-4 col-form-label ">Konfirmasi Password</label>
                                 <div class="col-sm-8">
-                                    <input type="password" class="form-control" name="konfir_password" id="konfir_password" value="123456" autocapitalize="off">
+                                    <input type="password" class="form-control" name="password2" id="password2" autocapitalize="off">
                                 </div>
                             </div>
                             <a href="<?= BASE_URL ?>customer/profil" class="btn btn-md tombol mb-3 mt-3">KEMBALI</a>

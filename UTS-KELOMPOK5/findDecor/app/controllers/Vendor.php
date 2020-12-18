@@ -50,6 +50,9 @@ class Vendor extends Controller
         if ($this->model('Vendor_model')->update_profil($_POST, $this->id_user, $foto) > 0) {
             header('Location: ' . BASE_URL . '/vendor');
             exit;
+        } else {
+            header('Location: ' . BASE_URL . '/vendor/update_profil');
+            exit;
         }
     }
 
@@ -85,6 +88,9 @@ class Vendor extends Controller
         $foto = $this->model('Home_model')->foto($_FILES, $tmp);
         if ($this->model('Vendor_model')->tambah_barang($_POST, $this->id_user, $foto) > 0) {
             header('Location: ' . BASE_URL . '/vendor/daftar_barang');
+            exit;
+        } else {
+            header('Location: ' . BASE_URL . '/vendor/tambah_barang');
             exit;
         }
     }
