@@ -52,7 +52,7 @@ class Auth extends Controller
     {
         $this->cekuser();
         if ($this->model("Auth_model")->registrasi($_POST) > 0) {
-            header('Location: ' . BASE_URL . '/auth');
+            header('Location: ' . BASE_URL . 'auth');
             exit;
         }
     }
@@ -60,7 +60,7 @@ class Auth extends Controller
     public function logout()
     {
         session_destroy();
-        header('Location: ' . BASE_URL . '/Home');
+        header('Location: ' . BASE_URL . 'home');
         exit;
     }
 

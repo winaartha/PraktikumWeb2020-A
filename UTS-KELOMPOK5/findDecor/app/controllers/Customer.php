@@ -86,6 +86,14 @@ class Customer extends Controller
         }
     }
 
+    public function hapus_pesanan($id_bayar)
+    {
+        if ($this->model("Customer_model")->hapus_pesanan($id_bayar) > 0) {
+            header('Location: ' . BASE_URL . '/customer/pemesanan');
+            exit;
+        }
+    }
+
     public function pemesanan()
     {
         $data['judul'] = 'Customer';

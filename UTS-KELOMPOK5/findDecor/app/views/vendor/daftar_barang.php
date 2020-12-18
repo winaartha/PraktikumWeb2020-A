@@ -17,7 +17,7 @@
                                 <?php foreach ($data['barang'] as $br) : ?>
                                     <div class="col-lg-4 mb-4">
                                         <div class="card mx-auto mb-3">
-                                            <img src="<?= URL_IMG ?>barang/barang1.jpg" class="card-img-top border-dark border-bottom" alt="...">
+                                            <img src="<?= URL_IMG ?>barang/<?= $br['foto']; ?>" class="card-img-top border-dark border-bottom" alt="...">
                                             <div class="card-body">
                                                 <div class="row">
                                                     <div class="col-lg-6">

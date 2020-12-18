@@ -1,7 +1,7 @@
 <div class="container mt-3 mb-3">
     <div class="row d-flex justify-content-center">
         <div class="col-sm-4 offset-sm-3">
-            <img src="<?= URL_IMG ?>logovendor/logo1.png" alt="" width="70%">
+            <img src="<?= URL_IMG ?>logovendor/<?= $data['barang']['foto_vendor'] ?>" alt="" width="70%">
         </div>
         <div class="col-sm-5">
             <div class="keterangan">
@@ -18,7 +18,7 @@
     <h4 class="sub-tittle text-center mb-4">Sewa Produk</h4>
     <div class="row">
         <div class="col-lg-4">
-            <img src="<?= URL_IMG ?>toko/gambar1.jpg" alt="" width="90%" class="mb-4">
+            <img src="<?= URL_IMG ?>barang/<?= $data['barang']['foto'] ?>" alt="" width="90%" class="mb-4">
             <p class="text-center">DESKRIPSI PRODUK</p>
             <div style="width: 20rem;">
                 <p class="text-justify"><?= $data['barang']['deskripsi_barang']; ?></p>

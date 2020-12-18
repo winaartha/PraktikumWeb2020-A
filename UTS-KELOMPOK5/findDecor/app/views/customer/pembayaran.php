@@ -42,8 +42,12 @@
                                                 </td>
                                                 <td>
                                                     <!-- BAYAR -->
-                                                    <a href="<?= BASE_URL ?>customer/halaman_bayar/<?= $byr['id_pesanan']; ?>" class="btn btn-danger btn-sm">
+                                                    <a href="<?= BASE_URL ?>customer/halaman_bayar/<?= $byr['id_pesanan']; ?>" class="btn btn-warning btn-sm">
                                                         BAYAR
+                                                    </a>
+                                                    <!-- BAYAR -->
+                                                    <a href="<?= BASE_URL ?>customer/hapus_pesanan/<?= $byr['id_pesanan']; ?>" class="btn btn-danger btn-sm">
+                                                        X
                                                     </a>
                                                 </td>
                                             </tr>

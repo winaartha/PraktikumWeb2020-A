@@ -7,13 +7,12 @@ class Home extends Controller
     {
         if (isset($_SESSION['id_user'])) {
             $this->id_user = $_SESSION['id_user'];
-        }
-
-        $data['user'] = $this->model('Home_model')->getuser($this->id_user);
-        $role = $data['user']['nama_role'];
-        if ($role == 'Admin') {
-            header('Location: ' . BASE_URL . 'auth/blocked/' . $role);
-            exit;
+            $data['user'] = $this->model('Home_model')->getuser($this->id_user);
+            $role = $data['user']['nama_role'];
+            if ($role == 'Admin') {
+                header('Location: ' . BASE_URL . 'auth/blocked/' . $role);
+                exit;
+            }
         }
     }
     public function index()

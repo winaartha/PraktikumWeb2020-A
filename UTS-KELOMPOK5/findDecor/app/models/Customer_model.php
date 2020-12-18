@@ -24,7 +24,7 @@ class Customer_model extends Controller
 
     public function detail_vendor($vendor_id)
     {
-        $query = mysqli_query($this->db->koneksi, "SELECT nama_vendor, notelp, alamat from user where id_user = $vendor_id");
+        $query = mysqli_query($this->db->koneksi, "SELECT * from user where id_user = $vendor_id");
         $result = mysqli_fetch_assoc($query);
         return $result;
     }
@@ -38,7 +38,7 @@ class Customer_model extends Controller
 
     public function detail_barang($id_barang)
     {
-        $query = "SELECT barang.*, user.nama_vendor, user.notelp, user.alamat
+        $query = "SELECT barang.*, user.nama_vendor, user.notelp, user.alamat, user.foto_vendor
                 FROM barang JOIN user 
                 ON barang.vendor_id = user.id_user
                 WHERE id_barang = $id_barang";
@@ -110,6 +110,13 @@ class Customer_model extends Controller
         $query = "UPDATE pesanan SET status_pesanan = '$status', atas_nama = '$atasnama', bank = '$bank', tgl_bayar = '$tgl_bayar' WHERE id_pesanan = $id_pesanan";
         mysqli_query($this->db->koneksi, $query);
 
+        return mysqli_affected_rows($this->db->koneksi);
+    }
+
+    public function hapus_pesanan($id_pesanan)
+    {
+        $query = "DELETE FROM pesanan WHERE id_pesanan  = $id_pesanan";
+        mysqli_query($this->db->koneksi, $query);
         return mysqli_affected_rows($this->db->koneksi);
     }
 

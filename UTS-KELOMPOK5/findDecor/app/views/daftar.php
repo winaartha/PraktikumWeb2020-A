@@ -31,23 +31,23 @@
                                 <form method="post" action="<?= BASE_URL; ?>auth/simpanregis">
                                     <div class="form-group">
                                         <label for="input_email" class="label">Email</label>
-                                        <input type="email" class="form-control form " id="email" name="email" autocomplete="off">
+                                        <input type="email" class="form-control form " id="email" name="email" autocomplete="off" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="input_username" class="label">Username</label>
-                                        <input type="text" class="form-control form " id="username" name="username" autocomplete="off">
+                                        <input type="text" class="form-control form " id="username" name="username" autocomplete="off" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="input_nama" class="label">Nama</label>
-                                        <input type="text" class="form-control form " id="nama" name="nama" autocomplete="off">
+                                        <input type="text" class="form-control form " id="nama" name="nama" autocomplete="off" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="input_nomor" class="label">Nomor Telepon</label>
-                                        <input type="text" class="form-control form " id="notelp" name="notelp" autocomplete="off">
+                                        <input type="text" class="form-control form " id="notelp" name="notelp" autocomplete="off" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="input_password" class="label">Password</label>
-                                        <input type="password" class="form-control form" id="password" name="password">
+                                        <input type="password" class="form-control form" id="password" name="password" required>
                                     </div>
 
                                     <div class="form-group">

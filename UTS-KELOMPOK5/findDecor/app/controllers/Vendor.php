@@ -80,7 +80,10 @@ class Vendor extends Controller
 
     public function simpan_barang()
     {
-        if ($this->model('Vendor_model')->tambah_barang($_POST, $this->id_user) > 0) {
+        $this->cekrole();
+        $tmp = 4;
+        $foto = $this->model('Home_model')->foto($_FILES, $tmp);
+        if ($this->model('Vendor_model')->tambah_barang($_POST, $this->id_user, $foto) > 0) {
             header('Location: ' . BASE_URL . '/vendor/daftar_barang');
             exit;
         }
@@ -100,7 +103,14 @@ class Vendor extends Controller
 
     public function update_barang($id_barang)
     {
-        if ($this->model('Vendor_model')->update_barang($_POST, $id_barang) > 0) {
+        $this->cekrole();
+        $data['barang'] = $this->model('Vendor_model')->getdetailbrg($id_barang);
+        $tmp = 4;
+        $foto = $this->model('Home_model')->foto($_FILES, $tmp);
+        if ($foto == NULL) {
+            $foto = $data['barang']['foto'];
+        }
+        if ($this->model('Vendor_model')->update_barang($_POST, $id_barang, $foto) > 0) {
             header('Location: ' . BASE_URL . '/vendor/daftar_barang');
             exit;
         }
@@ -206,7 +216,7 @@ class Vendor extends Controller
     public function simpan_vendor()
     {
         if ($this->model('Vendor_model')->jadi_vendor($_POST, $this->id_user) > 0) {
-            header('Location: ' . BASE_URL . 'Vendor');
+            header('Location: ' . BASE_URL . 'vendor');
             exit;
         }
     }

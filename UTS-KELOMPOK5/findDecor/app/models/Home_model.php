@@ -11,7 +11,7 @@ class Home_model extends Controller
 
     public function getvendor()
     {
-        $query = mysqli_query($this->db->koneksi, "SELECT id_user, nama_vendor from user where role_id = 2");
+        $query = mysqli_query($this->db->koneksi, "SELECT * from user where role_id = 2");
         $result = $this->db->resultAll($query);
         return $result;
     }
@@ -28,7 +28,7 @@ class Home_model extends Controller
     }
 
     // FOTO SEMUA USER
-    public function foto($data, $role)
+    public function foto($data, $tmp)
     {
         $ukuranFile = $data["foto"]["size"];
         $temp = $data["foto"]["tmp_name"];
@@ -60,12 +60,14 @@ class Home_model extends Controller
         $namaFileBaru = uniqid() . '.' . $ekstensiGambar;
 
         // Inputkan Ke Library
-        if ($role == 1) {
+        if ($tmp == 1) {
             $dir = '../public/assets/img/admin/';
-        } else if ($role == 2) {
+        } else if ($tmp == 2) {
             $dir = '../public/assets/img/logovendor/';
-        } else if ($role == 3) {
+        } else if ($tmp == 3) {
             $dir = '../public/assets/img/profile/';
+        } else if ($tmp == 4) {
+            $dir = '../public/assets/img/barang/';
         }
 
         $dest_path = $dir . $namaFileBaru;

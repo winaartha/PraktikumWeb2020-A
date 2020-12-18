@@ -80,8 +80,6 @@
                                         <th>Nama Barang</th>
                                         <th>Nama Vendor</th>
                                         <th>Harga/Hari</th>
-                                        <th>Kategori</th>
-                                        <th>Stock(?)</th>
                                         <th>Gambar</th>
                                         <th>Action</th>
                                     </thead>
@@ -94,10 +92,8 @@
                                                 <td><?= $brg['nama_barang']; ?></td>
                                                 <td><?= $brg['nama_vendor']; ?></td>
                                                 <td>Rp. <?= number_format($brg['harga_barang'], 0, ".", "."); ?></td>
-                                                <td>Ini Belum</td>
-                                                <td>Ini juga</td>
                                                 <td class="text-center">
-                                                    <img src="<?= URL_IMG ?>barang/barang1.jpg" width="200" />
+                                                    <img src="<?= URL_IMG ?>barang/<?= $brg['foto']; ?>" width="200" />
                                                 </td>
                                                 <td>
                                                     <!-- DELETE -->

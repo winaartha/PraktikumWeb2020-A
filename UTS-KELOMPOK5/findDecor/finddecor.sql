@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 17, 2020 at 11:50 AM
+-- Generation Time: Dec 18, 2020 at 12:13 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.3.16
 
@@ -41,9 +41,12 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`id_barang`, `nama_barang`, `harga_barang`, `deskripsi_barang`, `vendor_id`, `foto`) VALUES
-(2, 'Meja Eufloria', '50000', 'terbaik\r\n', 7, ''),
-(12, 'Set Kursi Eufloria', '90000', 'barang terbaik', 7, ''),
-(14, 'Tenda hias Eufloria', '850000', 'Tenda dengan hiasan terbaik', 7, '');
+(2, 'Meja Eufloria', '50000', 'terbaik\r\n', 7, '5fdc87201f81d.jpeg'),
+(12, 'Set Kursi Eufloria', '90000', 'barang terbaik', 7, '5fdc8851e4200.jpg'),
+(14, 'Tenda hias Eufloria', '850000', 'Tenda dengan hiasan terbaik', 7, '5fdc8859466e5.jpeg'),
+(17, 'Set Tenda Eufloria', '950000', 'Terbaik\r\n', 7, '5fdc88626c21e.jpg'),
+(18, 'Tenda Hias Eufloria', '850000', 'terbaik', 7, '5fdc88693d3cb.jpeg'),
+(20, 'Lampu Hias Eufloria', '90000', 'terbaik', 7, '5fdc859aafa58.jpg');
 
 -- --------------------------------------------------------
 
@@ -135,7 +138,8 @@ INSERT INTO `user` (`id_user`, `username`, `nama`, `email`, `notelp`, `foto`, `n
 (5, 'zulkarnain', 'Zulkarnain', 'zulkarnain@gmail.com', '011111', '', '', '', '', '', '', '', '', '', 3, '', '$2y$10$y7m/xkZ2LMhLM1s1SJgmH.h6QLAE6qTICL5yZ3s8Q8buQLXBWdn8W'),
 (7, 'firdauszul', 'Firdaus Zulkarnain', 'firdauszul@gmail.com', '085678367', 'Default.jpg', 'Eufloria Dekorasi', 'Default.jpg', 'Taman Giri', 'Badung', 'Kuta Selatan', '0789836', '983730203', '03739472', 2, 'Menyediakan Dekorasi Pernikahan Sesuai Dengan Yang Diinginkan ', '$2y$10$cC8aXnRB9F1ffKHJIzYzLua1CCzNjay5D9J6015jdU5Je27j0K5mu'),
 (13, 'winaartha', 'Wina Artha Setiawan', 'wina@gmail.com', '0361873892', 'Default.jpg', '', '', '', '', '', '', '', '', 3, '', '$2y$10$Gv6NjZeFRWDsxZrhXjmE6e5nMKbyIEIuZHNskiD9KuoOUHJM/5kRK'),
-(14, 'zul', 'zul', 'zul@gmail.com', '036278273', '', '', '', '', '', '', '', '', '', 3, '', '$2y$10$61q3o8d67vTsbU8E7XMZ9.IJcj/czK6oWpBSaX6yL3dNu/oqDv1hO');
+(40, 'nadyaokt', 'Nadya Oktaviana', 'nadya@gmail.com', '089753793749', 'Default.jpg', 'Nadya Vendor', 'Default.jpg', 'Jl Wanasari', 'Denpasar', 'Denpasar Utara', '', '', '018293028', 2, '', '$2y$10$w.7aSDYAIc.Vac4Yx8qMqeHnHWTieK/2sFRM7v9kGnQzb2YtvzgUG'),
+(41, 'putri', 'Putri Wahyuni', 'putri@gmail.com', '08562372838', 'Default.jpg', 'Putri Dekorasi', 'Default.jpg', 'Jl Kampus Unud', 'Badung', 'Jimbaran', '', '048299384', '', 2, '', '$2y$10$WW1PJbPZKfpd6MhFg/ABNeL4RmHW9SmbWrM9tIbVSlIfh6.qLmgYy');
 
 -- --------------------------------------------------------
 
@@ -199,7 +203,7 @@ ALTER TABLE `user_role`
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `invoice`
@@ -211,13 +215,13 @@ ALTER TABLE `invoice`
 -- AUTO_INCREMENT for table `pesanan`
 --
 ALTER TABLE `pesanan`
-  MODIFY `id_pesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_pesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `user_role`

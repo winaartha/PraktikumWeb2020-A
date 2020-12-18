@@ -1,7 +1,7 @@
 <div class="container mt-3 mb-3">
     <div class="row d-flex justify-content-center">
         <div class="col-sm-4 offset-sm-3">
-            <img src="<?= URL_IMG ?>logovendor/logo1.png" alt="" width="70%">
+            <img src="<?= URL_IMG ?>logovendor/<?= $data['vendor']['foto_vendor'] ?>" alt="" width="70%">
         </div>
         <div class="col-sm-5">
             <div class="keterangan">
@@ -24,7 +24,7 @@
             <?php foreach ($data['barang'] as $br) : ?>
                 <div class="col-lg-3 mb-4">
                     <div class="card mx-auto mb-3 ">
-                        <img src="<?= URL_IMG ?>toko/gambar1.jpg" class="card-img-top border-dark border-bottom" alt="...">
+                        <img src="<?= URL_IMG ?>barang/<?= $br['foto']; ?>" class="card-img-top border-dark border-bottom" alt="...">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-lg-6">

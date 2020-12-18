@@ -30,7 +30,7 @@ class Vendor_model extends Controller
 
 
 
-    // BARANG START
+    // BARANG STARTa
     public function getbarang($id_user)
     {
         $query = "SELECT * FROM barang WHERE vendor_id = '$id_user'";
@@ -39,13 +39,13 @@ class Vendor_model extends Controller
         return $result;
     }
 
-    public function tambah_barang($data, $user_id)
+    public function tambah_barang($data, $user_id, $foto)
     {
         $namabrg = htmlspecialchars($data['namabrg']);
         $hargabrg = htmlspecialchars($data['hargabrg']);
         $deskripsibrg = htmlspecialchars($data['deskripsibrg']);
 
-        $query = "INSERT INTO barang (nama_barang, harga_barang, deskripsi_barang, vendor_id) VALUES ('$namabrg','$hargabrg', '$deskripsibrg', $user_id)";
+        $query = "INSERT INTO barang (nama_barang, harga_barang, deskripsi_barang, vendor_id, foto) VALUES ('$namabrg','$hargabrg', '$deskripsibrg', $user_id, '$foto')";
 
         mysqli_query($this->db->koneksi, $query);
         return mysqli_affected_rows($this->db->koneksi);
@@ -53,29 +53,24 @@ class Vendor_model extends Controller
 
     public function getdetailbrg($id_brg)
     {
-        $query = "SELECT * FROM barang WHERE id_barang = $id_brg";
+        $query = "SELECT *  FROM barang  WHERE id_barang = $id_brg";
         $result = mysqli_query($this->db->koneksi, $query);
         $result = mysqli_fetch_assoc($result);
         return $result;
     }
 
-    public function update_barang($data, $id_barang)
+    public function update_barang($data, $id_barang, $foto)
     {
         $namabrg = htmlspecialchars($data['namabrg']);
         $hargabrg = htmlspecialchars($data['hargabrg']);
         $deskripsibrg = htmlspecialchars($data['deskripsibrg']);
 
-        $query = "UPDATE barang SET nama_barang = '$namabrg', harga_barang = '$hargabrg', deskripsi_barang = '$deskripsibrg' WHERE id_barang = $id_barang ";
+        $query = "UPDATE barang SET nama_barang = '$namabrg', harga_barang = '$hargabrg', deskripsi_barang = '$deskripsibrg', foto = '$foto' WHERE id_barang = $id_barang ";
         mysqli_query($this->db->koneksi, $query);
         return mysqli_affected_rows($this->db->koneksi);
     }
 
-    public function hapus_barang($id_barang)
-    {
-        $query = "DELETE FROM barang WHERE id_barang  = $id_barang";
-        mysqli_query($this->db->koneksi, $query);
-        return mysqli_affected_rows($this->db->koneksi);
-    }
+
 
     // PEMBAYARAN
     public function getbayar($id_user)
